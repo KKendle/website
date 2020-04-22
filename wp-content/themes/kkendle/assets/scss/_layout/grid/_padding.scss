@@ -1,0 +1,71 @@
+/// Padding spacing around elements.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-padding {
+  $self: &;
+
+  &__top {
+
+    &--small {
+      padding-top: $space__2;
+    }
+
+    &--medium {
+      padding-top: $space__3;
+    }
+
+    &--large {
+      padding-top: $space__5;
+    }
+  }
+
+  &__bottom {
+
+    &--none {
+      padding-bottom: 0;
+    }
+
+    &--medium {
+      padding-bottom: $space__3;
+    }
+
+    &--large {
+      padding-bottom: $space__5;
+    }
+  }
+
+  &__left {
+
+    &--default {
+      padding-left: $space__3;
+    }
+
+    &--medium {
+      padding-left: $space__3;
+    }
+
+    &--large {
+      padding-left: $space__5;
+    }
+  }
+
+  &__right {
+
+    &--default {
+      padding-right: $space__3;
+    }
+
+    &--small {
+      padding-right: $space__3;
+    }
+
+    &--medium {
+      padding-right: $space__5;
+    }
+
+    &--large {
+      padding-right: $space__5;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/// Search results page
+/// @author Kevin Kendle
+/// @group Page
+/// @since v1.0.0
+.search-results {
+
+  .entry-meta,
+  .entry-summary,
+  .entry-footer {
+    margin-bottom: $vr__default;
+    margin-bottom: var(--vr__default);
+  }
+}

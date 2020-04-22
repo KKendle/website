@@ -1,0 +1,386 @@
+/// Full (burger) site navigation. Secondary and Primary navigation items.
+/// This is specific to the burger navigation styles and not for the primary or secondary navigation styles.
+/// @author Kevin Kendle
+/// @group Site Header
+/// @since v1.0.0
+.c-navigation__full {
+  $self: &;
+  display: flex;
+  flex-wrap: wrap;
+  @include for-lap-until {
+    background-color: $theme__header--secondary;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    overflow-y: auto;
+    padding-top: 100px;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: translate(37%, -37%) scale(.2);
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+    width: 100vw;
+    z-index: $zIndex__nav;
+  }
+  @include for-lap-up {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: visible;
+    transform: translate(0) scale(1);
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .c-navigation {
+    flex: 1 1 100%;
+    padding: 0 1.25rem;
+    @include for-palm-up {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    @include for-lap-up {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__misc {
+      @include for-lap-up {
+        background-color: $theme__header--secondary;
+        flex: 0 auto;
+        padding-left: $space__4;
+      }
+    }
+
+    .menu-primary-container {
+      @include for-lap-up {
+        width: 100%;
+      }
+    }
+
+    .menu {
+      @include for-lap-up {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  // include home link if used
+  .menu-item-home,
+  .menu-item {
+    flex: 1 1 7.5rem;
+    margin-bottom: .5rem;
+    margin-bottom: var(--space__2);
+    @include for-lap-up {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $theme__color--white;
+      display: inline-block;
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+      padding: .5rem 0;
+      text-decoration: none;
+      @include for-lap-up {
+        color: $theme__text--body;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        padding-bottom: .75rem;
+        padding-top: .75rem;
+        text-align: center;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+
+        span {
+          position: relative;
+
+          &::after {
+            background-color: $theme__button--2;
+            bottom: -.125rem;
+            content: '';
+            height: .125rem;
+            left: 0;
+            right: 0;
+            position: absolute;
+            @include for-hands-up {
+              height: $space__1;
+            }
+            @include for-lap-up {
+              height: .125rem;
+            }
+          }
+        }
+      }
+    }
+
+    &.menu-item-has-children {
+
+      a {
+        @include for-lap-up {
+          margin-right: 0;
+        }
+      }
+
+      > a {
+        @include for-lap-up {
+          padding-left: 1.125rem;
+        }
+      }
+
+      .c-button__toggle {
+        font-size: 1.5rem;
+        @include for-hands-up {
+          font-size: 2rem;
+        }
+        @include for-lap-up {
+          font-size: 1.1875rem;
+        }
+
+        &:hover,
+        &:focus {
+
+          &::before,
+          &::after {
+            @include for-lap-until {
+              background-color: $theme__color--white;
+            }
+          }
+        }
+      }
+
+      &.is-active {
+
+        .c-button__toggle {
+
+          &:hover,
+          &:focus {
+
+            &::before,
+            &::after {
+              @include for-lap-up {
+                background-color: $theme__color--white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    padding-bottom: $vr__default;
+    padding-bottom: var(--vr__default);
+
+    &#navigation__secondary {
+      @include for-lap-until {
+        padding-bottom: $vr__4;
+      }
+    }
+
+    // &:last-of-type {
+    //   @include for-lap-until {
+    //     padding-bottom: $vr__4;
+    //     padding-bottom: var(--vr__4);
+    //   }
+    // }
+  }
+
+  #navigation__primary {
+    @include for-lap-up {
+      order: 2;
+      width: 100%;
+    }
+
+    #menu__primary > {
+
+      .menu-item,
+      .menu-item-home {
+        position: relative;
+      }
+    }
+
+    .menu-item a {
+      font-size: 1rem;
+      @include for-palm-up {
+        font-size: 1.4375rem;
+      }
+      @include for-lap-up {
+        font-size: 1rem;
+      }
+    }
+
+    .menu > .menu-item {
+
+      > a {
+        text-transform: initial;
+        font-size: 1.5rem;
+        @include for-palm-up {
+          font-size: 2.8125rem;
+        }
+        @include for-hands-up {
+          // font-size: 2.9375rem;
+          font-size: 4.6875rem;
+        }
+        @include for-lap-up {
+          font-size: 1.125rem;
+        }
+      }
+
+      &.is-button {
+
+        > a {
+          @include for-lap-up {
+            background-color: $theme__button--2;
+            border-bottom-right-radius: .375rem;
+            font-weight: 600;
+            margin: 0;
+            padding-left: $space__4;
+            padding-right: $space__4;
+          }
+
+          &:hover,
+          &:focus {
+
+            span {
+              position: relative;
+
+              &::after {
+                @include for-lap-up {
+                  background-color: currentColor;
+                  bottom: -.125rem;
+                  content: '';
+                  height: .125rem;
+                  left: 0;
+                  right: 0;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.is-active {
+
+        > a {
+
+          span {
+            position: relative;
+
+            &::after {
+              background-color: $theme__button--2;
+              bottom: -.125rem;
+              content: '';
+              height: .125rem;
+              left: 0;
+              right: 0;
+              position: absolute;
+              @include for-hands-up {
+                height: $space__1;
+              }
+              @include for-lap-up {
+                height: .125rem;
+              }
+            }
+          }
+        }
+
+        a {
+          color: $theme__color--white;
+        }
+      }
+    }
+  }
+
+  #navigation__secondary {
+    background-color: $theme__header--secondary;
+    color: $theme__color--white;
+    margin-top: 2rem;
+    padding-right: .75rem;
+    @include for-lap-up {
+      flex: 1;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    #menu__secondary {
+      @include for-lap-until {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .menu-item {
+
+      a {
+        color: $theme__color--white;
+        font-size: 1.1875rem;
+        font-weight: 600;
+        letter-spacing: .0625rem;
+        text-decoration: underline;
+        @include for-lap-up {
+          font-size: .9375rem;
+          padding-left: $space__1;
+          padding-right: $space__1;
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          span {
+            position: relative;
+
+            &::after {
+              content: none;
+              @include for-lap-up {
+                background-color: currentColor;
+                bottom: -.125rem;
+                content: '';
+                height: .125rem;
+                left: 0;
+                right: 0;
+                position: absolute;
+              }
+            }
+          }
+        }
+      }
+
+      &.current-page-item,
+      &.current-menu-item {
+
+        > a {
+          text-decoration: none;
+
+          span {
+
+            &::after {
+              @include for-lap-until {
+                background-color: $orange-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

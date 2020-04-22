@@ -1,0 +1,251 @@
+/// Search and Filter plugin. Styling the filter form.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.searchandfilter {
+  flex: 1;
+
+  // main list of form elements
+  > ul {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0; // removing base ul padding style
+
+    > li {
+      border-bottom: .125rem solid $theme__text--body;
+      flex: 1 1 100%;
+      margin-bottom: $space__2;
+      margin-right: $space__default;
+      max-width: 100%;
+      padding: 0;
+      @include for-ipad-up {
+        flex: 1 1 45%;
+      }
+      @include for-1k-up {
+        flex: auto;
+        width: 23%;
+      }
+
+      &.sf-field-reset {
+        border-bottom: 0;
+        max-width: none;
+        flex: 1 1 100%;
+
+        .search-filter-reset {
+          color: $yellow-1;
+          display: inline-block;
+          min-height: 44px;
+          min-width: 44px;
+          padding: .75rem;
+          text-transform: initial;
+          width: auto;
+
+          &:focus {
+            outline: .125rem solid rgba($yellow-1, 1);
+            outline-offset: .125rem;
+          }
+        }
+      }
+
+      &.sf-field-taxonomy-event_parent_activity {
+        flex: 1 1 100%;
+        position: relative;
+
+        h4 {
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: underline;
+        }
+
+        input {
+          left: .625rem;
+          position: absolute;
+          top: .625rem;
+          width: auto;
+
+          &:focus {
+
+            + label {
+              outline: .125rem solid rgba($yellow-1, 1);
+              outline-offset: .125rem;
+            }
+          }
+        }
+
+        ul {
+          padding-left: 0;
+
+          label {
+            cursor: pointer;
+            // padding-left: 1.875rem; // checkbox showing
+            padding-left: .75rem; // checkbox hidden
+            padding-right: .75rem; // checkbox hidden
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    select {
+      border: .125rem solid currentColor;
+      border-bottom: 0;
+      color: $theme__text--body;
+      font-family: $theme__font--body;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: $baseline;
+      margin: 0;
+    }
+
+    h4 {
+      background: $theme__text--body;
+      color: $white-1;
+      font-family: $theme__font--body;
+      font-size: 1.1875rem;
+      font-weight: 600;
+      padding: .5rem .75rem 0;
+    }
+
+    [data-sf-field-input-type='multiselect'] {
+
+      [data-combobox] {
+        background-image: none;
+      }
+
+      h4 {
+        background: $theme__text--body;
+      }
+
+      > label {
+        position: relative;
+
+        // &::after {
+        //   color: $theme__text--body;
+        //   content: '+';
+        //   font-size: 2rem;
+        //   position: absolute;
+        //   right: .75rem;
+        //   top: 0;
+        // }
+      }
+
+      // the filters
+      .chosen-choices {
+        background: $theme__color--white;
+        border: .125rem solid currentColor;
+        border-bottom: 0;
+        // padding: .44rem 1.5rem .44rem .44rem;
+        // padding: 0 1.5rem 0 0;
+        padding: 0;
+
+        // a selected filter
+        // .search-choice {
+        //   display: none;
+        // }
+
+        .search-choice {
+          align-items: center;
+          background: initial;
+          border: 0;
+          box-shadow: none;
+          color: $theme__text--body;
+          display: flex;
+          font-family: $theme__font--body;
+          font-size: 1rem;
+          line-height: $baseline;
+          margin: 0;
+          padding: 0 0 0 $space__2;
+          text-transform: initial;
+
+          .search-choice-close {
+            background: none !important;
+            bottom: unset;
+            font-weight: 700;
+            left: unset;
+            min-height: 40px;
+            min-width: 44px;
+            position: relative;
+            right: unset;
+            text-align: center;
+            top: unset;
+
+            &::after {
+              bottom: 0;
+              color: $theme__text--body;
+              content: 'X';
+              display: block;
+              font-size: 1.125rem;
+              left: 0;
+              position: relative;
+              right: 0;
+              top: 20px;
+              transform: translateY(-12px);
+            }
+          }
+        }
+
+        // input field for filter
+        .search-field {
+          padding: .44rem 0 .44rem .44rem;
+
+          input {
+            color: $theme__text--body;
+            font-family: $theme__font--body;
+            font-size: 1.125rem;
+            line-height: $baseline;
+            padding: 0 0 0 .25rem;
+          }
+        }
+      }
+
+      // multi-select options
+      .chosen-results {
+        color: $theme__text--body;
+
+        .active-result {
+          color: $theme__text--body;
+          font-family: $theme__font--body;
+          font-size: 1.125rem;
+          line-height: $baseline;
+          text-transform: initial;
+        }
+
+        .highlighted {
+          background-color: $blue-1;
+          color: $white-1;
+        }
+      }
+
+      // filter field is active/focused
+      .chosen-container-active {
+
+        .chosen-choices {
+          box-shadow: none;
+          // focus state
+          border-color: $theme__focus--input;
+        }
+      }
+
+      // whenever filter is NOT active
+      // add filter label overtop
+      // .chosen-container:not(.chosen-container-active) {
+
+      //   &::before {
+      //     background: $white-1;
+      //     color: currentColor;
+      //     content: attr(title);
+      //     font-family: $nunito-sans;
+      //     font-size: 1.125rem;
+      //     left: .125rem;
+      //     padding: .5rem .75rem;
+      //     pointer-events: none;
+      //     position: absolute;
+      //     text-transform: initial;
+      //     top: .125rem;
+      //     z-index: 10;
+      //   }
+      // }
+    }
+  }
+}

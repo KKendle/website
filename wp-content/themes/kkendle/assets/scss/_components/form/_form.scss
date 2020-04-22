@@ -1,0 +1,260 @@
+/// Remove `<ul>` browser styling
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.gform_body {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gfield {
+    margin-bottom: 1.5rem;
+
+    &.gform_hidden {
+      flex: 0;
+      margin-bottom: 0;
+    }
+
+    &.c-field--full {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+
+    &.c-field__checkbox,
+    &.c-field__radio {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+
+  .gfield_description {
+    font-size: 1rem;
+  }
+}
+
+/// Gravity Form error and message style.
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.validation_error,
+.validation_message {
+  background-color: $theme__form--errorMessage;
+  color: $theme__text--body;
+  padding: .5rem;
+}
+
+/// Gravity Form error message spacing.
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.validation_error {
+  margin-bottom: $vr__05;
+
+  p {
+    color: inherit;
+  }
+}
+
+/// Form styling.
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.c-form,
+.gform_wrapper {
+
+  .gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gfield_label,
+  .gfield_description {
+    line-height: 1.1875;
+    margin-bottom: .125rem;
+  }
+
+  .gfield {
+    display: flex;
+    flex: 1 1 13.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: $space__default;
+
+    &.c-form__field {
+
+      &--small {
+        @include for-hands-up {
+          flex: 1 1 25%;
+        }
+      }
+
+      &--fullWidth {
+        flex: 1 1 100%;
+        max-width: none;
+      }
+    }
+
+    &_required {
+      display: none;
+    }
+  }
+
+  .validation_error,
+  .validation_message {
+    background-color: $theme__form--errorMessage;
+    color: $theme__text--body;
+  }
+
+  &--black {
+    background-color: $black-1;
+
+    .gfield_label,
+    .gfield_description {
+      color: $theme__color--white;
+    }
+
+    .gfield {
+
+      input,
+      textarea,
+      select {
+        border-color: transparent;
+
+        &:focus {
+          border-color: $theme__focus--inputOnBG;
+        }
+      }
+    }
+
+    .validation_error,
+    .validation_message {
+      background-color: $theme__form--errorMessage;
+      color: $theme__text--body;
+    }
+
+    [type='submit'] {
+
+      .c-sprite__buttonArrow {
+        background-image: url('../images/button-arrow-white.png');
+      }
+    }
+  }
+}
+
+.c-form {
+  $self: &;
+  flex: 2 1;
+
+  &__header {
+    margin-bottom: $space__4;
+    @include for-ipad-up {
+      flex: 1 1 calc(50% - #{$space__5});
+      margin-right: $space__5;
+    }
+    @media (min-width: 1000px) {
+      flex: 1 1 calc(40% - #{$space__5});
+    }
+  }
+
+  &__form {
+    @include for-ipad-up {
+      flex: 1 1 50%;
+    }
+    @media (min-width: 1000px) {
+      flex: 1 1 60%;
+    }
+  }
+
+  &--newsletter {
+
+    .gfield {
+      flex: 1 1 45%;
+      margin-right: $space__2;
+    }
+  }
+
+  &--half {
+
+    #{$self}__header {
+      @media (min-width: 1000px) {
+        flex: 1 1 calc(50% - #{$space__5});
+      }
+    }
+
+    #{$self}__form {
+      @media (min-width: 1000px) {
+        flex: 1 1 50%;
+      }
+    }
+  }
+
+  &--black {
+
+    #{$self}__header {
+
+      h2,
+      h3,
+      p {
+        color: $theme__color--white;
+      }
+
+      h2,
+      h3 {
+        font-size: 4.6875rem;
+      }
+    }
+
+    .c-button__1,
+    .c-button__2,
+    .c-button__3 {
+      $color-length: calc(100% - 40px);
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right, $theme__color--white $color-length, rgba($theme__color--white, .0001) $color-length);
+        color: $theme__text--body;
+      }
+    }
+
+    .gfield_checkbox,
+    .gfield_radio {
+
+      label {
+        color: $theme__color--white;
+      }
+    }
+  }
+
+  &--contact {
+
+    #{$self}__header {
+      @media (min-width: 1000px) {
+        max-width: 300px;
+      }
+    }
+
+    #{$self}__form {
+      margin-bottom: $space__4;
+      @media (min-width: 1000px) {
+        max-width: 380px;
+      }
+    }
+
+    #{$self}__img {
+      display: none;
+      @media (min-width: 1000px) {
+        display: block;
+        flex: 1;
+      }
+      @include for-lap-up {
+        position: relative;
+        transform: translate(10%, 25px) scale(1.1);
+        transition: transform 300ms ease-in-out;
+      }
+    }
+  }
+}

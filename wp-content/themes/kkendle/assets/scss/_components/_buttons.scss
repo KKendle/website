@@ -1,0 +1,93 @@
+/// Button component styles. Contains Primary and Secondary styles.
+///
+/// The "--noStyle" is primarily used for modal 'X' or similar where it should have the accessible functionality of a button, but removes the base styles.
+/// These styles can be used on links or buttons.
+///
+/// Use a `<button>` if it is performing an action, such as submitting a form.
+/// Use a `<a>` if it is directing the user to another page.
+///
+/// @example
+///   * CTA's in hero images often go to another page. Therefore they should be links, `<a>`.
+///   * A Modal close icon often closes the modal. Therefore it should be a `<button>`.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-button {
+  $self: &;
+  $color-length: calc(100% - 40px);
+  // background-color: $theme__color--white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  padding: .6275rem $space__4 .6275rem 0;
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: $space__4;
+    margin-right: $space__default;
+  }
+
+  &__link {
+    max-width: none;
+    text-transform: lowercase;
+    width: auto;
+  }
+
+  &__1,
+  &__2 {
+    transition: all 150ms ease-in-out;
+  }
+
+  &__1 {
+    background: linear-gradient(to right, $theme__button--1 $color-length, rgba($theme__color--white, .0001) $color-length);
+    padding-left: $space__default;
+
+    &:hover,
+    &:focus,
+    &._hover,
+    &._focus {
+      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
+      color: $theme__color--white;
+    }
+  }
+
+  &__2 {
+    background: linear-gradient(to right, $theme__button--2 $color-length, rgba($theme__color--white, .0001) $color-length);
+    padding-left: $space__default;
+
+    &:hover,
+    &:focus,
+    &._hover,
+    &._focus {
+      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
+      color: $theme__color--white;
+    }
+  }
+
+  &--noStyle {
+    background-color: transparent;
+    border: 0;
+    color: $theme__text--body;
+    margin: 0;
+    min-width: initial;
+    padding: 0;
+  }
+
+  //------------
+  // FORM
+  //------------
+  // Gravity Forms
+  &.gform_button {
+    margin-bottom: 0;
+  }
+}
+
+/// Style WP Block Button
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.wp-block-button__link {
+  $color-length: calc(100% - 40px);
+}

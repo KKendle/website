@@ -1,0 +1,42 @@
+/// Input field component styles.
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.c-input__field {
+  margin-bottom: $space__4;
+  margin-bottom: var(--space__4);
+
+  &.gfield {
+    margin-bottom: $space__4;
+    margin-bottom: var(--space__4);
+
+    input {
+      border: .125em solid $theme__input--border;
+      border: .125em solid var(--theme__input--border, $theme__input--border);
+      color: $theme__text--body;
+      color: var(--theme__text--body, $theme__text--body);
+      font-family: $theme__font--button;
+      font-family: var(--button__font, $theme__font--button);
+      font-weight: 500;
+      padding: $space__3 $space__2;
+      padding: var(--space__3) var(--space__2);
+    }
+
+    .gfield_label {
+      color: $theme__text--body;
+      color: var(--theme__text--body, $theme__text--body);
+      display: inline-block;
+      margin-bottom: $space__1;
+      margin-bottom: var(--space__1);
+    }
+
+    // ERRORS
+    &.gfield_error {
+
+      .ginput_container {
+        margin-bottom: $space__1;
+        margin-bottom: var(--space__1);
+      }
+    }
+  }
+}

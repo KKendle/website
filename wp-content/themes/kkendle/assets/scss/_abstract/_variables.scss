@@ -1,0 +1,136 @@
+//------------
+// COLORS
+//------------
+// also in _base.scss for CSS Custom Variables
+$red-1: #ff2700;
+$red-2: #ffedea;
+$red-3: #ffb0a2;
+$white-1: #fff;
+$link-1: #235bf5;
+
+//------------
+// THEME COLORS
+//------------
+/// @group Base
+/// @type Map
+/// @prop {Color} $black-1 [#2b2b2b]
+/// @prop {Color} $orange-1 [#ff763b]
+/// @prop {Color} $blue-1 [#5ecbeb]
+/// @prop {Color} $yellow-1 [#ffd34d]
+$black-1: #1c1c1c;
+$white-2: #f7f7f7;
+$green-1: #51ce54;
+$orange-1: #f9a825;
+
+//------------
+// TYPOGRAPHY
+//------------
+/// @group Base
+/// @type Map
+/// @prop {Typeface} neue-haas-grotesk-display [neue-haas-grotesk-display]
+/// @example
+///   Neue Haas Grotesk Display Pro 45 Light
+///   font-family: neue-haas-grotesk-display, sans-serif;
+///   font-weight: 400;
+///   font-style: normal;
+$source-serif-pro: 'Source Serif Pro', serif;
+$roboto: 'Roboto', sans-serif;
+
+//------------
+// ELEMENT SPACING
+//------------
+// SOURCE https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62#deba
+// spacing
+$space__1: .25rem;
+$space__2: .5rem;
+$space__3: 1rem;
+$space__4: 1.5rem;
+$space__5: 2rem;
+$space__6: 3rem;
+$space__7: 4rem;
+$space__8: 5rem;
+$space__default: $space__3;
+
+/* typography */
+$baseFontSize: 1.25rem; /* 18px */
+$baseline: 1.2777;
+$letterspacing__caps: .05em; // for uppercase copy
+
+/* baseline amounts */
+$vr__05: calc(1rem * (#{$baseline} * .5));
+$vr__1: calc(1rem * #{$baseline});
+$vr__15: calc(1rem * (#{$baseline} * 1.5));
+$vr__2: calc(1rem * (#{$baseline} * 2));
+$vr__25: calc(1rem * (#{$baseline} * 2.5));
+$vr__3: calc(1rem * (#{$baseline} * 3));
+$vr__4: calc(1rem * (#{$baseline} * 4));
+$vr__default: $vr__1;
+
+// gutter
+$gutter: 3rem;
+
+//------------
+// Z-INDEX STACKING
+//------------
+$zIndex--sm: 1;
+$zIndex--md: 5;
+$zIndex--lg: 10;
+$zIndex__nav: 100;
+$zIndex__nav--close: 105;
+$zIndex__tooltip: 150;
+$zIndex__modal: 1000;
+
+//------------
+// THEME COLORS
+//------------
+// colors
+$theme__color--white: $white-2;
+$theme__color--error: $red-1;
+// text
+$theme__text--body: $black-1;
+$theme__text--link: $black-1;
+$theme__text--linkHover: $link-1;
+// header
+$theme__header--primary: $theme__color--white;
+$theme__header--secondary: $black-1;
+// footer
+$theme__footer--primary: $green-1;
+$theme__footer--text: $theme__text--body;
+// button
+$theme__button--1: $orange-1;
+$theme__button--2: $theme__color--white;
+// backgrounds
+$theme__bg--1: $green-1;
+// font
+$theme__font--button: $roboto;
+$theme__font--heading: $source-serif-pro;
+$theme__font--body: $roboto;
+$theme__font--navigation: $roboto;
+// headings
+$theme__heading--1: $black-1;
+// line-height
+$theme__lineHeight--heading: 1;
+$theme__lineHeight--base: $baseline;
+// reading length
+$theme__readingLength--default: 55ch;
+// inputs
+$theme__input--border: $theme__text--body;
+// focus
+$theme__focus: $theme__text--body; // changed to CurrentColor
+$theme__focus--input: $link-1;
+$theme__focus--inputOnBG: $orange-1;
+// form
+$theme__form--error: $theme__color--error;
+$theme__form--errorInput: $red-2;
+$theme__form--errorMessage: $red-3;
+$theme__formBG--1: $theme__text--body;
+
+//------------
+// BOX-SHADOW STACKING
+//------------
+$color__shadow: $theme__text--body;
+// flows CLOSEST from screen to FURTHEST
+$bs__inputs: 0 1px 1px $color__shadow; // for buttons, inputs
+$bs__panels--small: 0 3px 4px -1px $color__shadow; // for dropdowns, small panels
+$bs__panels--large: 0 8px 12px -4px $color__shadow; // for large panels
+$bs__modals: 0 25px 37px -6px $color__shadow; // for modals

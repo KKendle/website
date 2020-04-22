@@ -1,0 +1,22 @@
+/// Base link styles.
+///
+/// Use a `<button>` if it is performing an action, such as submitting a form.
+/// Use a `<a>` if it is directing the user to another page.
+///
+/// * CTA's in hero images often go to another page. Therefore they should be links, `<a>`.
+/// * A Modal close icon often closes the modal. Therefore it should be a button, `<button>`.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-link {
+  $self: &;
+
+  &--noStyle {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.page-template-template-styleguide {
+
+  .l-section__buttons {
+
+    ._styleguide__buttonContainer {
+      margin-bottom: $space__4;
+
+      .l-flex {
+
+        > div {
+          width: 100%;
+          @include for-ipad-up {
+            width: 48%;
+          }
+
+          &:first-of-type {
+            @include for-ipad-up {
+              margin-right: 2%;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-bottom: $space__1;
+
+        &:last-of-type {
+          margin-right: $space__default;
+        }
+      }
+    }
+
+    ._styleguide__buttonDesc {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/// Flexbox styling. Align items horizontally and vertically.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-flex {
+  $self: &;
+  display: flex;
+
+  &\@handsWide {
+    @include for-ipad-up {
+      display: flex;
+    }
+  }
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
+
+  //------------
+  // FLEX VERTICAL
+  //------------
+  &__top {
+    align-items: flex-start;
+  }
+
+  &__middle {
+    align-items: center;
+  }
+
+  &__bottom {
+    align-items: flex-end;
+  }
+
+  //------------
+  // FLEX HORIZONTAL
+  //------------
+  &__center {
+    justify-content: center;
+  }
+
+  &__end {
+    justify-content: flex-end;
+
+    &\@handsWide {
+      @include for-ipad-up {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__around {
+    justify-content: space-around;
+  }
+
+  &__between {
+    justify-content: space-between;
+  }
+
+  //------------
+  // FLEX DIRECTION
+  //------------
+  &__column {
+    flex-direction: column;
+  }
+
+  //------------
+  // FLEX ORDER
+  //------------
+  &__order--2 {
+    order: 2;
+
+    &\@handsWide {
+      @include for-ipad-up {
+        order: 2;
+      }
+    }
+  }
+}

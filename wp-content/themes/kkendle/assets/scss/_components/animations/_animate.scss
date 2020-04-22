@@ -1,0 +1,122 @@
+.c-animate {
+  $self: &;
+  $base-speed: .5s;
+  position: relative;
+
+  &.aos-init {
+    transition: all $base-speed ease;
+    opacity: 0;
+
+    &#{$self}__delay--short {
+      transition-delay: .25s;
+    }
+
+    &#{$self}--right {
+      transform: translateX(-5em);
+    }
+
+    &#{$self}--left {
+      transform: translateX(5em);
+    }
+
+    &#{$self}--up {
+      transform: translateY(5em);
+    }
+
+    &#{$self}--down {
+      transform: translateY(-5em);
+    }
+
+    &#{$self}--in {
+      opacity: 0;
+    }
+  }
+
+  &.aos-animate {
+    transition: all $base-speed ease;
+    opacity: 1;
+
+    &#{$self}--right {
+      transform: translateX(0);
+    }
+
+    &#{$self}--left {
+      transform: translateX(0);
+    }
+
+    &#{$self}--up {
+      transform: translateY(0);
+    }
+
+    &#{$self}--down {
+      transform: translateY(0);
+    }
+
+    &#{$self}--in {
+      opacity: 1;
+    }
+
+    &#{$self}--trio {
+
+      &:nth-child(2n) {
+        transition-delay: .1s;
+      }
+
+      &:nth-child(3n) {
+        transition-delay: .15s;
+      }
+    }
+
+    #{$self}--quad {
+
+      &:nth-child(2n) {
+        transition-delay: .1s;
+      }
+
+      &:nth-child(3n) {
+        transition-delay: .15s;
+      }
+
+      &:nth-child(4n) {
+        transition-delay: .2s;
+      }
+    }
+
+    //------------
+    // DELAY
+    //------------
+    &#{$self}__delay--short {
+      transition-delay: .125s;
+    }
+
+    &#{$self}__delay--medium {
+      transition-delay: .25s;
+    }
+
+    &#{$self}__delay--long {
+      transition-delay: .325s;
+    }
+
+    //------------
+    // SPEED
+    //------------
+    &#{$self}--slow {
+      transition-duration: $base-speed * 1.5;
+    }
+
+    //------------
+    // EASING
+    //------------
+    &#{$self}--ease-in {
+      transition-timing-function: ease-in;
+    }
+
+    &#{$self}--ease-out {
+      transition-timing-function: ease-out;
+    }
+
+    &#{$self}--ease-in-out {
+      transition-timing-function: ease-in-out;
+    }
+  }
+}

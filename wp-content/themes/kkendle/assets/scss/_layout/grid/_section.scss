@@ -1,0 +1,16 @@
+/// Default grouping class and provides base spacing between WP Blocks. `.l-section--flush` is for unique cases where content blocks require less than the default spacing.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-section {
+  $sectionSpace: $space__7;
+  --sectionSpace: var(--space__7);
+  display: flex;
+  justify-content: center;
+  margin-bottom: $sectionSpace;
+  margin-bottom: var(--sectionSpace);
+
+  &--flush {
+    margin-bottom: 0;
+  }
+}

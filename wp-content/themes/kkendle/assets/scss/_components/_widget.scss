@@ -1,0 +1,155 @@
+/// Footer widget basic styles
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-widget {
+  $self: &;
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+  width: 100%;
+  @include for-hands-up {
+    flex: 1 1 9.375rem;
+    width: auto;
+  }
+
+  .menu,
+  .sub-menu {
+    list-style: none;
+    padding-left: 0;
+
+    .menu-item {
+      margin-bottom: .25rem;
+
+      a {
+        color: $theme__text--body;
+        display: inline-block;
+        font-family: $theme__font--navigation;
+        font-weight: 600;
+        min-height: 44px;
+        min-width: 44px;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+
+        &:hover,
+        &:focus {
+          color: $theme__text--body;
+        }
+      }
+
+      &.menu-item-has-children {
+        margin-bottom: 1rem;
+
+        li {
+
+          a {
+            color: $theme__text--body;
+            font-family: $theme__font--navigation;
+            font-size: 1rem;
+            font-weight: 400;
+            padding-bottom: .25rem;
+            padding-top: .25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .c-address {
+
+    a {
+      text-decoration: underline;
+    }
+
+    &__title {
+      @include for-hands-until {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__footer--1 {
+    flex: 1 1 15.625rem;
+    position: relative;
+    z-index: 1;
+
+    .widget {
+      @include for-palm-up {
+        display: inline-block;
+        margin-right: $space__6;
+        width: auto;
+      }
+    }
+  }
+
+  &__footer--2 {
+
+    p:first-of-type {
+      margin-bottom: .25rem;
+      @include for-palm-up {
+        font-size: 2.1875rem;
+      }
+    }
+  }
+
+  &__footer--top {
+    flex: 0 1 25rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 4.25rem;
+      font-weight: 600;
+      line-height: .9;
+      max-width: 28ch;
+      @include for-hands-up {
+        font-size: 4.6875rem;
+      }
+    }
+  }
+
+  &__footer--bottom {
+    font-family: $theme__font--navigation;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @include for-palm-up {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #footer-widget-5 {
+      @include for-hands-up {
+        margin-right: $space__5;
+      }
+    }
+
+    p,
+    a {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding-bottom: .75rem;
+      padding-top: .75rem;
+      text-transform: initial;
+      @include for-lap-up {
+        margin-left: $space__2;
+        margin-right: $space__2;
+      }
+
+      &:not(:last-child) {
+        margin-right: $space__2;
+      }
+    }
+  }
+}

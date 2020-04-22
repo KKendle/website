@@ -1,0 +1,166 @@
+// @import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700&display=swap');
+
+.page-template-template-styleguide {
+  // $styleguide__font: 'Heebo', sans-serif;
+  $styleguide__font: $theme__font--body;
+  $styleguide__color: $theme__text--body;
+
+  #content {
+    overflow: visible;
+    @include for-lap-up {
+      // resetting to default
+      padding-top: $vr__default;
+      padding-top: var(--vr__default);
+    }
+  }
+
+  ._section {
+    margin-bottom: 3.75rem;
+  }
+
+  .l-section__color-palette,
+  .l-section__typography,
+  .l-section__iconography,
+  .l-section__buttons,
+  .l-section__input-fields,
+  .l-section__miscellaneous {
+    border-bottom: 1px solid #707070;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .l-section__color-palette,
+  .l-section__buttons {
+    padding-top: 0;
+  }
+
+  .l-section__iconography {
+    border-bottom: 0;
+  }
+
+  .c-styleguideFont {
+    color: $styleguide__color;
+    font-family: $styleguide__font;
+
+    &.c-link--section {
+      font-weight: 500;
+    }
+
+    &--section {
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  h1.c-styleguideFont {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  h2.c-styleguideFont {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  // 'labels' for what each thing is
+  .c-styleguide__descriptor {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  .c-styleguide__margin--tiny {
+    margin-bottom: .5rem;
+  }
+
+  // sticky parent element
+  // add height and overflow auto to have it scroll
+  .site-content {
+    padding: $space__5;
+    @include for-hands-up {
+      display: flex;
+      margin: auto;
+      max-width: 100%;
+      width: 86.5rem;
+    }
+  }
+
+  .l-sticky--top {
+    @include for-hands-up {
+      align-self: flex-start;
+      // height: auto;
+      flex: 1 1 200px;
+      position: sticky;
+      top: 30px;
+    }
+  }
+
+  // table of contents
+  .l-section__toc {
+    min-width: 200px;
+    @include for-hands-until {
+      margin-bottom: $space__7;
+      margin-bottom: var(--space__7);
+    }
+
+    .c-styleguide__logo {
+      display: inline-block;
+      margin-bottom: 1rem;
+
+      &:focus {
+        box-shadow: 0 .315rem .625rem rgba($theme__text--body, .3);
+      }
+
+      img {
+        width: 273px; // @1x size
+      }
+    }
+  }
+
+  .c-styleguideList {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    &__item {
+      margin-bottom: .5rem;
+      max-width: 100%;
+    }
+  }
+
+  .c-copy__intro {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: initial;
+  }
+
+  .c-styleguideLink {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &--group {
+      font-weight: 600;
+    }
+  }
+
+  .l-section__mainContent {
+    flex: 2 1 400px;
+    overflow: hidden;
+    @include for-hands-up() {
+      margin-top: 5rem;
+      padding-left: 1rem;
+    }
+
+    .l-row__container {
+      @include for-hands-up() {
+        padding: 0 $space__5;
+      }
+    }
+  }
+}

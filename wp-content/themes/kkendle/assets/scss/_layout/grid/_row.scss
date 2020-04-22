@@ -1,0 +1,24 @@
+/// Used to create rows of elements. Default is full-width. Most common useage is `.l-row__container` for default content block size. `.l-row__container--large` can be used for either a larger default content block size or unique content that stretches outside the regular container size.
+///
+/// Place inside Sections, on their own elements.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-row {
+  $self: &;
+  $grid__maxContentWidth: 68.125rem; // 1090px
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  &__container {
+    max-width: $grid__maxContentWidth;
+    max-width: var(--grid__contentWidth--max, $grid__maxContentWidth);
+  }
+
+  &--full {
+    max-width: none;
+  }
+}

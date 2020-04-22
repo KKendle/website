@@ -1,0 +1,27 @@
+// STYLES FOR STYLEGUIDE ONLY
+.page-template-template-styleguide {
+
+  .l-section__iconography {
+
+    .c-styleguideList {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .c-styleguideList__item {
+      text-align: center;
+      width: 128px;
+
+      p {
+        font-family: $theme__font--body;
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    .c-icon {
+      width: 128px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/// Background component styles. Full width background with optional pattern.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-background {
+
+  &__green {
+    background-color: $green-1;
+  }
+}

@@ -1,0 +1,3003 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Common - v3.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Common - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Common setup</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Common - 3.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="accessibility"><a href="#accessibility">accessibility</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="accessibility-css"><a href="#accessibility-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="accessibility" data-name=".screen-reader-text" data-type="css"><a href="#accessibility-css-.screen-reader-text">.screen-reader-text</a></li><li class="sidebar__item sassdoc__item" data-group="accessibility" data-name=".skip-to-content" data-type="css"><a href="#accessibility-css-.skip-to-content">.skip-to-content</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="base"><a href="#base">base</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="base-mixin"><a href="#base-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-wrist-until" data-type="mixin"><a href="#base-mixin-for-wrist-until">for-wrist-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-wrist-up" data-type="mixin"><a href="#base-mixin-for-wrist-up">for-wrist-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-palm-until" data-type="mixin"><a href="#base-mixin-for-palm-until">for-palm-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-palm-only" data-type="mixin"><a href="#base-mixin-for-palm-only">for-palm-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-palm-up" data-type="mixin"><a href="#base-mixin-for-palm-up">for-palm-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-hands-until" data-type="mixin"><a href="#base-mixin-for-hands-until">for-hands-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-hands-only" data-type="mixin"><a href="#base-mixin-for-hands-only">for-hands-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-hands-up" data-type="mixin"><a href="#base-mixin-for-hands-up">for-hands-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-ipad-until" data-type="mixin"><a href="#base-mixin-for-ipad-until">for-ipad-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-ipad-only" data-type="mixin"><a href="#base-mixin-for-ipad-only">for-ipad-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-ipad-up" data-type="mixin"><a href="#base-mixin-for-ipad-up">for-ipad-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-handsWide-until" data-type="mixin"><a href="#base-mixin-for-handsWide-until">for-handsWide-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-handsWide-only" data-type="mixin"><a href="#base-mixin-for-handsWide-only">for-handsWide-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-handsWide-up" data-type="mixin"><a href="#base-mixin-for-handsWide-up">for-handsWide-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-1k-until" data-type="mixin"><a href="#base-mixin-for-1k-until">for-1k-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-1k-only" data-type="mixin"><a href="#base-mixin-for-1k-only">for-1k-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-1k-up" data-type="mixin"><a href="#base-mixin-for-1k-up">for-1k-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-lap-until" data-type="mixin"><a href="#base-mixin-for-lap-until">for-lap-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-lap-only" data-type="mixin"><a href="#base-mixin-for-lap-only">for-lap-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-lap-up" data-type="mixin"><a href="#base-mixin-for-lap-up">for-lap-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-desk-until" data-type="mixin"><a href="#base-mixin-for-desk-until">for-desk-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-desk-only" data-type="mixin"><a href="#base-mixin-for-desk-only">for-desk-only</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-desk-up" data-type="mixin"><a href="#base-mixin-for-desk-up">for-desk-up</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-wall-until" data-type="mixin"><a href="#base-mixin-for-wall-until">for-wall-until</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="for-wall-up" data-type="mixin"><a href="#base-mixin-for-wall-up">for-wall-up</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="base-variable"><a href="#base-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="base" data-name="black-1" data-type="variable"><a href="#base-variable-black-1">black-1</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="source-serif-pro" data-type="variable"><a href="#base-variable-source-serif-pro">source-serif-pro</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="base-css"><a href="#base-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea" data-type="css"><a href="#base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea">h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, button, a, label, input, textarea</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget" data-type="css"><a href="#base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget">h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, button, article, .widget</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+h2,
+h3,
+h4,
+h5,
+h6" data-type="css"><a href="#base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6">h1, h2, h3, h4, h5, h6</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h1,
+.h1" data-type="css"><a href="#base-css-h1,
+.h1">h1, .h1</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h2,
+.h2" data-type="css"><a href="#base-css-h2,
+.h2">h2, .h2</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h3,
+.h3" data-type="css"><a href="#base-css-h3,
+.h3">h3, .h3</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h4,
+.h4" data-type="css"><a href="#base-css-h4,
+.h4">h4, .h4</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h5,
+.h5" data-type="css"><a href="#base-css-h5,
+.h5">h5, .h5</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="h6,
+.h6" data-type="css"><a href="#base-css-h6,
+.h6">h6, .h6</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="a" data-type="css"><a href="#base-css-a">a</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="ul,
+ol,
+p" data-type="css"><a href="#base-css-ul,
+ol,
+p">ul, ol, p</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="ul,
+ol" data-type="css"><a href="#base-css-ul,
+ol">ul, ol</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="p" data-type="css"><a href="#base-css-p">p</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="img" data-type="css"><a href="#base-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="blockquote" data-type="css"><a href="#base-css-blockquote">blockquote</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="address" data-type="css"><a href="#base-css-address">address</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="table" data-type="css"><a href="#base-css-table">table</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="components"><a href="#components">components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="components-css"><a href="#components-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="components" data-name="button,
+input[type=&#39;submit&#39;]" data-type="css"><a href="#components-css-button,
+input[type=&#39;submit&#39;]">button, input[type=&#39;submit&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name="[data-js=&#39;anchor&#39;]" data-type="css"><a href="#components-css-[data-js=&#39;anchor&#39;]">[data-js=&#39;anchor&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-background" data-type="css"><a href="#components-css-.c-background">.c-background</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-basic" data-type="css"><a href="#components-css-.c-basic">.c-basic</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name="[aria-label=&#39;breadcrumbs&#39;]" data-type="css"><a href="#components-css-[aria-label=&#39;breadcrumbs&#39;]">[aria-label=&#39;breadcrumbs&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-button" data-type="css"><a href="#components-css-.c-button">.c-button</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".wp-block-button__link" data-type="css"><a href="#components-css-.wp-block-button__link">.wp-block-button__link</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-link" data-type="css"><a href="#components-css-.c-link">.c-link</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-list" data-type="css"><a href="#components-css-.c-list">.c-list</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-widget" data-type="css"><a href="#components-css-.c-widget">.c-widget</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-z-index" data-type="css"><a href="#components-css-.c-z-index">.c-z-index</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".searchandfilter" data-type="css"><a href="#components-css-.searchandfilter">.searchandfilter</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-hamburger" data-type="css"><a href="#components-css-.c-hamburger">.c-hamburger</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="form"><a href="#form">form</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="form-css"><a href="#form-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-checkbox" data-type="css"><a href="#form-css-.c-checkbox">.c-checkbox</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-input__field" data-type="css"><a href="#form-css-.c-input__field">.c-input__field</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".gform_body" data-type="css"><a href="#form-css-.gform_body">.gform_body</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".validation_error,
+.validation_message" data-type="css"><a href="#form-css-.validation_error,
+.validation_message">.validation_error, .validation_message</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".validation_error" data-type="css"><a href="#form-css-.validation_error">.validation_error</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-form,
+.gform_wrapper" data-type="css"><a href="#form-css-.c-form,
+.gform_wrapper">.c-form, .gform_wrapper</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-search" data-type="css"><a href="#form-css-.c-search">.c-search</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-css"><a href="#layout-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-column" data-type="css"><a href="#layout-css-.l-column">.l-column</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-flex" data-type="css"><a href="#layout-css-.l-flex">.l-flex</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-gutter" data-type="css"><a href="#layout-css-.l-gutter">.l-gutter</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-margin" data-type="css"><a href="#layout-css-.l-margin">.l-margin</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-padding" data-type="css"><a href="#layout-css-.l-padding">.l-padding</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-row" data-type="css"><a href="#layout-css-.l-row">.l-row</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-section" data-type="css"><a href="#layout-css-.l-section">.l-section</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-squeeze" data-type="css"><a href="#layout-css-.l-squeeze">.l-squeeze</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-squish" data-type="css"><a href="#layout-css-.l-squish">.l-squish</a></li><li class="sidebar__item sassdoc__item" data-group="layout" data-name=".l-stack" data-type="css"><a href="#layout-css-.l-stack">.l-stack</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="page"><a href="#page">page</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="page-css"><a href="#page-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="page" data-name=".search-results" data-type="css"><a href="#page-css-.search-results">.search-results</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="site footer"><a href="#site footer">site footer</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="site footer-css"><a href="#site footer-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="site footer" data-name=".site-footer" data-type="css"><a href="#site footer-css-.site-footer">.site-footer</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="site header"><a href="#site header">site header</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="site header-css"><a href="#site header-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="site header" data-name=".site-header" data-type="css"><a href="#site header-css-.site-header">.site-header</a></li><li class="sidebar__item sassdoc__item" data-group="site header" data-name=".c-siteBranding" data-type="css"><a href="#site header-css-.c-siteBranding">.c-siteBranding</a></li><li class="sidebar__item sassdoc__item" data-group="site header" data-name=".c-navigation__full" data-type="css"><a href="#site header-css-.c-navigation__full">.c-navigation__full</a></li><li class="sidebar__item sassdoc__item" data-group="site header" data-name=".c-navigation__misc" data-type="css"><a href="#site header-css-.c-navigation__misc">.c-navigation__misc</a></li><li class="sidebar__item sassdoc__item" data-group="site header" data-name=".c-navigation" data-type="css"><a href="#site header-css-.c-navigation">.c-navigation</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="accessibility"><div class="container">accessibility</div></h1><section class="main__sub-section" id="accessibility-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="accessibility-css-.screen-reader-text"><h3 class="item__heading"><a class="item__name" href="#css-.screen-reader-text">.screen-reader-text</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+  &amp;:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+}</code>" data-collapsed=".screen-reader-text { ... }"><code>.screen-reader-text { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Text meant only for screen readers.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="accessibility-css-.skip-to-content"><h3 class="item__heading"><a class="item__name" href="#css-.skip-to-content">.skip-to-content</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.skip-to-content {
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+  position: absolute;
+
+  &amp;:focus {
+    clip: initial;
+    opacity: 1;
+    position: static;
+  }
+}</code>" data-collapsed=".skip-to-content { ... }"><code>.skip-to-content { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Link to skip the nav and go to the main content. Hidden unless tabbed to.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="base"><div class="container">base</div></h1><section class="main__sub-section" id="base-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="base-mixin-for-wrist-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-wrist-until">for-wrist-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-wrist-until() { 
+  // 149px
+  @media (max-width: $bp__wrist--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-wrist-until() { ... }"><code>@mixin for-wrist-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until wrist. For screen sizes on the wrist.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Watch</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-wrist-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-wrist-up">for-wrist-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-wrist-up() { 
+  // 150px
+  @media (min-width: $bp__wrist--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-wrist-up() { ... }"><code>@mixin for-wrist-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for wrist and larger. For screen sizes on the wrist.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Watch</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-palm-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-palm-until">for-palm-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-palm-until() { 
+  // 319px
+  @media (max-width: $bp__palm--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-palm-until() { ... }"><code>@mixin for-palm-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until palm. For screen sizes carried in one hand.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Phones</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-palm-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-palm-only">for-palm-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-palm-only() { 
+  // 320px and 599px
+  @media (min-width: $bp__palm--up) and (max-width: $bp__hands--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-palm-only() { ... }"><code>@mixin for-palm-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for palm only. For screen sizes carried in one hand.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Phones</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-palm-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-palm-up">for-palm-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-palm-up() { 
+  // 320px
+  @media (min-width: $bp__palm--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-palm-up() { ... }"><code>@mixin for-palm-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for palm and up. For screen sizes carried in one hand.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Phones</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-hands-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-hands-until">for-hands-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-hands-until() { 
+  // 599px
+  @media (max-width: $bp__hands--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-hands-until() { ... }"><code>@mixin for-hands-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until hands. For screen sizes carried in two hands. More Phone Landscape focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Possibly Phones turned side-ways
+&#39;Phablets&#39; (Large phones, small tablets)
+Tablets (Kindle, iPad, various Android options)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-hands-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-hands-only">for-hands-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-hands-only() { 
+  // 600px and 849px
+  @media (min-width: $bp__hands--up) and (max-width: $bp__handsWide--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-hands-only() { ... }"><code>@mixin for-hands-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for hands only. For screen sizes carried in two hands. More Phone Landscape focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Possibly Phones turned side-ways
+&#39;Phablets&#39; (Large phones, small tablets)
+Tablets (Kindle, iPad, various Android options)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-hands-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-hands-up">for-hands-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-hands-up() { 
+  // 600px
+  @media (min-width: $bp__hands--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-hands-up() { ... }"><code>@mixin for-hands-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for hands and up. For screen sizes carried in two hands. More Phone Landscape focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Possibly Phones turned side-ways
+&#39;Phablets&#39; (Large phones, small tablets)
+Tablets (Kindle, iPad, various Android options)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-ipad-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-ipad-until">for-ipad-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-ipad-until() { 
+  // 749px
+  @media (max-width: $bp__ipad--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-ipad-until() { ... }"><code>@mixin for-ipad-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for iPad only.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>iPad</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-ipad-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-ipad-only">for-ipad-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-ipad-only() { 
+  // 600px and 749px
+  @media (min-width: $bp__hands--up) and (max-width: $bp__ipad--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-ipad-only() { ... }"><code>@mixin for-ipad-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for iPad only.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>iPad</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-ipad-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-ipad-up">for-ipad-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-ipad-up() { 
+  // 750px
+  @media (min-width: $bp__ipad--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-ipad-up() { ... }"><code>@mixin for-ipad-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for iPad and up.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>iPad</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-handsWide-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-handsWide-until">for-handsWide-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-handsWide-until() { 
+  // 849px
+  @media (max-width: $bp__handsWide--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-handsWide-until() { ... }"><code>@mixin for-handsWide-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until hands wide. For screen sizes carried in two hands. More Tablet focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Tablets (Kindle, iPad, various Android options)
+Possibly Phones turned side-ways</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-handsWide-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-handsWide-only">for-handsWide-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-handsWide-only() { 
+  // 850px and 1000px
+  @media (min-width: $bp__handsWide--up) and (max-width: $bp__1k--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-handsWide-only() { ... }"><code>@mixin for-handsWide-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for hands wide only. For screen sizes carried in two hands. More Tablet focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Tablets (Kindle, iPad, various Android options)
+Possibly Phones turned side-ways</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-handsWide-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-handsWide-up">for-handsWide-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-handsWide-up() { 
+  // 850px
+  @media (min-width: $bp__handsWide--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-handsWide-up() { ... }"><code>@mixin for-handsWide-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for hands wide and up. For screen sizes carried in two hands. More Tablet focused.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Tablets (Kindle, iPad, various Android options)
+Possibly Phones turned side-ways</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-1k-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-1k-until">for-1k-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-1k-until() { 
+  // 999px
+  @media (max-width: $bp__1k--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-1k-until() { ... }"><code>@mixin for-1k-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for 1000px only.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>1000px</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-1k-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-1k-only">for-1k-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-1k-only() { 
+  // 1000px and 1199px
+  @media (min-width: $bp__handsWide--up) and (max-width: $bp__1k--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-1k-only() { ... }"><code>@mixin for-1k-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for 1000px only.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>1000px</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-1k-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-1k-up">for-1k-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-1k-up() { 
+  // 1000px
+  @media (min-width: $bp__1k--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-1k-up() { ... }"><code>@mixin for-1k-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for 1000px and up.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>1000px</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-lap-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-lap-until">for-lap-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-lap-until() { 
+  // 1199px
+  @media (max-width: $bp__lap--until) { // 1199px
+    @content;
+  }
+ }" data-collapsed="@mixin for-lap-until() { ... }"><code>@mixin for-lap-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until lap. For screen sizes found on Laps. Can be touch-screens.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Laptops (13&quot;, 15&quot;, 17&quot;, etc.)
+Windows Surface Laptops</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-lap-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-lap-only">for-lap-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-lap-only() { 
+  // 1200px and 1599px
+  @media (min-width: $bp__lap--up) and (max-width: $bp__desk--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-lap-only() { ... }"><code>@mixin for-lap-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for lap only. For screen sizes found on Laps. Can be touch-screens.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Laptops (13&quot;, 15&quot;, 17&quot;, etc.)
+Windows Surface Laptops</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-lap-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-lap-up">for-lap-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-lap-up() { 
+  // 1200px
+  @media (min-width: $bp__lap--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-lap-up() { ... }"><code>@mixin for-lap-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for lap and up. For screen sizes found on Laps. Can be touch-screens.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Laptops (13&quot;, 15&quot;, 17&quot;, etc.)
+Windows Surface Laptops</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-desk-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-desk-until">for-desk-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-desk-until() { 
+  // 1599px
+  @media (max-width: $bp__desk--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-desk-until() { ... }"><code>@mixin for-desk-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until desk. For screen sizes found on Desks.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Monitors (20&quot;, 24&quot;, 27&quot;, etc.)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-desk-only"><h3 class="item__heading"><a class="item__name" href="#mixin-for-desk-only">for-desk-only</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-desk-only() { 
+  // 1600px and 1919px
+  @media (min-width: $bp__desk--up) and (max-width: $bp__wall--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-desk-only() { ... }"><code>@mixin for-desk-only() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for desk only. For screen sizes found on Desks.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Monitors (20&quot;, 24&quot;, 27&quot;, etc.)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-desk-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-desk-up">for-desk-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-desk-up() { 
+  // 1600px
+  @media (min-width: $bp__desk--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-desk-up() { ... }"><code>@mixin for-desk-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for desk and up. For screen sizes found on Desks.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Monitors (20&quot;, 24&quot;, 27&quot;, etc.)</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-wall-until"><h3 class="item__heading"><a class="item__name" href="#mixin-for-wall-until">for-wall-until</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-wall-until() { 
+  // 1919px
+  @media (max-width: $bp__wall--until) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-wall-until() { ... }"><code>@mixin for-wall-until() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint until wall. For screen sizes found on Walls.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>TV</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-mixin-for-wall-up"><h3 class="item__heading"><a class="item__name" href="#mixin-for-wall-up">for-wall-up</a></h3><span class="item__since">Since v1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin for-wall-up() { 
+  // 1920px
+  @media (min-width: $bp__wall--up) {
+    @content;
+  }
+ }" data-collapsed="@mixin for-wall-up() { ... }"><code>@mixin for-wall-up() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breakpoint for wall and up. For screen sizes found on Walls.</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>TV</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section><section class="main__sub-section" id="base-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="base-variable-black-1"><h3 class="item__heading"><a class="item__name" href="#variable-black-1">black-1</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$black-1: #1c1c1c;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$black-1</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #2b2b2b; color: #fff;">#2b2b2b</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$orange-1</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #ff763b; color: #000;">#ff763b</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$blue-1</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #5ecbeb; color: #000;">#5ecbeb</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$yellow-1</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Color</code></td><td data-label="default"><code class="color-preview--inline" style="background: #ffd34d; color: #000;">#ffd34d</code></td></tr></tbody></table></section><section class="main__item container item" id="base-variable-source-serif-pro"><h3 class="item__heading"><a class="item__name" href="#variable-source-serif-pro">source-serif-pro</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$source-serif-pro: &#39;Source Serif Pro&#39;, serif;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Map structure</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">Map key </span>Name</th><th scope="col"><span class="visually-hidden">Map key </span>Description</th><th scope="col"><span class="visually-hidden">Map key </span>Type</th><th scope="col"><span class="visually-hidden">Map key </span>Value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>neue-haas-grotesk-display</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Typeface</code></td><td data-label="default"><code>neue-haas-grotesk-display</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>Neue Haas Grotesk Display Pro 45 Light
+font-family: neue-haas-grotesk-display, sans-serif;
+font-weight: 400;
+font-style: normal;</code></pre></div></section></section><section class="main__sub-section" id="base-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea">h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, button, a, label, input, textarea</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea {
+  color: $theme__text--body;
+  color: var(--theme__text--body, $theme__text--body);
+  line-height: $baseline;
+  line-height: var(--baseline);
+}</code>" data-collapsed="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea { ... }"><code>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default color and font for common elements. Specifics/overrides later on.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget">h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, button, article, .widget</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget {
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+  margin-top: 0;
+}</code>" data-collapsed="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget { ... }"><code>h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default spacing for common elements. Specifics/overrides later on.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h1,
+h2,
+h3,
+h4,
+h5,
+h6"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+h2,
+h3,
+h4,
+h5,
+h6">h1, h2, h3, h4, h5, h6</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $theme__text--body;
+  color: var(--theme__text--body, $theme__text--body);
+  font-family: $theme__font--heading;
+  font-size: var(--fontSize);
+  font-weight: 400;
+  line-height: $theme__lineHeight--heading;
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+}</code>" data-collapsed="h1,
+h2,
+h3,
+h4,
+h5,
+h6 { ... }"><code>h1,
+h2,
+h3,
+h4,
+h5,
+h6 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default color and spacing.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h1,
+.h1"><h3 class="item__heading"><a class="item__name" href="#css-h1,
+.h1">h1, .h1</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
+.h1 {
+  font-size: 4.25rem;
+  font-weight: 600;
+  max-width: 28ch;
+  @include for-hands-up {
+    font-size: 4.6875rem;
+  }
+}</code>" data-collapsed="h1,
+.h1 { ... }"><code>h1,
+.h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 1 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h2,
+.h2"><h3 class="item__heading"><a class="item__name" href="#css-h2,
+.h2">h2, .h2</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h2,
+.h2 {
+  font-size: 2.98125rem;
+  font-weight: 600;
+  max-width: 26ch;
+  @include for-hands-up {
+    font-size: 3.3125rem;
+  }
+}</code>" data-collapsed="h2,
+.h2 { ... }"><code>h2,
+.h2 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 2 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h3,
+.h3"><h3 class="item__heading"><a class="item__name" href="#css-h3,
+.h3">h3, .h3</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3,
+.h3 {
+  font-size: 2.19375rem;
+  font-weight: 400;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.4375rem;
+  }
+}</code>" data-collapsed="h3,
+.h3 { ... }"><code>h3,
+.h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 3 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h4,
+.h4"><h3 class="item__heading"><a class="item__name" href="#css-h4,
+.h4">h4, .h4</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h4,
+.h4 {
+  font-size: 2.19375rem;
+  font-weight: 400;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.4375rem;
+  }
+}</code>" data-collapsed="h4,
+.h4 { ... }"><code>h4,
+.h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 4 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h5,
+.h5"><h3 class="item__heading"><a class="item__name" href="#css-h5,
+.h5">h5, .h5</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h5,
+.h5 {
+  font-size: 2.025rem;
+  font-weight: 600;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.25rem;
+  }
+}</code>" data-collapsed="h5,
+.h5 { ... }"><code>h5,
+.h5 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 5 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h6,
+.h6"><h3 class="item__heading"><a class="item__name" href="#css-h6,
+.h6">h6, .h6</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h6,
+.h6 {
+  font-size: 1.63125rem;
+  font-weight: 600;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 1.8125rem;
+  }
+}</code>" data-collapsed="h6,
+.h6 { ... }"><code>h6,
+.h6 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 6 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-a"><h3 class="item__heading"><a class="item__name" href="#css-a">a</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
+  color: $theme__text--link;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: underline;
+
+  &amp;._focus,
+  &amp;:hover,
+  &amp;:focus {
+    color: $theme__text--linkHover;
+  }
+
+  &amp;--noStyle {
+    text-decoration: none;
+  }
+}</code>" data-collapsed="a { ... }"><code>a { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default link styles</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-ul,
+ol,
+p"><h3 class="item__heading"><a class="item__name" href="#css-ul,
+ol,
+p">ul, ol, p</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>ul,
+ol,
+p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}</code>" data-collapsed="ul,
+ol,
+p { ... }"><code>ul,
+ol,
+p { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Style lists and paragraphs the same size and weight.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-ul,
+ol"><h3 class="item__heading"><a class="item__name" href="#css-ul,
+ol">ul, ol</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>ul,
+ol {
+  list-style-type: disc;
+  margin-bottom: $space__4;
+  margin-bottom: var(--space__4);
+  padding: 0 0 0 40px;
+
+  &amp;:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    max-width: $theme__readingLength--default;
+
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+}</code>" data-collapsed="ul,
+ol { ... }"><code>ul,
+ol { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default list styling.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-p"><h3 class="item__heading"><a class="item__name" href="#css-p">p</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>p {
+  max-width: $theme__readingLength--default;
+
+  &amp;:last-child {
+    margin-bottom: 0;
+  }
+}</code>" data-collapsed="p { ... }"><code>p { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default color and spacing. Remove <code>margin-bottom</code> on <code>:last-child</code> so the Sections can all have even spacing between them.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-img"><h3 class="item__heading"><a class="item__name" href="#css-img">img</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default image styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-blockquote"><h3 class="item__heading"><a class="item__name" href="#css-blockquote">blockquote</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>blockquote {
+  background: $theme__color--white;
+  border: 0;
+  font-family: $theme__font--body;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 1.5rem;
+  padding: $space__default $space__default $space__default $space__4;
+  max-width: 28.125rem;
+  position: relative;
+  @include for-hands-up {
+    font-size: 1.8125rem;
+    padding: $space__6 $space__6 $space__6 $space__7;
+  }
+
+  &amp;::before,
+  &amp;::after {
+    content: &#39;&#39;;
+    background-image: url(&#39;../images/icons/icon-quote-double.png&#39;);
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    @include for-hands-up {
+      background-size: 3.175rem;
+    }
+  }
+
+  &amp;::before {
+    left: 0;
+    top: -$space__2;
+    @include for-hands-up {
+      left: $space__4;
+      top: $space__2;
+    }
+  }
+
+  &amp;::after {
+    bottom: -$space__2;
+    right: 0;
+    transform: rotate(180deg);
+    @include for-hands-up {
+      bottom: $space__2;
+      right: $space__4;
+    }
+  }
+
+  p {
+    font-size: 1.8125rem;
+    font-weight: 600;
+    line-height: 1;
+    max-width: 34ch;
+    @include for-hands-up {
+      font-size: 1.8125rem;
+    }
+  }
+}</code>" data-collapsed="blockquote { ... }"><code>blockquote { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default blockquote styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-address"><h3 class="item__heading"><a class="item__name" href="#css-address">address</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>address {
+  font-style: normal;
+}</code>" data-collapsed="address { ... }"><code>address { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default address styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-table"><h3 class="item__heading"><a class="item__name" href="#css-table">table</a></h3><span class="item__since">Since v1.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>table {
+  border-collapse: collapse;
+  width: 100%;
+
+  caption {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: $space__2;
+    padding-left: $space__2;
+    padding-right: $space__2;
+    text-align: left;
+  }
+
+  thead {
+
+    th {
+      padding-bottom: $space__default;
+      padding-top: $space__default;
+    }
+
+    tr {
+      border-bottom: 0;
+    }
+  }
+
+  tr {
+    border-bottom: $space__1 solid $theme__text--body;
+
+    &amp;:first-of-type {
+      border-top: $space__1 solid $theme__text--body;
+    }
+  }
+
+  th,
+  td {
+    display: block;
+    @include for-ipad-up {
+      display: table-cell;
+      padding: $space__5 $space__2;
+    }
+  }
+
+  td {
+    @include for-ipad-up {
+      vertical-align: top;
+    }
+
+    &amp;:first-child {
+      padding-top: $space__5;
+    }
+
+    &amp;:last-child {
+      padding-bottom: $space__5;
+    }
+  }
+}</code>" data-collapsed="table { ... }"><code>table { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Tables</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="components"><div class="container">components</div></h1><section class="main__sub-section" id="components-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="components-css-button,
+input[type=&#39;submit&#39;]"><h3 class="item__heading"><a class="item__name" href="#css-button,
+input[type=&#39;submit&#39;]">button, input[type=&#39;submit&#39;]</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>button,
+input[type=&#39;submit&#39;] {
+  background-color: $theme__color--white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.0526;
+  min-height: 44px;
+  min-width: 44px;
+  padding: .6275rem $space__default .6275rem 0;
+  position: relative;
+  text-align: left;
+  text-decoration: underline;
+  text-transform: lowercase;
+
+  &amp;._focus,
+  &amp;:hover,
+  &amp;:focus {
+    color: $theme__text--linkHover;
+
+    .c-sprite__buttonArrow--sm {
+      background-image: url(&#39;../images/button-arrow-blue.png&#39;);
+    }
+  }
+
+  &amp;::first-letter {
+    text-transform: uppercase;
+  }
+
+  &amp;:not(:last-of-type) {
+    margin-bottom: $space__4;
+    margin-right: $space__default;
+  }
+}</code>" data-collapsed="button,
+input[type=&#39;submit&#39;] { ... }"><code>button,
+input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base button styles.</p><p>Use a <code>&lt;button&gt;</code> if it is performing an action, such as submitting a form. Use a <code>&lt;a&gt;</code> if it is directing the user to another page.</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>* CTA&#39;s in hero images often go to another page. Therefore they should be links, `&lt;a&gt;`.
+* A Modal close icon often closes the modal. Therefore it should be a `&lt;button&gt;`.</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-[data-js=&#39;anchor&#39;]"><h3 class="item__heading"><a class="item__name" href="#css-[data-js=&#39;anchor&#39;]">[data-js=&#39;anchor&#39;]</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>[data-js=&#39;anchor&#39;] {
+  content: &#39;&#39;;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}</code>" data-collapsed="[data-js=&#39;anchor&#39;] { ... }"><code>[data-js=&#39;anchor&#39;] { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>For in-page anchors. <code>Top</code> adjustment is for height of sticky nav</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-background"><h3 class="item__heading"><a class="item__name" href="#css-.c-background">.c-background</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-background {
+  &amp;__green {
+    background-color: $green-1;
+  }
+}</code>" data-collapsed=".c-background { ... }"><code>.c-background { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Background component styles. Full width background with optional pattern.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-basic"><h3 class="item__heading"><a class="item__name" href="#css-.c-basic">.c-basic</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-basic {
+  $self: &amp;;
+
+  &amp;__copy {
+    margin-bottom: $space__4;
+
+    h3 {
+      font-size: 1.63125rem;
+      font-weight: 600;
+      max-width: 40ch;
+      @include for-hands-up {
+        font-size: 1.8125rem;
+      }
+    }
+  }
+
+  &amp;--donate {
+    $color-length: calc(100% - 40px);
+
+    #{$self}__title,
+    #{$self}__copy,
+    h2,
+    h3,
+    p {
+      color: $theme__color--white;
+    }
+
+    .c-button {
+
+      &amp;:hover,
+      &amp;:focus {
+        background: linear-gradient(to right, $theme__color--white $color-length, rgba($theme__color--white, .0001) $color-length);
+        color: $theme__text--body;
+      }
+    }
+
+    .l-column {
+      @include for-ipad-up {
+        flex: 1 1 50%;
+      }
+
+      &amp;:nth-child(1) {
+        @include for-ipad-up {
+          padding-right: $space__4;
+        }
+        @include for-1k-up {
+          flex: 1 1 40%;
+        }
+      }
+
+      &amp;:nth-child(2) {
+        @include for-1k-up {
+          flex: 1 1 60%;
+        }
+      }
+    }
+
+    #{$self}__img {
+      display: none;
+      @include for-ipad-up {
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &amp;--noBottom {
+    padding-bottom: 0;
+
+    #{$self}__copy {
+
+      &amp;:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}</code>" data-collapsed=".c-basic { ... }"><code>.c-basic { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Basic component. Copy and image</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-[aria-label=&#39;breadcrumbs&#39;]"><h3 class="item__heading"><a class="item__name" href="#css-[aria-label=&#39;breadcrumbs&#39;]">[aria-label=&#39;breadcrumbs&#39;]</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>[aria-label=&#39;breadcrumbs&#39;] {
+  li * {
+    font-weight: 600;
+  }
+
+  [aria-current] a {
+    text-decoration: none;
+
+    &amp;:hover,
+    &amp;:focus {
+      text-decoration: underline;
+    }
+  }
+}</code>" data-collapsed="[aria-label=&#39;breadcrumbs&#39;] { ... }"><code>[aria-label=&#39;breadcrumbs&#39;] { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breacrumb styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-button"><h3 class="item__heading"><a class="item__name" href="#css-.c-button">.c-button</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-button {
+  $self: &amp;;
+  $color-length: calc(100% - 40px);
+  // background-color: $theme__color--white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  padding: .6275rem $space__4 .6275rem 0;
+  position: relative;
+
+  &amp;:not(:last-of-type) {
+    margin-bottom: $space__4;
+    margin-right: $space__default;
+  }
+
+  &amp;__link {
+    max-width: none;
+    text-transform: lowercase;
+    width: auto;
+  }
+
+  &amp;__1,
+  &amp;__2 {
+    transition: all 150ms ease-in-out;
+  }
+
+  &amp;__1 {
+    background: linear-gradient(to right, $theme__button--1 $color-length, rgba($theme__color--white, .0001) $color-length);
+    padding-left: $space__default;
+
+    &amp;:hover,
+    &amp;:focus,
+    &amp;._hover,
+    &amp;._focus {
+      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
+      color: $theme__color--white;
+    }
+  }
+
+  &amp;__2 {
+    background: linear-gradient(to right, $theme__button--2 $color-length, rgba($theme__color--white, .0001) $color-length);
+    padding-left: $space__default;
+
+    &amp;:hover,
+    &amp;:focus,
+    &amp;._hover,
+    &amp;._focus {
+      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
+      color: $theme__color--white;
+    }
+  }
+
+  &amp;--noStyle {
+    background-color: transparent;
+    border: 0;
+    color: $theme__text--body;
+    margin: 0;
+    min-width: initial;
+    padding: 0;
+  }
+
+  //------------
+  // FORM
+  //------------
+  // Gravity Forms
+  &amp;.gform_button {
+    margin-bottom: 0;
+  }
+}</code>" data-collapsed=".c-button { ... }"><code>.c-button { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Button component styles. Contains Primary and Secondary styles.</p><p>The &quot;--noStyle&quot; is primarily used for modal &#39;X&#39; or similar where it should have the accessible functionality of a button, but removes the base styles. These styles can be used on links or buttons.</p><p>Use a <code>&lt;button&gt;</code> if it is performing an action, such as submitting a form. Use a <code>&lt;a&gt;</code> if it is directing the user to another page.</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>* CTA&#39;s in hero images often go to another page. Therefore they should be links, `&lt;a&gt;`.
+* A Modal close icon often closes the modal. Therefore it should be a `&lt;button&gt;`.</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.wp-block-button__link"><h3 class="item__heading"><a class="item__name" href="#css-.wp-block-button__link">.wp-block-button__link</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.wp-block-button__link {
+  $color-length: calc(100% - 40px);
+}</code>" data-collapsed=".wp-block-button__link { ... }"><code>.wp-block-button__link { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Style WP Block Button</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-link"><h3 class="item__heading"><a class="item__name" href="#css-.c-link">.c-link</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-link {
+  $self: &amp;;
+
+  &amp;--noStyle {
+    text-decoration: none;
+
+    &amp;:hover,
+    &amp;:focus {
+      text-decoration: underline;
+    }
+  }
+}</code>" data-collapsed=".c-link { ... }"><code>.c-link { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base link styles.</p><p>Use a <code>&lt;button&gt;</code> if it is performing an action, such as submitting a form. Use a <code>&lt;a&gt;</code> if it is directing the user to another page.</p><ul><li>CTA&#39;s in hero images often go to another page. Therefore they should be links, <code>&lt;a&gt;</code>.</li><li>A Modal close icon often closes the modal. Therefore it should be a button, <code>&lt;button&gt;</code>.</li></ul></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-list"><h3 class="item__heading"><a class="item__name" href="#css-.c-list">.c-list</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-list {
+  $self: &amp;;
+
+  &amp;__columns {
+
+    &amp;--2 {
+      columns: 2 13.75rem;
+    }
+  }
+
+  &amp;--noStyle {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &amp;--inline {
+    display: flex;
+
+    #{$self}__item {
+
+      &amp;:not(:last-child) {
+        margin-right: $space__2;
+        margin-right: var(--space__2);
+      }
+    }
+  }
+}</code>" data-collapsed=".c-list { ... }"><code>.c-list { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>List component styles. Keeps default browser styles for when using a list in a content block.</p><p><code>c-list--noStyle</code> removes default browser styles.</p><p><code>c-list--inline</code> puts the <code>&lt;li&gt;</code>&#39;s inline.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-widget"><h3 class="item__heading"><a class="item__name" href="#css-.c-widget">.c-widget</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-widget {
+  $self: &amp;;
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+  width: 100%;
+  @include for-hands-up {
+    flex: 1 1 9.375rem;
+    width: auto;
+  }
+
+  .menu,
+  .sub-menu {
+    list-style: none;
+    padding-left: 0;
+
+    .menu-item {
+      margin-bottom: .25rem;
+
+      a {
+        color: $theme__text--body;
+        display: inline-block;
+        font-family: $theme__font--navigation;
+        font-weight: 600;
+        min-height: 44px;
+        min-width: 44px;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+
+        &amp;:hover,
+        &amp;:focus {
+          color: $theme__text--body;
+        }
+      }
+
+      &amp;.menu-item-has-children {
+        margin-bottom: 1rem;
+
+        li {
+
+          a {
+            color: $theme__text--body;
+            font-family: $theme__font--navigation;
+            font-size: 1rem;
+            font-weight: 400;
+            padding-bottom: .25rem;
+            padding-top: .25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .c-address {
+
+    a {
+      text-decoration: underline;
+    }
+
+    &amp;__title {
+      @include for-hands-until {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &amp;__footer--1 {
+    flex: 1 1 15.625rem;
+    position: relative;
+    z-index: 1;
+
+    .widget {
+      @include for-palm-up {
+        display: inline-block;
+        margin-right: $space__6;
+        width: auto;
+      }
+    }
+  }
+
+  &amp;__footer--2 {
+
+    p:first-of-type {
+      margin-bottom: .25rem;
+      @include for-palm-up {
+        font-size: 2.1875rem;
+      }
+    }
+  }
+
+  &amp;__footer--top {
+    flex: 0 1 25rem;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 4.25rem;
+      font-weight: 600;
+      line-height: .9;
+      max-width: 28ch;
+      @include for-hands-up {
+        font-size: 4.6875rem;
+      }
+    }
+  }
+
+  &amp;__footer--bottom {
+    font-family: $theme__font--navigation;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    @include for-palm-up {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #footer-widget-5 {
+      @include for-hands-up {
+        margin-right: $space__5;
+      }
+    }
+
+    p,
+    a {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding-bottom: .75rem;
+      padding-top: .75rem;
+      text-transform: initial;
+      @include for-lap-up {
+        margin-left: $space__2;
+        margin-right: $space__2;
+      }
+
+      &amp;:not(:last-child) {
+        margin-right: $space__2;
+      }
+    }
+  }
+}</code>" data-collapsed=".c-widget { ... }"><code>.c-widget { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Footer widget basic styles</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-z-index"><h3 class="item__heading"><a class="item__name" href="#css-.c-z-index">.c-z-index</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-z-index {
+  &amp;__small {
+    z-index: 5;
+  }
+
+  &amp;__medium {
+    z-index: 10;
+  }
+
+  &amp;__site-header {
+    z-index: 100;
+  }
+}</code>" data-collapsed=".c-z-index { ... }"><code>.c-z-index { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Attempt at z-index name-spacing</p></div><h3 class="item__sub-heading">TODO's</h3><ul class="list-unstyled"><li><ul><li>assign better names</li></ul></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.searchandfilter"><h3 class="item__heading"><a class="item__name" href="#css-.searchandfilter">.searchandfilter</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.searchandfilter {
+  flex: 1;
+
+  // main list of form elements
+  &gt; ul {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0; // removing base ul padding style
+
+    &gt; li {
+      border-bottom: .125rem solid $theme__text--body;
+      flex: 1 1 100%;
+      margin-bottom: $space__2;
+      margin-right: $space__default;
+      max-width: 100%;
+      padding: 0;
+      @include for-ipad-up {
+        flex: 1 1 45%;
+      }
+      @include for-1k-up {
+        flex: auto;
+        width: 23%;
+      }
+
+      &amp;.sf-field-reset {
+        border-bottom: 0;
+        max-width: none;
+        flex: 1 1 100%;
+
+        .search-filter-reset {
+          color: $yellow-1;
+          display: inline-block;
+          min-height: 44px;
+          min-width: 44px;
+          padding: .75rem;
+          text-transform: initial;
+          width: auto;
+
+          &amp;:focus {
+            outline: .125rem solid rgba($yellow-1, 1);
+            outline-offset: .125rem;
+          }
+        }
+      }
+
+      &amp;.sf-field-taxonomy-event_parent_activity {
+        flex: 1 1 100%;
+        position: relative;
+
+        h4 {
+          cursor: pointer;
+          display: inline-block;
+          text-decoration: underline;
+        }
+
+        input {
+          left: .625rem;
+          position: absolute;
+          top: .625rem;
+          width: auto;
+
+          &amp;:focus {
+
+            + label {
+              outline: .125rem solid rgba($yellow-1, 1);
+              outline-offset: .125rem;
+            }
+          }
+        }
+
+        ul {
+          padding-left: 0;
+
+          label {
+            cursor: pointer;
+            // padding-left: 1.875rem; // checkbox showing
+            padding-left: .75rem; // checkbox hidden
+            padding-right: .75rem; // checkbox hidden
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    select {
+      border: .125rem solid currentColor;
+      border-bottom: 0;
+      color: $theme__text--body;
+      font-family: $theme__font--body;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: $baseline;
+      margin: 0;
+    }
+
+    h4 {
+      background: $theme__text--body;
+      color: $white-1;
+      font-family: $theme__font--body;
+      font-size: 1.1875rem;
+      font-weight: 600;
+      padding: .5rem .75rem 0;
+    }
+
+    [data-sf-field-input-type=&#39;multiselect&#39;] {
+
+      [data-combobox] {
+        background-image: none;
+      }
+
+      h4 {
+        background: $theme__text--body;
+      }
+
+      &gt; label {
+        position: relative;
+
+        // &amp;::after {
+        //   color: $theme__text--body;
+        //   content: &#39;+&#39;;
+        //   font-size: 2rem;
+        //   position: absolute;
+        //   right: .75rem;
+        //   top: 0;
+        // }
+      }
+
+      // the filters
+      .chosen-choices {
+        background: $theme__color--white;
+        border: .125rem solid currentColor;
+        border-bottom: 0;
+        // padding: .44rem 1.5rem .44rem .44rem;
+        // padding: 0 1.5rem 0 0;
+        padding: 0;
+
+        // a selected filter
+        // .search-choice {
+        //   display: none;
+        // }
+
+        .search-choice {
+          align-items: center;
+          background: initial;
+          border: 0;
+          box-shadow: none;
+          color: $theme__text--body;
+          display: flex;
+          font-family: $theme__font--body;
+          font-size: 1rem;
+          line-height: $baseline;
+          margin: 0;
+          padding: 0 0 0 $space__2;
+          text-transform: initial;
+
+          .search-choice-close {
+            background: none !important;
+            bottom: unset;
+            font-weight: 700;
+            left: unset;
+            min-height: 40px;
+            min-width: 44px;
+            position: relative;
+            right: unset;
+            text-align: center;
+            top: unset;
+
+            &amp;::after {
+              bottom: 0;
+              color: $theme__text--body;
+              content: &#39;X&#39;;
+              display: block;
+              font-size: 1.125rem;
+              left: 0;
+              position: relative;
+              right: 0;
+              top: 20px;
+              transform: translateY(-12px);
+            }
+          }
+        }
+
+        // input field for filter
+        .search-field {
+          padding: .44rem 0 .44rem .44rem;
+
+          input {
+            color: $theme__text--body;
+            font-family: $theme__font--body;
+            font-size: 1.125rem;
+            line-height: $baseline;
+            padding: 0 0 0 .25rem;
+          }
+        }
+      }
+
+      // multi-select options
+      .chosen-results {
+        color: $theme__text--body;
+
+        .active-result {
+          color: $theme__text--body;
+          font-family: $theme__font--body;
+          font-size: 1.125rem;
+          line-height: $baseline;
+          text-transform: initial;
+        }
+
+        .highlighted {
+          background-color: $blue-1;
+          color: $white-1;
+        }
+      }
+
+      // filter field is active/focused
+      .chosen-container-active {
+
+        .chosen-choices {
+          box-shadow: none;
+          // focus state
+          border-color: $theme__focus--input;
+        }
+      }
+
+      // whenever filter is NOT active
+      // add filter label overtop
+      // .chosen-container:not(.chosen-container-active) {
+
+      //   &amp;::before {
+      //     background: $white-1;
+      //     color: currentColor;
+      //     content: attr(title);
+      //     font-family: $nunito-sans;
+      //     font-size: 1.125rem;
+      //     left: .125rem;
+      //     padding: .5rem .75rem;
+      //     pointer-events: none;
+      //     position: absolute;
+      //     text-transform: initial;
+      //     top: .125rem;
+      //     z-index: 10;
+      //   }
+      // }
+    }
+  }
+}</code>" data-collapsed=".searchandfilter { ... }"><code>.searchandfilter { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Search and Filter plugin. Styling the filter form.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-hamburger"><h3 class="item__heading"><a class="item__name" href="#css-.c-hamburger">.c-hamburger</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-hamburger {
+  $self: &amp;;
+  $hamburger__tilt: 45deg;
+  border: 0;
+  color: $theme__text--body;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: .75em $space__2;
+
+  &amp;:hover,
+  &amp;:focus {
+    background-color: transparent;
+
+    #{$self}__line {
+      background-color: $theme__button--2;
+    }
+  }
+
+  &amp;__line {
+    background-color: $theme__text--body;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: opacity .1s, transform .1s;
+    width: $space__5;
+
+    &amp;:nth-child(2) {
+      margin: .375rem 0;
+      width: 75%;
+    }
+  }
+
+  &amp;.is-active {
+
+    #{$self}__line {
+
+      &amp;:nth-child(1) {
+        transform: translateY(.6666rem) rotate($hamburger__tilt);
+      }
+
+      &amp;:nth-child(2) {
+        opacity: 0;
+      }
+
+      &amp;:nth-child(3) {
+        transform: translateY(-.5555rem) rotate(-$hamburger__tilt);
+      }
+    }
+  }
+}</code>" data-collapsed=".c-hamburger { ... }"><code>.c-hamburger { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hamburger button, specifically the 3 lines.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="form"><div class="container">form</div></h1><section class="main__sub-section" id="form-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="form-css-.c-checkbox"><h3 class="item__heading"><a class="item__name" href="#css-.c-checkbox">.c-checkbox</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-checkbox {
+  $box-size: 1em;
+  $box-label-spacing: .375em;
+  margin-bottom: .325em;
+
+  label {
+    display: inline-block;
+    padding-left: #{$box-size + $box-label-spacing};
+    position: relative;
+
+    &amp;::before,
+    &amp;::after {
+      content: &#39;&#39;;
+      position: absolute;
+    }
+
+    &amp;::before {
+      border: .0625em solid;
+      display: inline-block;
+      height: $box-size;
+      left: 0;
+      top: .1875em;
+      width: $box-size;
+    }
+
+    &amp;::after {
+      border-bottom: .125em solid;
+      border-left: .125em solid;
+      display: inline-block;
+      height: .375em;
+      left: .25em;
+      top: .4375em;
+      transform: rotate(-45deg);
+      width: .5625em;
+    }
+  }
+
+  [type=&#39;checkbox&#39;] {
+    opacity: 0;
+    position: absolute;
+
+    + label::after {
+      content: none;
+    }
+
+    &amp;:checked + label::after {
+      content: &#39;&#39;;
+    }
+
+    &amp;:focus + label::before {
+      // outline: rgb(59, 153, 252) auto 5px;
+      outline: .125rem dashed $theme__focus;
+      outline-offset: .125rem;
+    }
+  }
+}</code>" data-collapsed=".c-checkbox { ... }"><code>.c-checkbox { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Checkbox component styles.</p></div><h3 class="item__sub-heading">TODO's</h3><ul class="list-unstyled"><li><ul><li>style based off Gravity Forms plugin</li></ul></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.c-input__field"><h3 class="item__heading"><a class="item__name" href="#css-.c-input__field">.c-input__field</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-input__field {
+  margin-bottom: $space__4;
+  margin-bottom: var(--space__4);
+
+  &amp;.gfield {
+    margin-bottom: $space__4;
+    margin-bottom: var(--space__4);
+
+    input {
+      border: .125em solid $theme__input--border;
+      border: .125em solid var(--theme__input--border, $theme__input--border);
+      color: $theme__text--body;
+      color: var(--theme__text--body, $theme__text--body);
+      font-family: $theme__font--button;
+      font-family: var(--button__font, $theme__font--button);
+      font-weight: 500;
+      padding: $space__3 $space__2;
+      padding: var(--space__3) var(--space__2);
+    }
+
+    .gfield_label {
+      color: $theme__text--body;
+      color: var(--theme__text--body, $theme__text--body);
+      display: inline-block;
+      margin-bottom: $space__1;
+      margin-bottom: var(--space__1);
+    }
+
+    // ERRORS
+    &amp;.gfield_error {
+
+      .ginput_container {
+        margin-bottom: $space__1;
+        margin-bottom: var(--space__1);
+      }
+    }
+  }
+}</code>" data-collapsed=".c-input__field { ... }"><code>.c-input__field { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Input field component styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.gform_body"><h3 class="item__heading"><a class="item__name" href="#css-.gform_body">.gform_body</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.gform_body {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gfield {
+    margin-bottom: 1.5rem;
+
+    &amp;.gform_hidden {
+      flex: 0;
+      margin-bottom: 0;
+    }
+
+    &amp;.c-field--full {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+
+    &amp;.c-field__checkbox,
+    &amp;.c-field__radio {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+
+  .gfield_description {
+    font-size: 1rem;
+  }
+}</code>" data-collapsed=".gform_body { ... }"><code>.gform_body { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Remove <code>&lt;ul&gt;</code> browser styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.validation_error,
+.validation_message"><h3 class="item__heading"><a class="item__name" href="#css-.validation_error,
+.validation_message">.validation_error, .validation_message</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.validation_error,
+.validation_message {
+  background-color: $theme__form--errorMessage;
+  color: $theme__text--body;
+  padding: .5rem;
+}</code>" data-collapsed=".validation_error,
+.validation_message { ... }"><code>.validation_error,
+.validation_message { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Gravity Form error and message style.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.validation_error"><h3 class="item__heading"><a class="item__name" href="#css-.validation_error">.validation_error</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.validation_error {
+  margin-bottom: $vr__05;
+
+  p {
+    color: inherit;
+  }
+}</code>" data-collapsed=".validation_error { ... }"><code>.validation_error { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Gravity Form error message spacing.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.c-form,
+.gform_wrapper"><h3 class="item__heading"><a class="item__name" href="#css-.c-form,
+.gform_wrapper">.c-form, .gform_wrapper</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-form,
+.gform_wrapper {
+  .gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gfield_label,
+  .gfield_description {
+    line-height: 1.1875;
+    margin-bottom: .125rem;
+  }
+
+  .gfield {
+    display: flex;
+    flex: 1 1 13.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: $space__default;
+
+    &amp;.c-form__field {
+
+      &amp;--small {
+        @include for-hands-up {
+          flex: 1 1 25%;
+        }
+      }
+
+      &amp;--fullWidth {
+        flex: 1 1 100%;
+        max-width: none;
+      }
+    }
+
+    &amp;_required {
+      display: none;
+    }
+  }
+
+  .validation_error,
+  .validation_message {
+    background-color: $theme__form--errorMessage;
+    color: $theme__text--body;
+  }
+
+  &amp;--black {
+    background-color: $black-1;
+
+    .gfield_label,
+    .gfield_description {
+      color: $theme__color--white;
+    }
+
+    .gfield {
+
+      input,
+      textarea,
+      select {
+        border-color: transparent;
+
+        &amp;:focus {
+          border-color: $theme__focus--inputOnBG;
+        }
+      }
+    }
+
+    .validation_error,
+    .validation_message {
+      background-color: $theme__form--errorMessage;
+      color: $theme__text--body;
+    }
+
+    [type=&#39;submit&#39;] {
+
+      .c-sprite__buttonArrow {
+        background-image: url(&#39;../images/button-arrow-white.png&#39;);
+      }
+    }
+  }
+}</code>" data-collapsed=".c-form,
+.gform_wrapper { ... }"><code>.c-form,
+.gform_wrapper { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Form styling.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="form-css-.c-search"><h3 class="item__heading"><a class="item__name" href="#css-.c-search">.c-search</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-search {
+  $self: &amp;;
+
+  &amp;__input,
+  &amp;__submit {
+    margin-bottom: $vr__05;
+    margin-bottom: var(--vr__05);
+    @include for-palm-up {
+      margin-bottom: 0;
+    }
+  }
+
+  &amp;__input {
+    font-family: $theme__font--button;
+    font-family: var(--button__font, $theme__font--button);
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: $vr__1;
+    margin-bottom: var(--vr__1);
+    margin-right: $space__1;
+    margin-right: var(--space__1);
+    width: 100%;
+  }
+
+  &amp;__label {
+    display: inline-block;
+  }
+
+  &amp;__icon {
+    cursor: pointer;
+    height: 100%;
+    max-height: 2.3333rem;
+    max-width: 2.3333rem;
+    padding: $space__2;
+    padding: var(--space__2);
+    stroke: currentColor;
+    width: 100%;
+  }
+
+  &amp;__innerLabel {
+    display: block;
+    margin-bottom: $vr__05;
+    margin-bottom: var(--vr__05);
+    width: 100%;
+  }
+
+  &amp;__submit {
+    $button__text: $theme__color--white;
+    background-color: $theme__button--1;
+    background-color: var(--theme__button--1, $theme__button--1);
+    color: $button__text;
+    color: var(--button__text, $button__text);
+    margin-bottom: $vr__1;
+    margin-bottom: var(--vr__1);
+
+    &amp;:focus {
+      outline-color: transparent;
+    }
+  }
+}</code>" data-collapsed=".c-search { ... }"><code>.c-search { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Search form</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="layout-css-.l-column"><h3 class="item__heading"><a class="item__name" href="#css-.l-column">.l-column</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-column {
+  width: 100%;
+
+  &amp;--1-2 {
+    width: 50%;
+
+    &amp;\@hands-up {
+      @include for-hands-up {
+        width: 50%;
+      }
+    }
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        width: 50%;
+      }
+    }
+
+    &amp;\@lap-up {
+      @include for-lap-up {
+        width: 50%;
+      }
+    }
+  }
+
+  &amp;--1-3 {
+    width: 33.3333%;
+
+    &amp;\@hands-up {
+      @include for-hands-up {
+        width: 33.3333%;
+      }
+    }
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        width: 33.3333%;
+      }
+    }
+
+    &amp;\@lap-up {
+      @include for-lap-up {
+        width: 33.3333%;
+      }
+    }
+  }
+
+  &amp;--2-3 {
+    width: 66.6666%;
+
+    &amp;\@hands-up {
+      @include for-hands-up {
+        width: 66.6666%;
+      }
+    }
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        width: 66.6666%;
+      }
+    }
+
+    &amp;\@lap-up {
+      @include for-lap-up {
+        width: 66.6666%;
+      }
+    }
+  }
+
+  &amp;--1-4 {
+    width: 25%;
+
+    &amp;\@hands-up {
+      @include for-hands-up {
+        width: 25%;
+      }
+    }
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        width: 25%;
+      }
+    }
+
+    &amp;\@lap-up {
+      @include for-lap-up {
+        width: 25%;
+      }
+    }
+  }
+
+  &amp;--3-4 {
+    width: 75%;
+
+    &amp;\@hands-up {
+      @include for-hands-up {
+        width: 75%;
+      }
+    }
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        width: 75%;
+      }
+    }
+
+    &amp;\@lap-up {
+      @include for-lap-up {
+        width: 75%;
+      }
+    }
+  }
+}</code>" data-collapsed=".l-column { ... }"><code>.l-column { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Grid system. Modifiers indentify the width to take up in a column. Default width is 100%.</p><p>Place inside Rows, on their own element.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-flex"><h3 class="item__heading"><a class="item__name" href="#css-.l-flex">.l-flex</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-flex {
+  $self: &amp;;
+  display: flex;
+
+  &amp;\@handsWide {
+    @include for-ipad-up {
+      display: flex;
+    }
+  }
+
+  &amp;__wrap {
+    flex-wrap: wrap;
+  }
+
+  //------------
+  // FLEX VERTICAL
+  //------------
+  &amp;__top {
+    align-items: flex-start;
+  }
+
+  &amp;__middle {
+    align-items: center;
+  }
+
+  &amp;__bottom {
+    align-items: flex-end;
+  }
+
+  //------------
+  // FLEX HORIZONTAL
+  //------------
+  &amp;__center {
+    justify-content: center;
+  }
+
+  &amp;__end {
+    justify-content: flex-end;
+
+    &amp;\@handsWide {
+      @include for-ipad-up {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &amp;__around {
+    justify-content: space-around;
+  }
+
+  &amp;__between {
+    justify-content: space-between;
+  }
+
+  //------------
+  // FLEX DIRECTION
+  //------------
+  &amp;__column {
+    flex-direction: column;
+  }
+
+  //------------
+  // FLEX ORDER
+  //------------
+  &amp;__order--2 {
+    order: 2;
+
+    &amp;\@handsWide {
+      @include for-ipad-up {
+        order: 2;
+      }
+    }
+  }
+}</code>" data-collapsed=".l-flex { ... }"><code>.l-flex { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Flexbox styling. Align items horizontally and vertically.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-gutter"><h3 class="item__heading"><a class="item__name" href="#css-.l-gutter">.l-gutter</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-gutter {
+  &amp;__default {
+    padding-left: $gutter;
+    padding-left: var(--gutter);
+
+    &amp;\@handsWide {
+      @include for-ipad-up {
+        padding-left: $gutter;
+        padding-left: var(--gutter);
+      }
+    }
+
+    &amp;\@lap {
+      @include for-lap-up {
+        padding-left: $gutter;
+        padding-left: var(--gutter);
+      }
+    }
+  }
+}</code>" data-collapsed=".l-gutter { ... }"><code>.l-gutter { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Optional gutters for the Grid System. Allows for consistent spacing when splitting up columns on larger viewports.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-margin"><h3 class="item__heading"><a class="item__name" href="#css-.l-margin">.l-margin</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-margin {
+  &amp;__bottom {
+
+    &amp;--none {
+      margin-bottom: 0;
+    }
+  }
+
+  &amp;__center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &amp;__left {
+
+    &amp;--none {
+      margin-left: 0;
+    }
+
+    &amp;--auto {
+      margin-left: auto;
+    }
+  }
+}</code>" data-collapsed=".l-margin { ... }"><code>.l-margin { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Margin styles for aligning content along the x-axis. Left and Right spacing amounts are useful for offsets.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-padding"><h3 class="item__heading"><a class="item__name" href="#css-.l-padding">.l-padding</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-padding {
+  $self: &amp;;
+
+  &amp;__top {
+
+    &amp;--small {
+      padding-top: $space__2;
+    }
+
+    &amp;--medium {
+      padding-top: $space__3;
+    }
+
+    &amp;--large {
+      padding-top: $space__5;
+    }
+  }
+
+  &amp;__bottom {
+
+    &amp;--none {
+      padding-bottom: 0;
+    }
+
+    &amp;--medium {
+      padding-bottom: $space__3;
+    }
+
+    &amp;--large {
+      padding-bottom: $space__5;
+    }
+  }
+
+  &amp;__left {
+
+    &amp;--default {
+      padding-left: $space__3;
+    }
+
+    &amp;--medium {
+      padding-left: $space__3;
+    }
+
+    &amp;--large {
+      padding-left: $space__5;
+    }
+  }
+
+  &amp;__right {
+
+    &amp;--default {
+      padding-right: $space__3;
+    }
+
+    &amp;--small {
+      padding-right: $space__3;
+    }
+
+    &amp;--medium {
+      padding-right: $space__5;
+    }
+
+    &amp;--large {
+      padding-right: $space__5;
+    }
+  }
+}</code>" data-collapsed=".l-padding { ... }"><code>.l-padding { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Padding spacing around elements.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-row"><h3 class="item__heading"><a class="item__name" href="#css-.l-row">.l-row</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-row {
+  $self: &amp;;
+  $grid__maxContentWidth: 68.125rem; // 1090px
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  &amp;__container {
+    max-width: $grid__maxContentWidth;
+    max-width: var(--grid__contentWidth--max, $grid__maxContentWidth);
+  }
+
+  &amp;--full {
+    max-width: none;
+  }
+}</code>" data-collapsed=".l-row { ... }"><code>.l-row { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Used to create rows of elements. Default is full-width. Most common useage is <code>.l-row__container</code> for default content block size. <code>.l-row__container--large</code> can be used for either a larger default content block size or unique content that stretches outside the regular container size.</p><p>Place inside Sections, on their own elements.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-section"><h3 class="item__heading"><a class="item__name" href="#css-.l-section">.l-section</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-section {
+  $sectionSpace: $space__7;
+  --sectionSpace: var(--space__7);
+  display: flex;
+  justify-content: center;
+  margin-bottom: $sectionSpace;
+  margin-bottom: var(--sectionSpace);
+
+  &amp;--flush {
+    margin-bottom: 0;
+  }
+}</code>" data-collapsed=".l-section { ... }"><code>.l-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default grouping class and provides base spacing between WP Blocks. <code>.l-section--flush</code> is for unique cases where content blocks require less than the default spacing.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squeeze"><h3 class="item__heading"><a class="item__name" href="#css-.l-squeeze">.l-squeeze</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squeeze {
+  padding-left: $space__4;
+  padding-right: $space__4;
+
+  &amp;--large {
+    padding-left: $space__4;
+    padding-right: $space__4;
+    @include for-hands-up {
+      padding-left: $space__6;
+      padding-right: $space__6;
+    }
+  }
+}</code>" data-collapsed=".l-squeeze { ... }"><code>.l-squeeze { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default margins for content blocks. Nearly always used unless element(s) need to be flush with the sides.</p><p>Place inside Columns, on their own element.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squish"><h3 class="item__heading"><a class="item__name" href="#css-.l-squish">.l-squish</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squish {
+  padding-bottom: $space__4;
+  padding-top: $space__4;
+
+  &amp;--large {
+    padding-bottom: $space__6;
+    padding-top: $space__6;
+
+    &amp;\@handsWide-up {
+      @include for-ipad-up {
+        padding-bottom: $space__6;
+        padding-top: $space__6;
+      }
+    }
+  }
+
+  &amp;--xl {
+    padding-bottom: $space__8;
+    padding-top: $space__8;
+  }
+}</code>" data-collapsed=".l-squish { ... }"><code>.l-squish { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default padding (top &amp; bottom) for section blocks. Nearly always used unless element(s) need to be flush with the top and bottom.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-stack"><h3 class="item__heading"><a class="item__name" href="#css-.l-stack">.l-stack</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-stack {
+  &amp;__default {
+    margin: $space__4;
+    margin: var(--space__4);
+  }
+
+  &amp;__lg {
+    margin: $space__5;
+    margin: var(--space__5);
+  }
+
+  &amp;__xlg {
+    margin: $space__6;
+    margin: var(--space__6);
+  }
+
+  &amp;__xl {
+    margin: $space__7;
+    margin: var(--space__7);
+  }
+
+  &amp;__none {
+    margin: 0;
+
+    &amp;\@handsWide {
+      @include for-ipad-up {
+        margin: 0;
+      }
+    }
+  }
+}</code>" data-collapsed=".l-stack { ... }"><code>.l-stack { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Consisten spacing for elements to use <code>margin-bottom</code> and clear other <code>margin</code> values.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="page"><div class="container">page</div></h1><section class="main__sub-section" id="page-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="page-css-.search-results"><h3 class="item__heading"><a class="item__name" href="#css-.search-results">.search-results</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.search-results {
+  .entry-meta,
+  .entry-summary,
+  .entry-footer {
+    margin-bottom: $vr__default;
+    margin-bottom: var(--vr__default);
+  }
+}</code>" data-collapsed=".search-results { ... }"><code>.search-results { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Search results page</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="site footer"><div class="container">site footer</div></h1><section class="main__sub-section" id="site footer-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="site footer-css-.site-footer"><h3 class="item__heading"><a class="item__name" href="#css-.site-footer">.site-footer</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.site-footer {
+  background-color: $theme__footer--primary;
+  color: $theme__footer--text;
+  padding-bottom: $space__6;
+  padding-top: 5rem;
+  position: relative;
+  @include for-hands-up {
+    text-align: left;
+  }
+  @include for-lap-up {
+    padding-top: 9.375rem;
+  }
+
+  p {
+    color: $theme__footer--text;
+    max-width: 66ch;
+  }
+
+  a {
+    color: $theme__text--body;
+    text-decoration: none;
+
+    &amp;:hover,
+    &amp;:focus {
+      color: $theme__text--body;
+      text-decoration: underline;
+    }
+  }
+
+  .c-widgetContainer {
+
+    &amp;__main {
+      justify-content: space-between;
+      @include for-lap-up {
+        position: relative;
+      }
+    }
+
+    &amp;__primary {
+
+      .l-row {
+        display: block;
+      }
+    }
+
+    &amp;__secondary {
+      display: flex;
+      flex-wrap: wrap;
+      @include for-lap-until {
+        order: -1;
+        margin-bottom: $space__5;
+        flex: 1 1 100%;
+      }
+
+      address {
+        margin-bottom: .5rem;
+
+        p {
+          line-height: 1.1;
+          @include for-palm-up {
+            font-size: 1.75rem;
+            margin-bottom: $space__4;
+          }
+        }
+      }
+
+      div p {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  // footer contact info
+  .footer-contact-info {
+    margin-right: $space__5;
+  }
+
+  // footer social links
+  .c-socialLinks {
+    display: initial;
+    margin-top: $space__4;
+    width: 100%;
+    @include for-hands-up {
+      margin-top: 0;
+      width: auto;
+    }
+
+    &amp;__link {
+      color: $theme__footer--text;
+      height: auto;
+      margin-bottom: $space__1;
+      padding: 0;
+      width: auto;
+      @include for-hands-up {
+        font-size: 1.75rem;
+      }
+
+      &amp;:hover,
+      &amp;:focus {
+        cursor: pointer;
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-divider {
+    height: 4.375rem;
+    margin: $space__4 auto $space__6;
+    width: 100%;
+
+    &amp;__arrow {
+      background-color: $black-1;
+      height: 4.375rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      @include for-lap-up {
+        background-color: initial;
+        background-image: url(&#39;../images/footer-divider-arrow.png&#39;);
+        background-position: 0 40%;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 100%;
+        left: -420px;
+        top: -145px;
+      }
+
+      &amp;::before {
+        background: $black-1;
+        content: &#39;&#39;;
+        height: 67.25px;
+        left: -100%;
+        position: absolute;
+        top: 174.625px;
+        width: 100%;
+      }
+    }
+  }
+}</code>" data-collapsed=".site-footer { ... }"><code>.site-footer { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site footer styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="site header"><div class="container">site header</div></h1><section class="main__sub-section" id="site header-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="site header-css-.site-header"><h3 class="item__heading"><a class="item__name" href="#css-.site-header">.site-header</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.site-header {
+  padding: 0 .9375rem;
+  position: sticky;
+  top: 0;
+  z-index: $zIndex__nav;
+  @media (max-height: calc(230px * 2.5)) {
+    position: static;
+  }
+
+  .u-wrapper__header {
+    align-items: center;
+    background-color: $theme__color--white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    @include for-palm-up {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &amp;::before {
+      background: $theme__color--white;
+      bottom: 0;
+      content: &#39;&#39;;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: $zIndex__nav--close;
+      @include for-lap-up {
+        display: none;
+      }
+    }
+  }
+
+  .c-search {
+
+    &amp;__form {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &amp;__label {
+      @include for-palm-until {
+        margin-bottom: $vr__05;
+        margin-bottom: var(--vr__05);
+      }
+      @include for-palm-up {
+        align-items: center;
+        display: flex;
+      }
+
+      // for showing the search label
+      // span {
+      //   @include for-lap-until {
+      //     clip-path: none;
+      //     clip: unset;
+      //     display: block;
+      //     height: auto;
+      //     margin: 0;
+      //     overflow: visible;
+      //     position: static !important;
+      //     width: auto;
+      //   }
+      // }
+    }
+
+    &amp;__input,
+    &amp;__submit {
+      @include for-palm-up {
+        margin-bottom: 0;
+      }
+    }
+
+    &amp;__input {
+
+      &amp;:not(:focus) {
+        border-width: 0;
+        padding: 0;
+        width: 0;
+      }
+    }
+
+    &amp;__submit {
+      height: 1px;
+      padding: 0;
+      width: 1px;
+    }
+  }
+
+  .c-socialLinks__link {
+    @include for-palm-up {
+      margin-bottom: 0;
+    }
+  }
+}</code>" data-collapsed=".site-header { ... }"><code>.site-header { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site header styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-siteBranding"><h3 class="item__heading"><a class="item__name" href="#css-.c-siteBranding">.c-siteBranding</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-siteBranding {
+  flex: 1 1 100%;
+  margin-right: $space__3;
+  max-width: 17.25rem;
+  position: relative;
+  z-index: $zIndex__nav--close;
+
+  &amp;__link {
+    display: inline-block;
+    padding: $space__2 $space__4;
+    transition: box-shadow 150ms ease-in-out;
+
+    &amp;:focus {
+      box-shadow: 0 .315rem .625rem rgba($theme__text--body, .3);
+      outline-color: transparent;
+    }
+  }
+}</code>" data-collapsed=".c-siteBranding { ... }"><code>.c-siteBranding { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site Branding/Logo</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-navigation__full"><h3 class="item__heading"><a class="item__name" href="#css-.c-navigation__full">.c-navigation__full</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-navigation__full {
+  $self: &amp;;
+  display: flex;
+  flex-wrap: wrap;
+  @include for-lap-until {
+    background-color: $theme__header--secondary;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    overflow-y: auto;
+    padding-top: 100px;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transform: translate(37%, -37%) scale(.2);
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+    width: 100vw;
+    z-index: $zIndex__nav;
+  }
+  @include for-lap-up {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+
+  &amp;.is-active {
+    opacity: 1;
+    pointer-events: visible;
+    transform: translate(0) scale(1);
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .c-navigation {
+    flex: 1 1 100%;
+    padding: 0 1.25rem;
+    @include for-palm-up {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    @include for-lap-up {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &amp;__misc {
+      @include for-lap-up {
+        background-color: $theme__header--secondary;
+        flex: 0 auto;
+        padding-left: $space__4;
+      }
+    }
+
+    .menu-primary-container {
+      @include for-lap-up {
+        width: 100%;
+      }
+    }
+
+    .menu {
+      @include for-lap-up {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  // include home link if used
+  .menu-item-home,
+  .menu-item {
+    flex: 1 1 7.5rem;
+    margin-bottom: .5rem;
+    margin-bottom: var(--space__2);
+    @include for-lap-up {
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $theme__color--white;
+      display: inline-block;
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+      padding: .5rem 0;
+      text-decoration: none;
+      @include for-lap-up {
+        color: $theme__text--body;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        padding-bottom: .75rem;
+        padding-top: .75rem;
+        text-align: center;
+      }
+
+      &amp;:hover,
+      &amp;:focus {
+        text-decoration: none;
+
+        span {
+          position: relative;
+
+          &amp;::after {
+            background-color: $theme__button--2;
+            bottom: -.125rem;
+            content: &#39;&#39;;
+            height: .125rem;
+            left: 0;
+            right: 0;
+            position: absolute;
+            @include for-hands-up {
+              height: $space__1;
+            }
+            @include for-lap-up {
+              height: .125rem;
+            }
+          }
+        }
+      }
+    }
+
+    &amp;.menu-item-has-children {
+
+      a {
+        @include for-lap-up {
+          margin-right: 0;
+        }
+      }
+
+      &gt; a {
+        @include for-lap-up {
+          padding-left: 1.125rem;
+        }
+      }
+
+      .c-button__toggle {
+        font-size: 1.5rem;
+        @include for-hands-up {
+          font-size: 2rem;
+        }
+        @include for-lap-up {
+          font-size: 1.1875rem;
+        }
+
+        &amp;:hover,
+        &amp;:focus {
+
+          &amp;::before,
+          &amp;::after {
+            @include for-lap-until {
+              background-color: $theme__color--white;
+            }
+          }
+        }
+      }
+
+      &amp;.is-active {
+
+        .c-button__toggle {
+
+          &amp;:hover,
+          &amp;:focus {
+
+            &amp;::before,
+            &amp;::after {
+              @include for-lap-up {
+                background-color: $theme__color--white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    padding-bottom: $vr__default;
+    padding-bottom: var(--vr__default);
+
+    &amp;#navigation__secondary {
+      @include for-lap-until {
+        padding-bottom: $vr__4;
+      }
+    }
+
+    // &amp;:last-of-type {
+    //   @include for-lap-until {
+    //     padding-bottom: $vr__4;
+    //     padding-bottom: var(--vr__4);
+    //   }
+    // }
+  }
+
+  #navigation__primary {
+    @include for-lap-up {
+      order: 2;
+      width: 100%;
+    }
+
+    #menu__primary &gt; {
+
+      .menu-item,
+      .menu-item-home {
+        position: relative;
+      }
+    }
+
+    .menu-item a {
+      font-size: 1rem;
+      @include for-palm-up {
+        font-size: 1.4375rem;
+      }
+      @include for-lap-up {
+        font-size: 1rem;
+      }
+    }
+
+    .menu &gt; .menu-item {
+
+      &gt; a {
+        text-transform: initial;
+        font-size: 1.5rem;
+        @include for-palm-up {
+          font-size: 2.8125rem;
+        }
+        @include for-hands-up {
+          // font-size: 2.9375rem;
+          font-size: 4.6875rem;
+        }
+        @include for-lap-up {
+          font-size: 1.125rem;
+        }
+      }
+
+      &amp;.is-button {
+
+        &gt; a {
+          @include for-lap-up {
+            background-color: $theme__button--2;
+            border-bottom-right-radius: .375rem;
+            font-weight: 600;
+            margin: 0;
+            padding-left: $space__4;
+            padding-right: $space__4;
+          }
+
+          &amp;:hover,
+          &amp;:focus {
+
+            span {
+              position: relative;
+
+              &amp;::after {
+                @include for-lap-up {
+                  background-color: currentColor;
+                  bottom: -.125rem;
+                  content: &#39;&#39;;
+                  height: .125rem;
+                  left: 0;
+                  right: 0;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &amp;.is-active {
+
+        &gt; a {
+
+          span {
+            position: relative;
+
+            &amp;::after {
+              background-color: $theme__button--2;
+              bottom: -.125rem;
+              content: &#39;&#39;;
+              height: .125rem;
+              left: 0;
+              right: 0;
+              position: absolute;
+              @include for-hands-up {
+                height: $space__1;
+              }
+              @include for-lap-up {
+                height: .125rem;
+              }
+            }
+          }
+        }
+
+        a {
+          color: $theme__color--white;
+        }
+      }
+    }
+  }
+
+  #navigation__secondary {
+    background-color: $theme__header--secondary;
+    color: $theme__color--white;
+    margin-top: 2rem;
+    padding-right: .75rem;
+    @include for-lap-up {
+      flex: 1;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    #menu__secondary {
+      @include for-lap-until {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .menu-item {
+
+      a {
+        color: $theme__color--white;
+        font-size: 1.1875rem;
+        font-weight: 600;
+        letter-spacing: .0625rem;
+        text-decoration: underline;
+        @include for-lap-up {
+          font-size: .9375rem;
+          padding-left: $space__1;
+          padding-right: $space__1;
+          text-decoration: none;
+        }
+
+        &amp;:hover,
+        &amp;:focus {
+          text-decoration: none;
+
+          span {
+            position: relative;
+
+            &amp;::after {
+              content: none;
+              @include for-lap-up {
+                background-color: currentColor;
+                bottom: -.125rem;
+                content: &#39;&#39;;
+                height: .125rem;
+                left: 0;
+                right: 0;
+                position: absolute;
+              }
+            }
+          }
+        }
+      }
+
+      &amp;.current-page-item,
+      &amp;.current-menu-item {
+
+        &gt; a {
+          text-decoration: none;
+
+          span {
+
+            &amp;::after {
+              @include for-lap-until {
+                background-color: $orange-1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</code>" data-collapsed=".c-navigation__full { ... }"><code>.c-navigation__full { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Full (burger) site navigation. Secondary and Primary navigation items. This is specific to the burger navigation styles and not for the primary or secondary navigation styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-navigation__misc"><h3 class="item__heading"><a class="item__name" href="#css-.c-navigation__misc">.c-navigation__misc</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-navigation__misc {
+  $self: &amp;;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  order: -1;
+  @include for-lap-until {
+    margin-top: 1rem;
+  }
+  @include for-lap-up {
+    flex-wrap: nowrap;
+  }
+
+  .c-navigation__search {
+    margin: .5rem 0;
+    order: -1;
+    @include for-lap-up {
+      margin: 0;
+      order: 1;
+    }
+
+    .c-search__label {
+      color: $theme__color--white;
+      margin-bottom: 0;
+      @include for-lap-up {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 2.75rem;
+        min-width: 2.75rem;
+      }
+    }
+
+    .c-search__input {
+      margin-left: .5rem;
+      max-width: 12rem; // roughly 200px
+      padding-bottom: .25rem;
+      padding-top: .25rem;
+      transition: width 200ms;
+      width: 200px; // explicit width so it moves adjacent content smoothly
+      @include for-lap-up {
+        width: 0;
+
+        &amp;:focus {
+          width: 200px; // explicit width so it moves adjacent content smoothly
+        }
+      }
+
+      &amp;:focus {
+        border-color: $theme__focus--inputOnBG;
+      }
+    }
+  }
+
+  .c-navigation__social {
+    flex: 1 1 6.25rem;
+    margin-top: -.0625rem;
+  }
+
+  .c-search__form {
+    @include for-lap-up {
+      flex-wrap: nowrap;
+    }
+  }
+}</code>" data-collapsed=".c-navigation__misc { ... }"><code>.c-navigation__misc { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Additional navigation elements</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-navigation"><h3 class="item__heading"><a class="item__name" href="#css-.c-navigation">.c-navigation</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-navigation {
+  $lineLength: 100%;
+  $nav__font: $theme__font--navigation;
+  $nav__subMenu: $theme__header--primary;
+  $nav__text: $theme__text--body;
+
+  a {
+
+    &amp;:focus {
+      outline-color: transparent;
+    }
+  }
+
+  .menu-item-has-children {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &gt; a {
+      @include for-lap-up {
+        margin-right: 0;
+        padding-left: 1.25rem;
+      }
+    }
+
+    .sub-menu {
+      border-radius: 0 0 .375rem .375rem;
+      display: none;
+      position: relative;
+      width: 100%;
+      z-index: $zIndex--sm;
+
+      .menu-item {
+        width: 100%;
+
+        a {
+          font-weight: 500;
+          margin-left: 0;
+          margin-right: 0;
+
+          &amp;:hover,
+          &amp;:focus {
+            text-decoration: underline;
+
+            span::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // &amp;:hover,
+    // &amp;:focus,
+    &amp;.is-active {
+      @include for-lap-up {
+        background-color: $theme__text--body;
+        color: $theme__color--white;
+      }
+
+      .c-button__toggle {
+
+        &amp;:hover,
+        &amp;:focus {
+          color: $theme__color--white;
+        }
+      }
+
+      &gt; .sub-menu {
+        display: block;
+        @include for-lap-up {
+          background-color: $theme__text--body;
+          color: $theme__color--white;
+          left: 0;
+          max-width: 50vw;
+          padding: $space__1;
+          position: absolute;
+          text-align: center;
+          top: 100%;
+          width: 100%;
+        }
+
+        a {
+
+          &amp;:hover,
+          &amp;:focus {
+            text-decoration: underline;
+
+            span::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-item {
+
+    a {
+      box-shadow: none;
+      color: $nav__text;
+      color: var(--nav__text, $nav__text);
+      display: inline-block;
+      font-family: $nav__font;
+      font-weight: 600;
+      position: relative;
+      word-wrap: anywhere;
+
+      &amp;:hover,
+      &amp;:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &amp;.current_page_item,
+    &amp;.current_page_parent {
+
+      &gt; a {
+
+        span {
+          position: relative;
+
+          &amp;::after {
+            background-color: $theme__button--2;
+            bottom: -.125rem;
+            content: &#39;&#39;;
+            height: .125rem;
+            left: 0;
+            right: 0;
+            position: absolute;
+            @include for-lap-up {
+              background-color: currentColor;
+            }
+          }
+        }
+      }
+
+      .sub-menu {
+
+        .current_page_item {
+
+          a span {
+            text-decoration: underline;
+
+            &amp;::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-button--noStyle {
+
+    &amp;:hover,
+    &amp;:focus {
+      background-color: transparent;
+    }
+  }
+
+  // BUTTON IN SITE NAV
+  .is-button.secondary {
+    margin-top: 1.5rem;
+    @include for-lap-up {
+      margin-left: .5rem;
+      margin-top: 0;
+    }
+
+    a,
+    button {
+      $button__text: $theme__color--white;
+      background-color: $theme__button--2;
+      background-color: var(--theme__button--2, $theme__button--2);
+      border-color: $theme__button--2;
+      border-color: var(--button__border, $theme__button--2);
+      border-radius: 0;
+      border-style: solid;
+      border-width: .1111rem;
+      color: $button__text;
+      color: var(--button__text, $button__text);
+      cursor: pointer;
+      display: inline-block;
+      font-family: $theme__font--button;
+      font-family: var(--button__font, $theme__font--button);
+      font-weight: 500;
+      margin-bottom: 0;
+      padding: .55rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: border-radius 150ms linear;
+
+      &amp;:hover,
+      &amp;:focus {
+        background-color: $button__text;
+        border-radius: 2rem;
+        color: $theme__button--2;
+        color: var(--theme__button--2, $theme__button--2);
+        text-decoration: none;
+      }
+
+      &amp;:not(:last-of-type) {
+        margin-right: $space__default;
+      }
+
+      &amp;::after {
+        content: none;
+      }
+    }
+  }
+}</code>" data-collapsed=".c-navigation { ... }"><code>.c-navigation { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Primary site navigation</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Common</span><!-- Version --> <span class="project-info__version">- v3.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

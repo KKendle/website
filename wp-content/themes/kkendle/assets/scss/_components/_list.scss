@@ -1,0 +1,36 @@
+/// List component styles. Keeps default browser styles for when using a list in a content block.
+///
+/// `c-list--noStyle` removes default browser styles.
+///
+/// `c-list--inline` puts the `<li>`'s inline.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-list {
+  $self: &;
+
+  &__columns {
+
+    &--2 {
+      columns: 2 13.75rem;
+    }
+  }
+
+  &--noStyle {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &--inline {
+    display: flex;
+
+    #{$self}__item {
+
+      &:not(:last-child) {
+        margin-right: $space__2;
+        margin-right: var(--space__2);
+      }
+    }
+  }
+}

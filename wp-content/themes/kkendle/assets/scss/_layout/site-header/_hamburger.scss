@@ -1,0 +1,62 @@
+/// Hamburger button, specifically the 3 lines.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-hamburger {
+  $self: &;
+  $hamburger__tilt: 45deg;
+  border: 0;
+  color: $theme__text--body;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: .75em $space__2;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+
+    #{$self}__line {
+      background-color: $theme__button--2;
+    }
+  }
+
+  &__line {
+    background-color: $theme__text--body;
+    display: block;
+    height: .25rem;
+    position: relative;
+    transition: opacity .1s, transform .1s;
+    width: $space__5;
+
+    &:nth-child(2) {
+      margin: .375rem 0;
+      width: 75%;
+    }
+  }
+
+  &.is-active {
+
+    #{$self}__line {
+
+      &:nth-child(1) {
+        transform: translateY(.6666rem) rotate($hamburger__tilt);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-.5555rem) rotate(-$hamburger__tilt);
+      }
+    }
+  }
+}
+
+.c-navigation__burger {
+  position: relative;
+  z-index: $zIndex__nav--close;
+  @include for-lap-up {
+    display: none;
+  }
+}

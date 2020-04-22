@@ -1,0 +1,19 @@
+/// Attempt at z-index name-spacing
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+/// @todo * assign better names
+.c-z-index {
+
+  &__small {
+    z-index: 5;
+  }
+
+  &__medium {
+    z-index: 10;
+  }
+
+  &__site-header {
+    z-index: 100;
+  }
+}

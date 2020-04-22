@@ -1,0 +1,69 @@
+/// Additional navigation elements
+/// @author Kevin Kendle
+/// @group Site Header
+/// @since v1.0.0
+.c-navigation__misc {
+  $self: &;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  order: -1;
+  @include for-lap-until {
+    margin-top: 1rem;
+  }
+  @include for-lap-up {
+    flex-wrap: nowrap;
+  }
+
+  .c-navigation__search {
+    margin: .5rem 0;
+    order: -1;
+    @include for-lap-up {
+      margin: 0;
+      order: 1;
+    }
+
+    .c-search__label {
+      color: $theme__color--white;
+      margin-bottom: 0;
+      @include for-lap-up {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 2.75rem;
+        min-width: 2.75rem;
+      }
+    }
+
+    .c-search__input {
+      margin-left: .5rem;
+      max-width: 12rem; // roughly 200px
+      padding-bottom: .25rem;
+      padding-top: .25rem;
+      transition: width 200ms;
+      width: 200px; // explicit width so it moves adjacent content smoothly
+      @include for-lap-up {
+        width: 0;
+
+        &:focus {
+          width: 200px; // explicit width so it moves adjacent content smoothly
+        }
+      }
+
+      &:focus {
+        border-color: $theme__focus--inputOnBG;
+      }
+    }
+  }
+
+  .c-navigation__social {
+    flex: 1 1 6.25rem;
+    margin-top: -.0625rem;
+  }
+
+  .c-search__form {
+    @include for-lap-up {
+      flex-wrap: nowrap;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+// STYLES FOR STYLEGUIDE ONLY
+.page-template-template-styleguide {
+
+  .l-section__color-palette {
+    $styleguide__color--border: $theme__text--body;
+    $styleguide__color: $theme__text--body;
+    $styleguide__font: 'Heebo', sans-serif;
+    $swatch-border-size: 2px;
+
+    .c-styleguideList {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .c-swatch {
+      $self: &;
+      margin-right: $space__3;
+      position: relative;
+
+      &__border {
+        border: $swatch-border-size solid $styleguide__color--border;
+      }
+
+      &__hex {
+        color: $theme__text--body;
+        left: 50%;
+        font-family: $styleguide__font;
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin: 0;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        text-align: center;
+        @include for-palm-until {
+          word-wrap: break-word;
+        }
+      }
+
+      &__color {
+        background-color: var(--swatchColor, transparent);
+        height: 185px;
+        margin-bottom: $space__2;
+        max-width: 100%;
+        width: 340px;
+
+        &--white-1 {
+          background-color: $white-1;
+        }
+
+        &--black-1 {
+
+          .c-swatch__color {
+            background-color: $black-1;
+          }
+
+          .c-swatch__hex {
+            color: $white-1;
+          }
+        }
+
+        &--orange-1 {
+          background-color: $orange-1;
+        }
+
+        &--green-1 {
+          background-color: $green-1;
+        }
+      }
+    }
+  }
+}

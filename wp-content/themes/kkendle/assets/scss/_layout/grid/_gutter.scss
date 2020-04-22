@@ -1,0 +1,25 @@
+/// Optional gutters for the Grid System. Allows for consistent spacing when splitting up columns on larger viewports.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-gutter {
+
+  &__default {
+    padding-left: $gutter;
+    padding-left: var(--gutter);
+
+    &\@handsWide {
+      @include for-ipad-up {
+        padding-left: $gutter;
+        padding-left: var(--gutter);
+      }
+    }
+
+    &\@lap {
+      @include for-lap-up {
+        padding-left: $gutter;
+        padding-left: var(--gutter);
+      }
+    }
+  }
+}

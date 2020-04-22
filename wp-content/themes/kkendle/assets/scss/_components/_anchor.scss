@@ -1,0 +1,10 @@
+/// For in-page anchors. `Top` adjustment is for height of sticky nav
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+[data-js='anchor'] {
+  content: '';
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}

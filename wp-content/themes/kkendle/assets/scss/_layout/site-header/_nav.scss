@@ -1,0 +1,217 @@
+/// Primary site navigation
+/// @author Kevin Kendle
+/// @group Site Header
+/// @since v1.0.0
+.c-navigation {
+  $lineLength: 100%;
+  $nav__font: $theme__font--navigation;
+  $nav__subMenu: $theme__header--primary;
+  $nav__text: $theme__text--body;
+
+  a {
+
+    &:focus {
+      outline-color: transparent;
+    }
+  }
+
+  .menu-item-has-children {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    > a {
+      @include for-lap-up {
+        margin-right: 0;
+        padding-left: 1.25rem;
+      }
+    }
+
+    .sub-menu {
+      border-radius: 0 0 .375rem .375rem;
+      display: none;
+      position: relative;
+      width: 100%;
+      z-index: $zIndex--sm;
+
+      .menu-item {
+        width: 100%;
+
+        a {
+          font-weight: 500;
+          margin-left: 0;
+          margin-right: 0;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+
+            span::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    // &:hover,
+    // &:focus,
+    &.is-active {
+      @include for-lap-up {
+        background-color: $theme__text--body;
+        color: $theme__color--white;
+      }
+
+      .c-button__toggle {
+
+        &:hover,
+        &:focus {
+          color: $theme__color--white;
+        }
+      }
+
+      > .sub-menu {
+        display: block;
+        @include for-lap-up {
+          background-color: $theme__text--body;
+          color: $theme__color--white;
+          left: 0;
+          max-width: 50vw;
+          padding: $space__1;
+          position: absolute;
+          text-align: center;
+          top: 100%;
+          width: 100%;
+        }
+
+        a {
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+
+            span::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-item {
+
+    a {
+      box-shadow: none;
+      color: $nav__text;
+      color: var(--nav__text, $nav__text);
+      display: inline-block;
+      font-family: $nav__font;
+      font-weight: 600;
+      position: relative;
+      word-wrap: anywhere;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    &.current_page_item,
+    &.current_page_parent {
+
+      > a {
+
+        span {
+          position: relative;
+
+          &::after {
+            background-color: $theme__button--2;
+            bottom: -.125rem;
+            content: '';
+            height: .125rem;
+            left: 0;
+            right: 0;
+            position: absolute;
+            @include for-lap-up {
+              background-color: currentColor;
+            }
+          }
+        }
+      }
+
+      .sub-menu {
+
+        .current_page_item {
+
+          a span {
+            text-decoration: underline;
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-button--noStyle {
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  // BUTTON IN SITE NAV
+  .is-button.secondary {
+    margin-top: 1.5rem;
+    @include for-lap-up {
+      margin-left: .5rem;
+      margin-top: 0;
+    }
+
+    a,
+    button {
+      $button__text: $theme__color--white;
+      background-color: $theme__button--2;
+      background-color: var(--theme__button--2, $theme__button--2);
+      border-color: $theme__button--2;
+      border-color: var(--button__border, $theme__button--2);
+      border-radius: 0;
+      border-style: solid;
+      border-width: .1111rem;
+      color: $button__text;
+      color: var(--button__text, $button__text);
+      cursor: pointer;
+      display: inline-block;
+      font-family: $theme__font--button;
+      font-family: var(--button__font, $theme__font--button);
+      font-weight: 500;
+      margin-bottom: 0;
+      padding: .55rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      transition: border-radius 150ms linear;
+
+      &:hover,
+      &:focus {
+        background-color: $button__text;
+        border-radius: 2rem;
+        color: $theme__button--2;
+        color: var(--theme__button--2, $theme__button--2);
+        text-decoration: none;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: $space__default;
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

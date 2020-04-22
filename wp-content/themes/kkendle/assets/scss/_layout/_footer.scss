@@ -1,0 +1,151 @@
+/// Site footer styles.
+/// @author Kevin Kendle
+/// @group Site Footer
+/// @since v1.0.0
+.site-footer {
+  background-color: $theme__footer--primary;
+  color: $theme__footer--text;
+  padding-bottom: $space__6;
+  padding-top: 5rem;
+  position: relative;
+  @include for-hands-up {
+    text-align: left;
+  }
+  @include for-lap-up {
+    padding-top: 9.375rem;
+  }
+
+  p {
+    color: $theme__footer--text;
+    max-width: 66ch;
+  }
+
+  a {
+    color: $theme__text--body;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $theme__text--body;
+      text-decoration: underline;
+    }
+  }
+
+  .c-widgetContainer {
+
+    &__main {
+      justify-content: space-between;
+      @include for-lap-up {
+        position: relative;
+      }
+    }
+
+    &__primary {
+
+      .l-row {
+        display: block;
+      }
+    }
+
+    &__secondary {
+      display: flex;
+      flex-wrap: wrap;
+      @include for-lap-until {
+        order: -1;
+        margin-bottom: $space__5;
+        flex: 1 1 100%;
+      }
+
+      address {
+        margin-bottom: .5rem;
+
+        p {
+          line-height: 1.1;
+          @include for-palm-up {
+            font-size: 1.75rem;
+            margin-bottom: $space__4;
+          }
+        }
+      }
+
+      div p {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  // footer contact info
+  .footer-contact-info {
+    margin-right: $space__5;
+  }
+
+  // footer social links
+  .c-socialLinks {
+    display: initial;
+    margin-top: $space__4;
+    width: 100%;
+    @include for-hands-up {
+      margin-top: 0;
+      width: auto;
+    }
+
+    &__link {
+      color: $theme__footer--text;
+      height: auto;
+      margin-bottom: $space__1;
+      padding: 0;
+      width: auto;
+      @include for-hands-up {
+        font-size: 1.75rem;
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-divider {
+    height: 4.375rem;
+    margin: $space__4 auto $space__6;
+    width: 100%;
+
+    &__arrow {
+      background-color: $black-1;
+      height: 4.375rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      @include for-lap-up {
+        background-color: initial;
+        background-image: url('../images/footer-divider-arrow.png');
+        background-position: 0 40%;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        height: 100%;
+        left: -420px;
+        top: -145px;
+      }
+
+      &::before {
+        background: $black-1;
+        content: '';
+        height: 67.25px;
+        left: -100%;
+        position: absolute;
+        top: 174.625px;
+        width: 100%;
+      }
+    }
+  }
+}

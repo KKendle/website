@@ -1,0 +1,36 @@
+/// Consisten spacing for elements to use `margin-bottom` and clear other `margin` values.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-stack {
+
+  &__default {
+    margin: $space__4;
+    margin: var(--space__4);
+  }
+
+  &__lg {
+    margin: $space__5;
+    margin: var(--space__5);
+  }
+
+  &__xlg {
+    margin: $space__6;
+    margin: var(--space__6);
+  }
+
+  &__xl {
+    margin: $space__7;
+    margin: var(--space__7);
+  }
+
+  &__none {
+    margin: 0;
+
+    &\@handsWide {
+      @include for-ipad-up {
+        margin: 0;
+      }
+    }
+  }
+}

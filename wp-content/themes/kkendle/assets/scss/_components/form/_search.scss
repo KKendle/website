@@ -1,0 +1,64 @@
+/// Search form
+/// @author Kevin Kendle
+/// @group Form
+/// @since v1.0.0
+.c-search {
+  $self: &;
+
+  &__input,
+  &__submit {
+    margin-bottom: $vr__05;
+    margin-bottom: var(--vr__05);
+    @include for-palm-up {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    font-family: $theme__font--button;
+    font-family: var(--button__font, $theme__font--button);
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: $vr__1;
+    margin-bottom: var(--vr__1);
+    margin-right: $space__1;
+    margin-right: var(--space__1);
+    width: 100%;
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__icon {
+    cursor: pointer;
+    height: 100%;
+    max-height: 2.3333rem;
+    max-width: 2.3333rem;
+    padding: $space__2;
+    padding: var(--space__2);
+    stroke: currentColor;
+    width: 100%;
+  }
+
+  &__innerLabel {
+    display: block;
+    margin-bottom: $vr__05;
+    margin-bottom: var(--vr__05);
+    width: 100%;
+  }
+
+  &__submit {
+    $button__text: $theme__color--white;
+    background-color: $theme__button--1;
+    background-color: var(--theme__button--1, $theme__button--1);
+    color: $button__text;
+    color: var(--button__text, $button__text);
+    margin-bottom: $vr__1;
+    margin-bottom: var(--vr__1);
+
+    &:focus {
+      outline-color: transparent;
+    }
+  }
+}

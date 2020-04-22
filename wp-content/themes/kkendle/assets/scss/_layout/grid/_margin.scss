@@ -1,0 +1,32 @@
+//------------
+// MARGIN
+//------------
+/// Margin styles for aligning content along the x-axis. Left and Right spacing amounts are useful for offsets.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-margin {
+
+  &__bottom {
+
+    &--none {
+      margin-bottom: 0;
+    }
+  }
+
+  &__center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__left {
+
+    &--none {
+      margin-left: 0;
+    }
+
+    &--auto {
+      margin-left: auto;
+    }
+  }
+}

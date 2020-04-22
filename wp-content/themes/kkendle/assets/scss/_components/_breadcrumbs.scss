@@ -1,0 +1,19 @@
+/// Breacrumb styling
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+[aria-label='breadcrumbs'] {
+
+  li * {
+    font-weight: 600;
+  }
+
+  [aria-current] a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

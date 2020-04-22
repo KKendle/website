@@ -1,0 +1,16 @@
+@import 'main';
+
+//------------
+// STYLEGUIDE
+//------------
+@import
+  '_components/styleguide/buttons',
+  '_components/styleguide/color-palette',
+  '_components/styleguide/iconography',
+  '_components/styleguide/input-fields',
+  // '_components/styleguide/misc',
+  '_components/styleguide/typography';
+
+// PAGES
+@import
+  '_pages/styleguide';

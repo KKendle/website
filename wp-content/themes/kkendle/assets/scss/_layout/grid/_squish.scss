@@ -1,0 +1,25 @@
+/// Default padding (top & bottom) for section blocks. Nearly always used unless element(s) need to be flush with the top and bottom.
+/// @author Kevin Kendle
+/// @group Layout
+/// @since v1.0.0
+.l-squish {
+  padding-bottom: $space__4;
+  padding-top: $space__4;
+
+  &--large {
+    padding-bottom: $space__6;
+    padding-top: $space__6;
+
+    &\@handsWide-up {
+      @include for-ipad-up {
+        padding-bottom: $space__6;
+        padding-top: $space__6;
+      }
+    }
+  }
+
+  &--xl {
+    padding-bottom: $space__8;
+    padding-top: $space__8;
+  }
+}

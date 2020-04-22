@@ -1,0 +1,378 @@
+// source: http://alexbea.com/blog/ergonomic-breakpoint-variables/#ergonomic-context-variable-names
+// source: https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+$bp__wrist--until: 9.3125rem; // 149px
+$bp__wrist--up: 9.375rem; // 150px
+// $bp__palm--until: 19.9375rem; // 319px
+// $bp__palm--up: 20rem; // 320px
+$bp__palm--until: 22.4375rem; // 359px
+$bp__palm--up: 22.5rem; // 360px
+$bp__hands--until: 37.4375rem; // 599px
+$bp__hands--up: 37.5rem; // 600px
+$bp__ipad--until: 46.8125rem; // 749px
+$bp__ipad--up: 46.875rem; // 750px
+$bp__handsWide--until: 53.0625rem; // 849px
+$bp__handsWide--up: 53.125rem; // 850px
+$bp__1k--until: 62.4375rem; // 999px
+$bp__1k--up: 62.5rem; // 1000px
+$bp__lap--until: 74.9375rem; // 1199px
+$bp__lap--up: 75rem; // 1200px
+$bp__desk--until: 99.9375rem; // 1599px
+$bp__desk--up: 100rem; // 1600px
+$bp__wall--until: 119.9375rem; // 1919px
+$bp__wall--up: 120rem; // 1920px
+
+/// Breakpoint until wrist.
+/// For screen sizes on the wrist.
+/// @example
+///   Watch
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-wrist-until {
+  // 149px
+  @media (max-width: $bp__wrist--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for wrist and larger.
+/// For screen sizes on the wrist.
+/// @example
+///   Watch
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-wrist-up {
+  // 150px
+  @media (min-width: $bp__wrist--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until palm.
+/// For screen sizes carried in one hand.
+/// @example
+///   Phones
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-palm-until {
+  // 319px
+  @media (max-width: $bp__palm--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for palm only.
+/// For screen sizes carried in one hand.
+/// @example
+///   Phones
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-palm-only {
+  // 320px and 599px
+  @media (min-width: $bp__palm--up) and (max-width: $bp__hands--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for palm and up.
+/// For screen sizes carried in one hand.
+/// @example
+///   Phones
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-palm-up {
+  // 320px
+  @media (min-width: $bp__palm--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until hands.
+/// For screen sizes carried in two hands. More Phone Landscape focused.
+/// @example
+///   Possibly Phones turned side-ways
+///   'Phablets' (Large phones, small tablets)
+///   Tablets (Kindle, iPad, various Android options)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-hands-until {
+  // 599px
+  @media (max-width: $bp__hands--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for hands only.
+/// For screen sizes carried in two hands. More Phone Landscape focused.
+/// @example
+///   Possibly Phones turned side-ways
+///   'Phablets' (Large phones, small tablets)
+///   Tablets (Kindle, iPad, various Android options)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-hands-only {
+  // 600px and 849px
+  @media (min-width: $bp__hands--up) and (max-width: $bp__handsWide--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for hands and up.
+/// For screen sizes carried in two hands. More Phone Landscape focused.
+/// @example
+///   Possibly Phones turned side-ways
+///   'Phablets' (Large phones, small tablets)
+///   Tablets (Kindle, iPad, various Android options)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-hands-up {
+  // 600px
+  @media (min-width: $bp__hands--up) {
+    @content;
+  }
+}
+
+/// Breakpoint for iPad only.
+/// @example
+///   iPad
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-ipad-until {
+  // 749px
+  @media (max-width: $bp__ipad--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for iPad only.
+/// @example
+///   iPad
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-ipad-only {
+  // 600px and 749px
+  @media (min-width: $bp__hands--up) and (max-width: $bp__ipad--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for iPad and up.
+/// @example
+///   iPad
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-ipad-up {
+  // 750px
+  @media (min-width: $bp__ipad--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until hands wide.
+/// For screen sizes carried in two hands. More Tablet focused.
+/// @example
+///   Tablets (Kindle, iPad, various Android options)
+///   Possibly Phones turned side-ways
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-handsWide-until {
+  // 849px
+  @media (max-width: $bp__handsWide--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for hands wide only.
+/// For screen sizes carried in two hands. More Tablet focused.
+/// @example
+///   Tablets (Kindle, iPad, various Android options)
+///   Possibly Phones turned side-ways
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-handsWide-only {
+  // 850px and 1000px
+  @media (min-width: $bp__handsWide--up) and (max-width: $bp__1k--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for hands wide and up.
+/// For screen sizes carried in two hands. More Tablet focused.
+/// @example
+///   Tablets (Kindle, iPad, various Android options)
+///   Possibly Phones turned side-ways
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-handsWide-up {
+  // 850px
+  @media (min-width: $bp__handsWide--up) {
+    @content;
+  }
+}
+
+/// Breakpoint for 1000px only.
+/// @example
+///   1000px
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-1k-until {
+  // 999px
+  @media (max-width: $bp__1k--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for 1000px only.
+/// @example
+///   1000px
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-1k-only {
+  // 1000px and 1199px
+  @media (min-width: $bp__handsWide--up) and (max-width: $bp__1k--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for 1000px and up.
+/// @example
+///   1000px
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-1k-up {
+  // 1000px
+  @media (min-width: $bp__1k--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until lap.
+/// For screen sizes found on Laps. Can be touch-screens.
+/// @example
+///   Laptops (13", 15", 17", etc.)
+///   Windows Surface Laptops
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-lap-until {
+  // 1199px
+  @media (max-width: $bp__lap--until) { // 1199px
+    @content;
+  }
+}
+
+/// Breakpoint for lap only.
+/// For screen sizes found on Laps. Can be touch-screens.
+/// @example
+///   Laptops (13", 15", 17", etc.)
+///   Windows Surface Laptops
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-lap-only {
+  // 1200px and 1599px
+  @media (min-width: $bp__lap--up) and (max-width: $bp__desk--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for lap and up.
+/// For screen sizes found on Laps. Can be touch-screens.
+/// @example
+///   Laptops (13", 15", 17", etc.)
+///   Windows Surface Laptops
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-lap-up {
+  // 1200px
+  @media (min-width: $bp__lap--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until desk.
+/// For screen sizes found on Desks.
+/// @example
+///   Monitors (20", 24", 27", etc.)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-desk-until {
+  // 1599px
+  @media (max-width: $bp__desk--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for desk only.
+/// For screen sizes found on Desks.
+/// @example
+///   Monitors (20", 24", 27", etc.)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-desk-only {
+  // 1600px and 1919px
+  @media (min-width: $bp__desk--up) and (max-width: $bp__wall--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for desk and up.
+/// For screen sizes found on Desks.
+/// @example
+///   Monitors (20", 24", 27", etc.)
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-desk-up {
+  // 1600px
+  @media (min-width: $bp__desk--up) {
+    @content;
+  }
+}
+
+/// Breakpoint until wall.
+/// For screen sizes found on Walls.
+/// @example
+///   TV
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-wall-until {
+  // 1919px
+  @media (max-width: $bp__wall--until) {
+    @content;
+  }
+}
+
+/// Breakpoint for wall and up.
+/// For screen sizes found on Walls.
+/// @example
+///   TV
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0
+@mixin for-wall-up {
+  // 1920px
+  @media (min-width: $bp__wall--up) {
+    @content;
+  }
+}

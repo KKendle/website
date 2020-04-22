@@ -1,0 +1,84 @@
+/// Basic component. Copy and image
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+.c-basic {
+  $self: &;
+
+  &__copy {
+    margin-bottom: $space__4;
+
+    h3 {
+      font-size: 1.63125rem;
+      font-weight: 600;
+      max-width: 40ch;
+      @include for-hands-up {
+        font-size: 1.8125rem;
+      }
+    }
+  }
+
+  &--donate {
+    $color-length: calc(100% - 40px);
+
+    #{$self}__title,
+    #{$self}__copy,
+    h2,
+    h3,
+    p {
+      color: $theme__color--white;
+    }
+
+    .c-button {
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right, $theme__color--white $color-length, rgba($theme__color--white, .0001) $color-length);
+        color: $theme__text--body;
+      }
+    }
+
+    .l-column {
+      @include for-ipad-up {
+        flex: 1 1 50%;
+      }
+
+      &:nth-child(1) {
+        @include for-ipad-up {
+          padding-right: $space__4;
+        }
+        @include for-1k-up {
+          flex: 1 1 40%;
+        }
+      }
+
+      &:nth-child(2) {
+        @include for-1k-up {
+          flex: 1 1 60%;
+        }
+      }
+    }
+
+    #{$self}__img {
+      display: none;
+      @include for-ipad-up {
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &--noBottom {
+    padding-bottom: 0;
+
+    #{$self}__copy {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

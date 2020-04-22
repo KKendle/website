@@ -1,0 +1,586 @@
+@import url('https://use.typekit.net/tqu0jdf.css');
+
+:root {
+  // spacing
+  --space__1: .25rem;
+  --space__2: .5rem;
+  --space__3: 1rem;
+  --space__4: 1.5rem;
+  --space__5: 2rem;
+  --space__6: 3rem;
+  --space__7: 4rem;
+  --space__default: var(--space__3);
+
+  /* typography */
+  --baseFontSize: 1.125rem; /* 18px */
+  --baseline: 1.33;
+  --letterspacing__caps: .05em; // for uppercase copy
+
+  /* baseline amounts */
+  --vr__05: calc(1rem * (var(--baseline) * .5));
+  --vr__1: calc(1rem * var(--baseline));
+  --vr__15: calc(1rem * (var(--baseline) * 1.5));
+  --vr__2: calc(1rem * (var(--baseline) * 2));
+  --vr__25: calc(1rem * (var(--baseline) * 2.5));
+  --vr__3: calc(1rem * (var(--baseline) * 3));
+  --vr__4: calc(1rem * (var(--baseline) * 4));
+  --vr__default: var(--vr__1);
+
+  // gutter
+  --gutter: var(--space__4);
+}
+
+// so grid can work
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $theme__text--body;
+  color: var(--theme__text--body, $theme__text--body);
+  font-family: $theme__font--body;
+  font-size: 1.125rem;
+  font-size: var(--baseFontSize);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: $baseline;
+  line-height: var(--baseline);
+  text-align: left;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: initial;
+  @include for-palm-until {
+    word-break: break-word;
+  }
+}
+
+// the 'main' main content
+// #content {
+//   overflow: hidden; // removes horizontal scrollbar for pulled content
+// }
+
+main {
+
+  &.u-navSpace {
+    @include for-lap-up {
+      padding-top: 7.5rem;
+    }
+  }
+}
+
+// focus state
+:focus:not([tabindex='-1']) {
+  outline: .125rem dashed rgba($white-1, .0001);
+  outline-offset: .125rem;
+}
+
+/// Default color and font for common elements. Specifics/overrides later on.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+a,
+label,
+input,
+textarea {
+  color: $theme__text--body;
+  color: var(--theme__text--body, $theme__text--body);
+  line-height: $baseline;
+  line-height: var(--baseline);
+}
+
+/// Default spacing for common elements. Specifics/overrides later on.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+button,
+article,
+.widget {
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+  margin-top: 0;
+}
+
+/// Default color and spacing.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $theme__text--body;
+  color: var(--theme__text--body, $theme__text--body);
+  font-family: $theme__font--heading;
+  font-size: var(--fontSize);
+  font-weight: 400;
+  line-height: $theme__lineHeight--heading;
+  margin-bottom: $vr__default;
+  margin-bottom: var(--vr__default);
+}
+
+/// Heading 1 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h1,
+.h1 {
+  font-size: 4.25rem;
+  font-weight: 600;
+  max-width: 28ch;
+  @include for-hands-up {
+    font-size: 4.6875rem;
+  }
+}
+
+/// Heading 2 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h2,
+.h2 {
+  font-size: 2.98125rem;
+  font-weight: 600;
+  max-width: 26ch;
+  @include for-hands-up {
+    font-size: 3.3125rem;
+  }
+}
+
+/// Heading 3 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h3,
+.h3 {
+  font-size: 2.19375rem;
+  font-weight: 400;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.4375rem;
+  }
+}
+
+/// Heading 4 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h4,
+.h4 {
+  font-size: 2.19375rem;
+  font-weight: 400;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.4375rem;
+  }
+}
+
+/// Heading 5 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h5,
+.h5 {
+  font-size: 2.025rem;
+  font-weight: 600;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 2.25rem;
+  }
+}
+
+/// Heading 6 size
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+h6,
+.h6 {
+  font-size: 1.63125rem;
+  font-weight: 600;
+  max-width: 40ch;
+  @include for-hands-up {
+    font-size: 1.8125rem;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/// Default link styles
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+a {
+  color: $theme__text--link;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: underline;
+
+  &._focus,
+  &:hover,
+  &:focus {
+    color: $theme__text--linkHover;
+  }
+
+  &--noStyle {
+    text-decoration: none;
+  }
+}
+
+/// Style lists and paragraphs the same size and weight.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+ul,
+ol,
+p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/// Default list styling.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+ul,
+ol {
+  list-style-type: disc;
+  margin-bottom: $space__4;
+  margin-bottom: var(--space__4);
+  padding: 0 0 0 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    max-width: $theme__readingLength--default;
+
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/// Default color and spacing. Remove `margin-bottom` on `:last-child` so the Sections can all have even spacing between them.
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+p {
+  max-width: $theme__readingLength--default;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+/// Default image styling
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/// Default blockquote styling
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+blockquote {
+  background: $theme__color--white;
+  border: 0;
+  font-family: $theme__font--body;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 1.5rem;
+  padding: $space__default $space__default $space__default $space__4;
+  max-width: 28.125rem;
+  position: relative;
+  @include for-hands-up {
+    font-size: 1.8125rem;
+    padding: $space__6 $space__6 $space__6 $space__7;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-image: url('../images/icons/icon-quote-double.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    @include for-hands-up {
+      background-size: 3.175rem;
+    }
+  }
+
+  &::before {
+    left: 0;
+    top: -$space__2;
+    @include for-hands-up {
+      left: $space__4;
+      top: $space__2;
+    }
+  }
+
+  &::after {
+    bottom: -$space__2;
+    right: 0;
+    transform: rotate(180deg);
+    @include for-hands-up {
+      bottom: $space__2;
+      right: $space__4;
+    }
+  }
+
+  p {
+    font-size: 1.8125rem;
+    font-weight: 600;
+    line-height: 1;
+    max-width: 34ch;
+    @include for-hands-up {
+      font-size: 1.8125rem;
+    }
+  }
+}
+
+/// Default address styling
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.0.0
+address {
+  font-style: normal;
+}
+
+label {
+  display: block;
+  font-family: $theme__font--body;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.1875;
+  margin-bottom: .375rem;
+}
+
+input,
+textarea,
+select {
+  border: .125rem solid currentColor;
+  border-radius: 0;
+  margin-bottom: .25rem;
+  max-width: 100%;
+  padding: .5rem;
+  width: 100%;
+
+  &:focus {
+    border-color: $theme__focus--input;
+  }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: auto;
+
+  + label {
+    display: inline-block;
+    margin-left: $space__2;
+  }
+}
+
+/// Base button  styles.
+///
+/// Use a `<button>` if it is performing an action, such as submitting a form.
+/// Use a `<a>` if it is directing the user to another page.
+///
+/// @example
+///   * CTA's in hero images often go to another page. Therefore they should be links, `<a>`.
+///   * A Modal close icon often closes the modal. Therefore it should be a `<button>`.
+/// @author Kevin Kendle
+/// @group Components
+/// @since v1.0.0
+button,
+input[type='submit'] {
+  background-color: $theme__color--white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.0526;
+  min-height: 44px;
+  min-width: 44px;
+  padding: .6275rem $space__default .6275rem 0;
+  position: relative;
+  text-align: left;
+  text-decoration: underline;
+  text-transform: lowercase;
+
+  &._focus,
+  &:hover,
+  &:focus {
+    color: $theme__text--linkHover;
+
+    .c-sprite__buttonArrow--sm {
+      background-image: url('../images/button-arrow-blue.png');
+    }
+  }
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: $space__4;
+    margin-right: $space__default;
+  }
+}
+
+textarea {
+  height: 6.25rem;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  background-color: $theme__color--white;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%233c2416%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  // arrow icon position (1em from the right, 50% vertical)
+  background-position: right .7em top 50%;
+  background-size: .65em auto;
+  border-color: $theme__text--body;
+  display: block;
+  line-height: $baseline;
+  max-width: 100%; // useful when width is set to anything other than 100%
+  padding: .5rem 2rem .5rem .5rem;
+
+  /* Hide arrow icon in IE browsers */
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.widget {
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.entry-content {
+
+  h2 {
+    font-size: 2.19375rem;
+    font-weight: 600;
+    max-width: 40ch;
+    @include for-hands-up {
+      font-size: 2.4375rem;
+    }
+  }
+}
+
+.entry-footer {
+  width: 100%;
+}
+
+.archive-description {
+  margin-bottom: $space__4;
+}
+
+/// Tables
+/// @author Kevin Kendle
+/// @group Base
+/// @since v1.1.0
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  caption {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: $space__2;
+    padding-left: $space__2;
+    padding-right: $space__2;
+    text-align: left;
+  }
+
+  thead {
+
+    th {
+      padding-bottom: $space__default;
+      padding-top: $space__default;
+    }
+
+    tr {
+      border-bottom: 0;
+    }
+  }
+
+  tr {
+    border-bottom: $space__1 solid $theme__text--body;
+
+    &:first-of-type {
+      border-top: $space__1 solid $theme__text--body;
+    }
+  }
+
+  th,
+  td {
+    display: block;
+    @include for-ipad-up {
+      display: table-cell;
+      padding: $space__5 $space__2;
+    }
+  }
+
+  td {
+    @include for-ipad-up {
+      vertical-align: top;
+    }
+
+    &:first-child {
+      padding-top: $space__5;
+    }
+
+    &:last-child {
+      padding-bottom: $space__5;
+    }
+  }
+}
