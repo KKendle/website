@@ -52,7 +52,7 @@ $space__8: 5rem;
 $space__default: $space__3;
 
 /* typography */
-$baseFontSize: 1.25rem; /* 18px */
+$baseFontSize: 1.25rem; /* 20px */
 $baseline: 1.2777;
 $letterspacing__caps: .05em; // for uppercase copy
 
@@ -68,6 +68,8 @@ $vr__default: $vr__1;
 
 // gutter
 $gutter: 3rem;
+
+$grid__maxContentWidth: 100rem; // 1600px
 
 //------------
 // Z-INDEX STACKING
@@ -88,11 +90,11 @@ $theme__color--white: $white-2;
 $theme__color--error: $red-1;
 // text
 $theme__text--body: $black-1;
+$theme__text--heading: $black-1;
 $theme__text--link: $black-1;
 $theme__text--linkHover: $link-1;
 // header
-$theme__header--primary: $theme__color--white;
-$theme__header--secondary: $black-1;
+$theme__header--primary: $green-1;
 // footer
 $theme__footer--primary: $green-1;
 $theme__footer--text: $theme__text--body;

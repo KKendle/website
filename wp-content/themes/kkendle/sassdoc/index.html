@@ -83,7 +83,7 @@ p" data-type="css"><a href="#base-css-ul,
 ol,
 p">ul, ol, p</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="ul,
 ol" data-type="css"><a href="#base-css-ul,
-ol">ul, ol</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="p" data-type="css"><a href="#base-css-p">p</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="img" data-type="css"><a href="#base-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="blockquote" data-type="css"><a href="#base-css-blockquote">blockquote</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="address" data-type="css"><a href="#base-css-address">address</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="table" data-type="css"><a href="#base-css-table">table</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="components"><a href="#components">components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="components-css"><a href="#components-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="components" data-name="button,
+ol">ul, ol</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="p" data-type="css"><a href="#base-css-p">p</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="img" data-type="css"><a href="#base-css-img">img</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="// blockquote" data-type="css"><a href="#base-css-// blockquote">// blockquote</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="address" data-type="css"><a href="#base-css-address">address</a></li><li class="sidebar__item sassdoc__item" data-group="base" data-name="table" data-type="css"><a href="#base-css-table">table</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="components"><a href="#components">components</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="components-css"><a href="#components-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="components" data-name="button,
 input[type=&#39;submit&#39;]" data-type="css"><a href="#components-css-button,
 input[type=&#39;submit&#39;]">button, input[type=&#39;submit&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name="[data-js=&#39;anchor&#39;]" data-type="css"><a href="#components-css-[data-js=&#39;anchor&#39;]">[data-js=&#39;anchor&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-background" data-type="css"><a href="#components-css-.c-background">.c-background</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-basic" data-type="css"><a href="#components-css-.c-basic">.c-basic</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name="[aria-label=&#39;breadcrumbs&#39;]" data-type="css"><a href="#components-css-[aria-label=&#39;breadcrumbs&#39;]">[aria-label=&#39;breadcrumbs&#39;]</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-button" data-type="css"><a href="#components-css-.c-button">.c-button</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".wp-block-button__link" data-type="css"><a href="#components-css-.wp-block-button__link">.wp-block-button__link</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-link" data-type="css"><a href="#components-css-.c-link">.c-link</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-list" data-type="css"><a href="#components-css-.c-list">.c-list</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-widget" data-type="css"><a href="#components-css-.c-widget">.c-widget</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-z-index" data-type="css"><a href="#components-css-.c-z-index">.c-z-index</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".searchandfilter" data-type="css"><a href="#components-css-.searchandfilter">.searchandfilter</a></li><li class="sidebar__item sassdoc__item" data-group="components" data-name=".c-hamburger" data-type="css"><a href="#components-css-.c-hamburger">.c-hamburger</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="form"><a href="#form">form</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="form-css"><a href="#form-css">css</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-checkbox" data-type="css"><a href="#form-css-.c-checkbox">.c-checkbox</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".c-input__field" data-type="css"><a href="#form-css-.c-input__field">.c-input__field</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".gform_body" data-type="css"><a href="#form-css-.gform_body">.gform_body</a></li><li class="sidebar__item sassdoc__item" data-group="form" data-name=".validation_error,
 .validation_message" data-type="css"><a href="#form-css-.validation_error,
@@ -318,9 +318,9 @@ label,
 input,
 textarea {
   color: $theme__text--body;
-  color: var(--theme__text--body, $theme__text--body);
+  color: var(--theme__text--body, #{$theme__text--body});
   line-height: $baseline;
-  line-height: var(--baseline);
+  line-height: var(--baseline, #{$baseline});
 }</code>" data-collapsed="h1,
 h2,
 h3,
@@ -392,7 +392,7 @@ button,
 article,
 .widget {
   margin-bottom: $vr__default;
-  margin-bottom: var(--vr__default);
+  margin-bottom: var(--vr__default, #{$vr__default});
   margin-top: 0;
 }</code>" data-collapsed="h1,
 h2,
@@ -436,14 +436,25 @@ h3,
 h4,
 h5,
 h6 {
-  color: $theme__text--body;
-  color: var(--theme__text--body, $theme__text--body);
+  color: $theme__text--heading;
+  color: var(--theme__text--heading, #{$theme__text--heading});
   font-family: $theme__font--heading;
-  font-size: var(--fontSize);
   font-weight: 400;
   line-height: $theme__lineHeight--heading;
   margin-bottom: $vr__default;
-  margin-bottom: var(--vr__default);
+  margin-bottom: var(--vr__default, #{$vr__default});
+  position: relative;
+
+  &amp;::after {
+    background-color: $orange-1;
+    bottom: size(7);
+    content: &#39;&#39;;
+    height: size(8);
+    left: 0;
+    position: absolute;
+    width: size(100);
+    z-index: -1;
+  }
 }</code>" data-collapsed="h1,
 h2,
 h3,
@@ -458,78 +469,48 @@ h6 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div 
 .h1"><h3 class="item__heading"><a class="item__name" href="#css-h1,
 .h1">h1, .h1</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
 .h1 {
-  font-size: 4.25rem;
-  font-weight: 600;
-  max-width: 28ch;
-  @include for-hands-up {
-    font-size: 4.6875rem;
-  }
+  font-size: size(59.72);
 }</code>" data-collapsed="h1,
 .h1 { ... }"><code>h1,
 .h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 1 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h2,
 .h2"><h3 class="item__heading"><a class="item__name" href="#css-h2,
 .h2">h2, .h2</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h2,
 .h2 {
-  font-size: 2.98125rem;
-  font-weight: 600;
-  max-width: 26ch;
-  @include for-hands-up {
-    font-size: 3.3125rem;
-  }
+  font-size: size(49.77);
 }</code>" data-collapsed="h2,
 .h2 { ... }"><code>h2,
 .h2 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 2 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h3,
 .h3"><h3 class="item__heading"><a class="item__name" href="#css-h3,
 .h3">h3, .h3</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3,
 .h3 {
-  font-size: 2.19375rem;
-  font-weight: 400;
-  max-width: 40ch;
-  @include for-hands-up {
-    font-size: 2.4375rem;
-  }
+  font-size: size(41.47);
 }</code>" data-collapsed="h3,
 .h3 { ... }"><code>h3,
 .h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 3 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h4,
 .h4"><h3 class="item__heading"><a class="item__name" href="#css-h4,
 .h4">h4, .h4</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h4,
 .h4 {
-  font-size: 2.19375rem;
-  font-weight: 400;
-  max-width: 40ch;
-  @include for-hands-up {
-    font-size: 2.4375rem;
-  }
+  font-size: size(34.56);
 }</code>" data-collapsed="h4,
 .h4 { ... }"><code>h4,
 .h4 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 4 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h5,
 .h5"><h3 class="item__heading"><a class="item__name" href="#css-h5,
 .h5">h5, .h5</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h5,
 .h5 {
-  font-size: 2.025rem;
-  font-weight: 600;
-  max-width: 40ch;
-  @include for-hands-up {
-    font-size: 2.25rem;
-  }
+  font-size: size(28.8);
 }</code>" data-collapsed="h5,
 .h5 { ... }"><code>h5,
 .h5 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 5 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h6,
 .h6"><h3 class="item__heading"><a class="item__name" href="#css-h6,
 .h6">h6, .h6</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h6,
 .h6 {
-  font-size: 1.63125rem;
-  font-weight: 600;
-  max-width: 40ch;
-  @include for-hands-up {
-    font-size: 1.8125rem;
-  }
+  font-size: size(22);
 }</code>" data-collapsed="h6,
 .h6 { ... }"><code>h6,
 .h6 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 6 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-a"><h3 class="item__heading"><a class="item__name" href="#css-a">a</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>a {
   color: $theme__text--link;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: $baseFontSize;
+  font-size: var(--baseFontSize, #{$baseFontSize});
   text-decoration: underline;
 
   &amp;._focus,
@@ -548,8 +529,8 @@ ol,
 p">ul, ol, p</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>ul,
 ol,
 p {
-  font-size: 1.125rem;
-  font-weight: 500;
+  font-size: $baseFontSize;
+  font-size: var(--baseFontSize, #{$baseFontSize});
 }</code>" data-collapsed="ul,
 ol,
 p { ... }"><code>ul,
@@ -560,7 +541,7 @@ ol">ul, ol</a></h3><span class="item__since">Since v1.0.0</span><div class="item
 ol {
   list-style-type: disc;
   margin-bottom: $space__4;
-  margin-bottom: var(--space__4);
+  margin-bottom: var(--space__4, #{$space__4});
   padding: 0 0 0 40px;
 
   &amp;:last-child {
@@ -588,64 +569,9 @@ ol { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div 
   height: auto;
   max-height: 100%;
   max-width: 100%;
-}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default image styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-blockquote"><h3 class="item__heading"><a class="item__name" href="#css-blockquote">blockquote</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>blockquote {
-  background: $theme__color--white;
-  border: 0;
-  font-family: $theme__font--body;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-left: 1.5rem;
-  padding: $space__default $space__default $space__default $space__4;
-  max-width: 28.125rem;
-  position: relative;
-  @include for-hands-up {
-    font-size: 1.8125rem;
-    padding: $space__6 $space__6 $space__6 $space__7;
-  }
-
-  &amp;::before,
-  &amp;::after {
-    content: &#39;&#39;;
-    background-image: url(&#39;../images/icons/icon-quote-double.png&#39;);
-    background-repeat: no-repeat;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    @include for-hands-up {
-      background-size: 3.175rem;
-    }
-  }
-
-  &amp;::before {
-    left: 0;
-    top: -$space__2;
-    @include for-hands-up {
-      left: $space__4;
-      top: $space__2;
-    }
-  }
-
-  &amp;::after {
-    bottom: -$space__2;
-    right: 0;
-    transform: rotate(180deg);
-    @include for-hands-up {
-      bottom: $space__2;
-      right: $space__4;
-    }
-  }
-
-  p {
-    font-size: 1.8125rem;
-    font-weight: 600;
-    line-height: 1;
-    max-width: 34ch;
-    @include for-hands-up {
-      font-size: 1.8125rem;
-    }
-  }
-}</code>" data-collapsed="blockquote { ... }"><code>blockquote { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default blockquote styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-address"><h3 class="item__heading"><a class="item__name" href="#css-address">address</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>address {
+}</code>" data-collapsed="img { ... }"><code>img { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default image styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-// blockquote"><h3 class="item__heading"><a class="item__name" href="#css-// blockquote">// blockquote</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>// blockquote {
+  
+}</code>" data-collapsed="// blockquote { ... }"><code>// blockquote { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default blockquote styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-address"><h3 class="item__heading"><a class="item__name" href="#css-address">address</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>address {
   font-style: normal;
 }</code>" data-collapsed="address { ... }"><code>address { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default address styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-table"><h3 class="item__heading"><a class="item__name" href="#css-table">table</a></h3><span class="item__since">Since v1.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>table {
   border-collapse: collapse;
@@ -706,36 +632,28 @@ ol { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div 
 input[type=&#39;submit&#39;]"><h3 class="item__heading"><a class="item__name" href="#css-button,
 input[type=&#39;submit&#39;]">button, input[type=&#39;submit&#39;]</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>button,
 input[type=&#39;submit&#39;] {
-  background-color: $theme__color--white;
-  border: 0;
-  border-radius: 0;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $theme__font--button;
-  font-size: 1.1875rem;
-  font-weight: 600;
-  line-height: 1.0526;
-  min-height: 44px;
-  min-width: 44px;
-  padding: .6275rem $space__default .6275rem 0;
-  position: relative;
-  text-align: left;
-  text-decoration: underline;
-  text-transform: lowercase;
+  // background-color: $theme__color--white;
+  // border: 0;
+  // border-radius: 0;
+  // cursor: pointer;
+  // display: inline-block;
+  // font-family: $theme__font--button;
+  // font-size: 1.1875rem;
+  // font-weight: 600;
+  // line-height: 1.0526;
+  // min-height: 44px;
+  // min-width: 44px;
+  // padding: .6275rem $space__default .6275rem 0;
+  // position: relative;
+  // text-align: left;
+  // text-decoration: underline;
+  // text-transform: lowercase;
 
-  &amp;._focus,
-  &amp;:hover,
-  &amp;:focus {
-    color: $theme__text--linkHover;
-
-    .c-sprite__buttonArrow--sm {
-      background-image: url(&#39;../images/button-arrow-blue.png&#39;);
-    }
-  }
-
-  &amp;::first-letter {
-    text-transform: uppercase;
-  }
+  // &amp;._focus,
+  // &amp;:hover,
+  // &amp;:focus {
+  //   color: $theme__text--linkHover;
+  // }
 
   &amp;:not(:last-of-type) {
     margin-bottom: $space__4;
@@ -1988,7 +1906,6 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
   }
 }</code>" data-collapsed=".l-padding { ... }"><code>.l-padding { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Padding spacing around elements.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-row"><h3 class="item__heading"><a class="item__name" href="#css-.l-row">.l-row</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-row {
   $self: &amp;;
-  $grid__maxContentWidth: 68.125rem; // 1090px
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -1997,7 +1914,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
 
   &amp;__container {
     max-width: $grid__maxContentWidth;
-    max-width: var(--grid__contentWidth--max, $grid__maxContentWidth);
+    max-width: var(--grid__contentWidth--max, #{$grid__maxContentWidth});
   }
 
   &amp;--full {
@@ -2015,31 +1932,24 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     margin-bottom: 0;
   }
 }</code>" data-collapsed=".l-section { ... }"><code>.l-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default grouping class and provides base spacing between WP Blocks. <code>.l-section--flush</code> is for unique cases where content blocks require less than the default spacing.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squeeze"><h3 class="item__heading"><a class="item__name" href="#css-.l-squeeze">.l-squeeze</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squeeze {
-  padding-left: $space__4;
-  padding-right: $space__4;
+  padding-left: $space__default;
+  padding-right: $space__default;
 
   &amp;--large {
-    padding-left: $space__4;
-    padding-right: $space__4;
+    padding-left: $space__default;
+    padding-right: $space__default;
     @include for-hands-up {
-      padding-left: $space__6;
-      padding-right: $space__6;
+      padding-left: $space__5;
+      padding-right: $space__5;
     }
   }
 }</code>" data-collapsed=".l-squeeze { ... }"><code>.l-squeeze { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default margins for content blocks. Nearly always used unless element(s) need to be flush with the sides.</p><p>Place inside Columns, on their own element.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squish"><h3 class="item__heading"><a class="item__name" href="#css-.l-squish">.l-squish</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squish {
-  padding-bottom: $space__4;
-  padding-top: $space__4;
+  padding-bottom: $space__default;
+  padding-top: $space__default;
 
   &amp;--large {
-    padding-bottom: $space__6;
-    padding-top: $space__6;
-
-    &amp;\@handsWide-up {
-      @include for-ipad-up {
-        padding-bottom: $space__6;
-        padding-top: $space__6;
-      }
-    }
+    padding-bottom: $space__5;
+    padding-top: $space__5;
   }
 
   &amp;--xl {
@@ -2086,263 +1996,24 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
 }</code>" data-collapsed=".search-results { ... }"><code>.search-results { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Search results page</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="site footer"><div class="container">site footer</div></h1><section class="main__sub-section" id="site footer-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="site footer-css-.site-footer"><h3 class="item__heading"><a class="item__name" href="#css-.site-footer">.site-footer</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.site-footer {
   background-color: $theme__footer--primary;
   color: $theme__footer--text;
-  padding-bottom: $space__6;
-  padding-top: 5rem;
-  position: relative;
-  @include for-hands-up {
-    text-align: left;
-  }
-  @include for-lap-up {
-    padding-top: 9.375rem;
-  }
-
-  p {
-    color: $theme__footer--text;
-    max-width: 66ch;
-  }
-
-  a {
-    color: $theme__text--body;
-    text-decoration: none;
-
-    &amp;:hover,
-    &amp;:focus {
-      color: $theme__text--body;
-      text-decoration: underline;
-    }
-  }
-
-  .c-widgetContainer {
-
-    &amp;__main {
-      justify-content: space-between;
-      @include for-lap-up {
-        position: relative;
-      }
-    }
-
-    &amp;__primary {
-
-      .l-row {
-        display: block;
-      }
-    }
-
-    &amp;__secondary {
-      display: flex;
-      flex-wrap: wrap;
-      @include for-lap-until {
-        order: -1;
-        margin-bottom: $space__5;
-        flex: 1 1 100%;
-      }
-
-      address {
-        margin-bottom: .5rem;
-
-        p {
-          line-height: 1.1;
-          @include for-palm-up {
-            font-size: 1.75rem;
-            margin-bottom: $space__4;
-          }
-        }
-      }
-
-      div p {
-        margin-bottom: 0;
-      }
-
-      a {
-        display: block;
-      }
-    }
-  }
-
-  // footer contact info
-  .footer-contact-info {
-    margin-right: $space__5;
-  }
-
-  // footer social links
-  .c-socialLinks {
-    display: initial;
-    margin-top: $space__4;
-    width: 100%;
-    @include for-hands-up {
-      margin-top: 0;
-      width: auto;
-    }
-
-    &amp;__link {
-      color: $theme__footer--text;
-      height: auto;
-      margin-bottom: $space__1;
-      padding: 0;
-      width: auto;
-      @include for-hands-up {
-        font-size: 1.75rem;
-      }
-
-      &amp;:hover,
-      &amp;:focus {
-        cursor: pointer;
-
-        span {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .footer-divider {
-    height: 4.375rem;
-    margin: $space__4 auto $space__6;
-    width: 100%;
-
-    &amp;__arrow {
-      background-color: $black-1;
-      height: 4.375rem;
-      left: 0;
-      position: absolute;
-      right: 0;
-      width: 100%;
-      @include for-lap-up {
-        background-color: initial;
-        background-image: url(&#39;../images/footer-divider-arrow.png&#39;);
-        background-position: 0 40%;
-        background-repeat: no-repeat;
-        background-size: 90%;
-        height: 100%;
-        left: -420px;
-        top: -145px;
-      }
-
-      &amp;::before {
-        background: $black-1;
-        content: &#39;&#39;;
-        height: 67.25px;
-        left: -100%;
-        position: absolute;
-        top: 174.625px;
-        width: 100%;
-      }
-    }
-  }
 }</code>" data-collapsed=".site-footer { ... }"><code>.site-footer { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site footer styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="site header"><div class="container">site header</div></h1><section class="main__sub-section" id="site header-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="site header-css-.site-header"><h3 class="item__heading"><a class="item__name" href="#css-.site-header">.site-header</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.site-header {
-  padding: 0 .9375rem;
-  position: sticky;
-  top: 0;
-  z-index: $zIndex__nav;
-  @media (max-height: calc(230px * 2.5)) {
-    position: static;
-  }
-
-  .u-wrapper__header {
-    align-items: center;
-    background-color: $theme__color--white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
-    width: 100%;
-    @include for-palm-up {
-      flex-wrap: nowrap;
-      justify-content: space-between;
-    }
-
-    &amp;::before {
-      background: $theme__color--white;
-      bottom: 0;
-      content: &#39;&#39;;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: $zIndex__nav--close;
-      @include for-lap-up {
-        display: none;
-      }
-    }
-  }
-
-  .c-search {
-
-    &amp;__form {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    &amp;__label {
-      @include for-palm-until {
-        margin-bottom: $vr__05;
-        margin-bottom: var(--vr__05);
-      }
-      @include for-palm-up {
-        align-items: center;
-        display: flex;
-      }
-
-      // for showing the search label
-      // span {
-      //   @include for-lap-until {
-      //     clip-path: none;
-      //     clip: unset;
-      //     display: block;
-      //     height: auto;
-      //     margin: 0;
-      //     overflow: visible;
-      //     position: static !important;
-      //     width: auto;
-      //   }
-      // }
-    }
-
-    &amp;__input,
-    &amp;__submit {
-      @include for-palm-up {
-        margin-bottom: 0;
-      }
-    }
-
-    &amp;__input {
-
-      &amp;:not(:focus) {
-        border-width: 0;
-        padding: 0;
-        width: 0;
-      }
-    }
-
-    &amp;__submit {
-      height: 1px;
-      padding: 0;
-      width: 1px;
-    }
-  }
-
-  .c-socialLinks__link {
-    @include for-palm-up {
-      margin-bottom: 0;
-    }
-  }
+  background-color: $theme__header--primary;
+  padding-bottom: size(80);
+  padding-top: size(80);
 }</code>" data-collapsed=".site-header { ... }"><code>.site-header { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site header styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-siteBranding"><h3 class="item__heading"><a class="item__name" href="#css-.c-siteBranding">.c-siteBranding</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-siteBranding {
-  flex: 1 1 100%;
-  margin-right: $space__3;
-  max-width: 17.25rem;
-  position: relative;
-  z-index: $zIndex__nav--close;
+  $self: &amp;;
+  text-align: center;
 
-  &amp;__link {
-    display: inline-block;
-    padding: $space__2 $space__4;
-    transition: box-shadow 150ms ease-in-out;
+  &amp;__title {
+    display: block;
+    margin-bottom: $space__2;
+    text-decoration: none;
+  }
 
-    &amp;:focus {
-      box-shadow: 0 .315rem .625rem rgba($theme__text--body, .3);
-      outline-color: transparent;
-    }
+  &amp;__description {
+    font-size: size(24);
+    margin-left: auto;
+    margin-right: auto;
   }
 }</code>" data-collapsed=".c-siteBranding { ... }"><code>.c-siteBranding { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site Branding/Logo</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-navigation__full"><h3 class="item__heading"><a class="item__name" href="#css-.c-navigation__full">.c-navigation__full</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-navigation__full {
   $self: &amp;;

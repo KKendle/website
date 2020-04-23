@@ -3,19 +3,12 @@
 /// @group Layout
 /// @since v1.0.0
 .l-squish {
-  padding-bottom: $space__4;
-  padding-top: $space__4;
+  padding-bottom: $space__default;
+  padding-top: $space__default;
 
   &--large {
-    padding-bottom: $space__6;
-    padding-top: $space__6;
-
-    &\@handsWide-up {
-      @include for-ipad-up {
-        padding-bottom: $space__6;
-        padding-top: $space__6;
-      }
-    }
+    padding-bottom: $space__5;
+    padding-top: $space__5;
   }
 
   &--xl {

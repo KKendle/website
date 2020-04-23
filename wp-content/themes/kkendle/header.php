@@ -27,18 +27,23 @@
     <div id="content" class="site-content">
 
       <header id="masthead" class="site-header">
-        <?php
-        /**
-         * SITE BRANDING
-         */
-        ?>
-        <div class="c-siteBranding">
-          <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-            <?php bloginfo('name'); ?>
-          </a>
-          <p class="c-siteBranding__description">
-            <?php bloginfo('description'); ?>
-          </p>
+        <div class="l-row l-row__container">
+          <div class="l-column">
+            <div class="l-squish l-squeeze">
+              <?php
+              /**
+               * SITE BRANDING
+               */
+              ?>
+              <div class="c-siteBranding">
+                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="c-siteBranding__title h1">
+                  Kevin Kendle
+                </a>
+                <p class="c-siteBranding__description">
+                  <?php bloginfo('description'); ?>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
       </header>

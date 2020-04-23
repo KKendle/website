@@ -3,20 +3,18 @@
 /// @group Site Header
 /// @since v1.0.0
 .c-siteBranding {
-  flex: 1 1 100%;
-  margin-right: $space__3;
-  max-width: 17.25rem;
-  position: relative;
-  z-index: $zIndex__nav--close;
+  $self: &;
+  text-align: center;
 
-  &__link {
-    display: inline-block;
-    padding: $space__2 $space__4;
-    transition: box-shadow 150ms ease-in-out;
+  &__title {
+    display: block;
+    margin-bottom: $space__2;
+    text-decoration: none;
+  }
 
-    &:focus {
-      box-shadow: 0 .315rem .625rem rgba($theme__text--body, .3);
-      outline-color: transparent;
-    }
+  &__description {
+    font-size: size(24);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
