@@ -61,6 +61,25 @@ body {
   outline-offset: .125rem;
 }
 
+main {
+  background-color: $white-1;
+  margin-left: $space__default;
+  margin-right: $space__default;
+  position: relative;
+  transform: translateY(#{size(-240)});
+  z-index: 1; // for heading underlines
+  @include for-handsWide-up {
+    transform: translateY(#{size(-200)});
+  }
+  @include for-desk-up {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: size(48);
+    padding-top: size(48);
+    width: size(1552);
+  }
+}
+
 /// Default color and font for common elements. Specifics/overrides later on.
 /// @author Kevin Kendle
 /// @group Base
@@ -131,7 +150,7 @@ h6 {
 
   &::after {
     background-color: $orange-1;
-    bottom: size(7);
+    top: .875em; // stay at first line
     content: '';
     height: size(8);
     left: 0;
@@ -147,7 +166,8 @@ h6 {
 /// @since v1.0.0
 h1,
 .h1 {
-  font-size: size(59.72);
+  // font-size: size(59.72);
+  font-size: size(49.77);
 }
 
 /// Heading 2 size
@@ -156,7 +176,8 @@ h1,
 /// @since v1.0.0
 h2,
 .h2 {
-  font-size: size(49.77);
+  // font-size: size(49.77);
+  font-size: size(41.47);
 }
 
 /// Heading 3 size
@@ -165,7 +186,8 @@ h2,
 /// @since v1.0.0
 h3,
 .h3 {
-  font-size: size(41.47);
+  // font-size: size(41.47);
+  font-size: size(34.56);
 }
 
 /// Heading 4 size
@@ -401,28 +423,43 @@ input[type='radio'] {
 /// @since v1.0.0
 button,
 input[type='submit'] {
-  // background-color: $theme__color--white;
-  // border: 0;
-  // border-radius: 0;
-  // cursor: pointer;
-  // display: inline-block;
-  // font-family: $theme__font--button;
-  // font-size: 1.1875rem;
-  // font-weight: 600;
-  // line-height: 1.0526;
-  // min-height: 44px;
-  // min-width: 44px;
-  // padding: .6275rem $space__default .6275rem 0;
-  // position: relative;
-  // text-align: left;
-  // text-decoration: underline;
-  // text-transform: lowercase;
+  background-color: $theme__button--1;
+  background-color: var(--theme__button__1, #{$theme__button--1});
+  border-width: size(2);
+  border-radius: 0;
+  color: $theme__text--body;
+  color: var(--theme__text--body, #{$theme__text--body});
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  padding: size(11) $space__default size(12);
+  position: relative;
+  text-decoration: none;
 
-  // &._focus,
-  // &:hover,
-  // &:focus {
-  //   color: $theme__text--linkHover;
-  // }
+  &:hover,
+  &:focus {
+    color: $theme__text--body;
+    color: var(--theme__text--body, #{$theme__text--body});
+    text-decoration: underline;
+
+    &::after {
+      transform: none;
+    }
+  }
+
+  &::after {
+    border: 2px solid $theme__button--1;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(#{size(8)}, #{size(8)});
+    transition: transform 150ms ease-in-out;
+    z-index: -1;
+  }
 
   &:not(:last-of-type) {
     margin-bottom: $space__4;

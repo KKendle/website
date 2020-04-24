@@ -7,6 +7,7 @@ $red-2: #ffedea;
 $red-3: #ffb0a2;
 $white-1: #fff;
 $link-1: #235bf5;
+$link-2: #3962d3;
 
 //------------
 // THEME COLORS
@@ -69,7 +70,7 @@ $vr__default: $vr__1;
 // gutter
 $gutter: 3rem;
 
-$grid__maxContentWidth: 100rem; // 1600px
+$grid__maxContentWidth: #{size(1420)};
 
 //------------
 // Z-INDEX STACKING
@@ -91,13 +92,16 @@ $theme__color--error: $red-1;
 // text
 $theme__text--body: $black-1;
 $theme__text--heading: $black-1;
-$theme__text--link: $black-1;
-$theme__text--linkHover: $link-1;
+$theme__text--link: $link-1;
+$theme__text--linkHover: $link-2;
 // header
-$theme__header--primary: $green-1;
+$theme__header--primary: $black-1;
+$theme__header--heading: $green-1;
+$theme__header--text: $theme__color--white;
 // footer
-$theme__footer--primary: $green-1;
-$theme__footer--text: $theme__text--body;
+$theme__footer--primary: $black-1;
+$theme__footer--heading: $green-1;
+$theme__footer--text: $theme__color--white;
 // button
 $theme__button--1: $orange-1;
 $theme__button--2: $theme__color--white;
@@ -111,7 +115,7 @@ $theme__font--navigation: $roboto;
 // headings
 $theme__heading--1: $black-1;
 // line-height
-$theme__lineHeight--heading: 1;
+$theme__lineHeight--heading: $baseline;
 $theme__lineHeight--base: $baseline;
 // reading length
 $theme__readingLength--default: 55ch;

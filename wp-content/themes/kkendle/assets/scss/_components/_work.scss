@@ -1,0 +1,56 @@
+.c-work {
+  $self: &;
+  margin-bottom: $space__7;
+  max-width: 100%;
+  width: size(598);
+  @include for-ipad-up {
+    position: relative;
+  }
+
+  &__content {
+    background-color: $green-1;
+    padding: $space__default;
+    @include for-ipad-up {
+      bottom: 0;
+      clip-path: polygon(100% 100%, 100% 0%, 30% 0%, 10% 100%);
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: size(74);
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 0;
+      width: 60%;
+    }
+  }
+
+  &__icon {
+    height: size(24);
+    margin-bottom: $space__2;
+    width: size(24);
+    @include for-ipad-up {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: size(26);
+    margin-bottom: $space__default;
+    @include for-ipad-up {
+      margin-left: auto;
+      margin-right: 0;
+      width: 90%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__excerpt {
+    margin-bottom: $space__4;
+  }
+}

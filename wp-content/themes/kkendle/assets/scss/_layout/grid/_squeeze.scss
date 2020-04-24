@@ -5,15 +5,11 @@
 /// @group Layout
 /// @since v1.0.0
 .l-squeeze {
-  padding-left: $space__default;
-  padding-right: $space__default;
+  padding-left: $space__4;
+  padding-right: $space__4;
 
   &--large {
-    padding-left: $space__default;
-    padding-right: $space__default;
-    @include for-hands-up {
-      padding-left: $space__5;
-      padding-right: $space__5;
-    }
+    padding-left: $space__5;
+    padding-right: $space__5;
   }
 }

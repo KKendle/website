@@ -18,7 +18,7 @@
     }
 
     &\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 50%;
       }
     }
@@ -40,7 +40,7 @@
     }
 
     &\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 33.3333%;
       }
     }
@@ -62,7 +62,7 @@
     }
 
     &\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 66.6666%;
       }
     }
@@ -84,7 +84,7 @@
     }
 
     &\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 25%;
       }
     }
@@ -106,7 +106,7 @@
     }
 
     &\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 75%;
       }
     }

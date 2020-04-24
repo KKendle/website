@@ -147,4 +147,12 @@ function kkendle_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'kkendle_excerpt_more');
 
+
+
+
+//------------
+// IMAGE SIZES
+//------------
+add_image_size( 'work', 598, 337, true );
+
 ?>

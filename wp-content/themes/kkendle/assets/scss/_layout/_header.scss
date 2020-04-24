@@ -4,6 +4,7 @@
 /// @since v1.0.0
 .site-header {
   background-color: $theme__header--primary;
-  padding-bottom: size(80);
+  background-color: var(--theme__header--primary, #{$theme__header--primary});
+  padding-bottom: size(280);
   padding-top: size(80);
 }

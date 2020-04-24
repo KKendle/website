@@ -7,14 +7,30 @@
   text-align: center;
 
   &__title {
+    color: $theme__header--heading;
+    color: var(--theme__header--heading, #{$theme__header--heading});
     display: block;
+    font-family: $theme__font--heading;
     margin-bottom: $space__2;
     text-decoration: none;
+    @include for-handsWide-up {
+      font-size: size(90);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--theme__header--heading, #{$theme__header--heading});
+      text-decoration: underline;
+    }
   }
 
   &__description {
+    color: $theme__header--text;
+    color: var(--theme__header--text, #{$theme__header--text});
     font-size: size(24);
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    width: size(400);
   }
 }

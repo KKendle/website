@@ -447,7 +447,7 @@ h6 {
 
   &amp;::after {
     background-color: $orange-1;
-    bottom: size(7);
+    top: .875em; // stay at first line
     content: &#39;&#39;;
     height: size(8);
     left: 0;
@@ -469,21 +469,24 @@ h6 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div 
 .h1"><h3 class="item__heading"><a class="item__name" href="#css-h1,
 .h1">h1, .h1</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h1,
 .h1 {
-  font-size: size(59.72);
+  // font-size: size(59.72);
+  font-size: size(49.77);
 }</code>" data-collapsed="h1,
 .h1 { ... }"><code>h1,
 .h1 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 1 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h2,
 .h2"><h3 class="item__heading"><a class="item__name" href="#css-h2,
 .h2">h2, .h2</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h2,
 .h2 {
-  font-size: size(49.77);
+  // font-size: size(49.77);
+  font-size: size(41.47);
 }</code>" data-collapsed="h2,
 .h2 { ... }"><code>h2,
 .h2 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 2 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h3,
 .h3"><h3 class="item__heading"><a class="item__name" href="#css-h3,
 .h3">h3, .h3</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>h3,
 .h3 {
-  font-size: size(41.47);
+  // font-size: size(41.47);
+  font-size: size(34.56);
 }</code>" data-collapsed="h3,
 .h3 { ... }"><code>h3,
 .h3 { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Heading 3 size</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="base-css-h4,
@@ -632,28 +635,43 @@ ol { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div 
 input[type=&#39;submit&#39;]"><h3 class="item__heading"><a class="item__name" href="#css-button,
 input[type=&#39;submit&#39;]">button, input[type=&#39;submit&#39;]</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>button,
 input[type=&#39;submit&#39;] {
-  // background-color: $theme__color--white;
-  // border: 0;
-  // border-radius: 0;
-  // cursor: pointer;
-  // display: inline-block;
-  // font-family: $theme__font--button;
-  // font-size: 1.1875rem;
-  // font-weight: 600;
-  // line-height: 1.0526;
-  // min-height: 44px;
-  // min-width: 44px;
-  // padding: .6275rem $space__default .6275rem 0;
-  // position: relative;
-  // text-align: left;
-  // text-decoration: underline;
-  // text-transform: lowercase;
+  background-color: $theme__button--1;
+  background-color: var(--theme__button__1, #{$theme__button--1});
+  border-width: size(2);
+  border-radius: 0;
+  color: $theme__text--body;
+  color: var(--theme__text--body, #{$theme__text--body});
+  cursor: pointer;
+  display: inline-block;
+  font-family: $theme__font--button;
+  padding: size(11) $space__default size(12);
+  position: relative;
+  text-decoration: none;
 
-  // &amp;._focus,
-  // &amp;:hover,
-  // &amp;:focus {
-  //   color: $theme__text--linkHover;
-  // }
+  &amp;:hover,
+  &amp;:focus {
+    color: $theme__text--body;
+    color: var(--theme__text--body, #{$theme__text--body});
+    text-decoration: underline;
+
+    &amp;::after {
+      transform: none;
+    }
+  }
+
+  &amp;::after {
+    border: 2px solid $theme__button--1;
+    bottom: 0;
+    content: &#39;&#39;;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(#{size(8)}, #{size(8)});
+    transition: transform 150ms ease-in-out;
+    z-index: -1;
+  }
 
   &amp;:not(:last-of-type) {
     margin-bottom: $space__4;
@@ -765,15 +783,44 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
   }
 }</code>" data-collapsed="[aria-label=&#39;breadcrumbs&#39;] { ... }"><code>[aria-label=&#39;breadcrumbs&#39;] { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Breacrumb styling</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="components-css-.c-button"><h3 class="item__heading"><a class="item__name" href="#css-.c-button">.c-button</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-button {
   $self: &amp;;
-  $color-length: calc(100% - 40px);
-  // background-color: $theme__color--white;
-  border: 0;
+  background-color: $theme__button--1;
+  background-color: var(--theme__button__1, #{$theme__button--1});
   border-radius: 0;
+  border: size(2) solid $theme__button--1;
+  border-color: var(--theme__button--1, #{$theme__button--1});
+  color: $theme__text--body;
+  color: var(--theme__text--body, #{$theme__text--body});
   cursor: pointer;
   display: inline-block;
   font-family: $theme__font--button;
-  padding: .6275rem $space__4 .6275rem 0;
+  padding: size(11) $space__default size(12);
   position: relative;
+  text-decoration: none;
+
+  &amp;:hover,
+  &amp;:focus {
+    color: $theme__text--body;
+    color: var(--theme__text--body, #{$theme__text--body});
+    text-decoration: underline;
+
+    &amp;::after {
+      transform: none;
+    }
+  }
+
+  &amp;::after {
+    border: size(2) solid $theme__button--1;
+    bottom: 0;
+    content: &#39;&#39;;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(#{size(8)}, #{size(8)});
+    transition: transform 150ms ease-in-out;
+    z-index: -1;
+  }
 
   &amp;:not(:last-of-type) {
     margin-bottom: $space__4;
@@ -782,39 +829,21 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
 
   &amp;__link {
     max-width: none;
-    text-transform: lowercase;
-    width: auto;
-  }
-
-  &amp;__1,
-  &amp;__2 {
-    transition: all 150ms ease-in-out;
-  }
-
-  &amp;__1 {
-    background: linear-gradient(to right, $theme__button--1 $color-length, rgba($theme__color--white, .0001) $color-length);
-    padding-left: $space__default;
-
-    &amp;:hover,
-    &amp;:focus,
-    &amp;._hover,
-    &amp;._focus {
-      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
-      color: $theme__color--white;
-    }
   }
 
   &amp;__2 {
-    background: linear-gradient(to right, $theme__button--2 $color-length, rgba($theme__color--white, .0001) $color-length);
-    padding-left: $space__default;
+    background-color: $theme__button--2;
+    border-color: $theme__text--body;
 
-    &amp;:hover,
-    &amp;:focus,
-    &amp;._hover,
-    &amp;._focus {
-      background: linear-gradient(to right, $theme__text--body $color-length, rgba($theme__color--white, .0001) $color-length);
-      color: $theme__color--white;
+    &amp;::after {
+      border-color: currentColor;
     }
+  }
+
+  &amp;__container {
+    margin-bottom: $space__2;
+    position: relative;
+    z-index: $zIndex--sm;
   }
 
   &amp;--noStyle {
@@ -1624,7 +1653,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     }
 
     &amp;\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 50%;
       }
     }
@@ -1646,7 +1675,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     }
 
     &amp;\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 33.3333%;
       }
     }
@@ -1668,7 +1697,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     }
 
     &amp;\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 66.6666%;
       }
     }
@@ -1690,7 +1719,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     }
 
     &amp;\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 25%;
       }
     }
@@ -1712,7 +1741,7 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     }
 
     &amp;\@handsWide-up {
-      @include for-ipad-up {
+      @include for-handsWide-up {
         width: 75%;
       }
     }
@@ -1932,20 +1961,16 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
     margin-bottom: 0;
   }
 }</code>" data-collapsed=".l-section { ... }"><code>.l-section { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default grouping class and provides base spacing between WP Blocks. <code>.l-section--flush</code> is for unique cases where content blocks require less than the default spacing.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squeeze"><h3 class="item__heading"><a class="item__name" href="#css-.l-squeeze">.l-squeeze</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squeeze {
-  padding-left: $space__default;
-  padding-right: $space__default;
+  padding-left: $space__4;
+  padding-right: $space__4;
 
   &amp;--large {
-    padding-left: $space__default;
-    padding-right: $space__default;
-    @include for-hands-up {
-      padding-left: $space__5;
-      padding-right: $space__5;
-    }
+    padding-left: $space__5;
+    padding-right: $space__5;
   }
 }</code>" data-collapsed=".l-squeeze { ... }"><code>.l-squeeze { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default margins for content blocks. Nearly always used unless element(s) need to be flush with the sides.</p><p>Place inside Columns, on their own element.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="layout-css-.l-squish"><h3 class="item__heading"><a class="item__name" href="#css-.l-squish">.l-squish</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.l-squish {
-  padding-bottom: $space__default;
-  padding-top: $space__default;
+  padding-bottom: $space__4;
+  padding-top: $space__4;
 
   &amp;--large {
     padding-bottom: $space__5;
@@ -1998,22 +2023,39 @@ input[type=&#39;submit&#39;] { ... }</code></pre></div><h3 class="item__sub-head
   color: $theme__footer--text;
 }</code>" data-collapsed=".site-footer { ... }"><code>.site-footer { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site footer styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="site header"><div class="container">site header</div></h1><section class="main__sub-section" id="site header-css"><h2 class="main__heading--secondary"><div class="container">css</div></h2><section class="main__item container item" id="site header-css-.site-header"><h3 class="item__heading"><a class="item__name" href="#css-.site-header">.site-header</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.site-header {
   background-color: $theme__header--primary;
-  padding-bottom: size(80);
+  background-color: var(--theme__header--primary, #{$theme__header--primary});
+  padding-bottom: size(280);
   padding-top: size(80);
 }</code>" data-collapsed=".site-header { ... }"><code>.site-header { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site header styles.</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-siteBranding"><h3 class="item__heading"><a class="item__name" href="#css-.c-siteBranding">.c-siteBranding</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-siteBranding {
   $self: &amp;;
   text-align: center;
 
   &amp;__title {
+    color: $theme__header--heading;
+    color: var(--theme__header--heading, #{$theme__header--heading});
     display: block;
+    font-family: $theme__font--heading;
     margin-bottom: $space__2;
     text-decoration: none;
+    @include for-handsWide-up {
+      font-size: size(90);
+    }
+
+    &amp;:hover,
+    &amp;:focus {
+      color: var(--theme__header--heading, #{$theme__header--heading});
+      text-decoration: underline;
+    }
   }
 
   &amp;__description {
+    color: $theme__header--text;
+    color: var(--theme__header--text, #{$theme__header--text});
     font-size: size(24);
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    width: size(400);
   }
 }</code>" data-collapsed=".c-siteBranding { ... }"><code>.c-siteBranding { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Site Branding/Logo</p></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Kevin Kendle</p></li></ul></section><section class="main__item container item" id="site header-css-.c-navigation__full"><h3 class="item__heading"><a class="item__name" href="#css-.c-navigation__full">.c-navigation__full</a></h3><span class="item__since">Since v1.0.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="<code>.c-navigation__full {
   $self: &amp;;
