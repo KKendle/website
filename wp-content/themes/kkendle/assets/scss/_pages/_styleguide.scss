@@ -9,8 +9,7 @@
     overflow: visible;
     @include for-lap-up {
       // resetting to default
-      padding-top: $vr__default;
-      padding-top: var(--vr__default);
+      padding-top: $space__4;
     }
   }
 

@@ -58,14 +58,14 @@ $baseline: 1.2777;
 $letterspacing__caps: .05em; // for uppercase copy
 
 /* baseline amounts */
-$vr__05: calc(1rem * (#{$baseline} * .5));
-$vr__1: calc(1rem * #{$baseline});
-$vr__15: calc(1rem * (#{$baseline} * 1.5));
-$vr__2: calc(1rem * (#{$baseline} * 2));
-$vr__25: calc(1rem * (#{$baseline} * 2.5));
-$vr__3: calc(1rem * (#{$baseline} * 3));
-$vr__4: calc(1rem * (#{$baseline} * 4));
-$vr__default: $vr__1;
+// $vr__05: calc(1rem * (#{$baseline} * .5));
+// $vr__1: calc(1rem * #{$baseline});
+// $vr__15: calc(1rem * (#{$baseline} * 1.5));
+// $vr__2: calc(1rem * (#{$baseline} * 2));
+// $vr__25: calc(1rem * (#{$baseline} * 2.5));
+// $vr__3: calc(1rem * (#{$baseline} * 3));
+// $vr__4: calc(1rem * (#{$baseline} * 4));
+// $vr__default: $vr__1;
 
 // gutter
 $gutter: 3rem;
@@ -126,6 +126,7 @@ $theme__focus: $theme__text--body; // changed to CurrentColor
 $theme__focus--input: $link-1;
 $theme__focus--inputOnBG: $orange-1;
 // form
+$theme__form--label: $theme__color--white;
 $theme__form--error: $theme__color--error;
 $theme__form--errorInput: $red-2;
 $theme__form--errorMessage: $red-3;

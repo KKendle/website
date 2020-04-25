@@ -7,7 +7,6 @@
   .entry-meta,
   .entry-summary,
   .entry-footer {
-    margin-bottom: $vr__default;
-    margin-bottom: var(--vr__default);
+    margin-bottom: $space__4;
   }
 }

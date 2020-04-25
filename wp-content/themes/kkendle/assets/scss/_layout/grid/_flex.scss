@@ -69,8 +69,8 @@
   &__order--2 {
     order: 2;
 
-    &\@handsWide {
-      @include for-ipad-up {
+    &\@handsWide-up {
+      @include for-handsWide-up {
         order: 2;
       }
     }

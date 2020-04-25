@@ -39,6 +39,13 @@
     }
   }
 
+  .c-siteBranding & {
+
+    &:focus {
+      outline-color: rgba($green-1, 1);
+    }
+  }
+
   &::after {
     border: size(2) solid $theme__button--1;
     bottom: 0;

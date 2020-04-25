@@ -4,8 +4,7 @@
 /// @since v1.0.0
 .c-widget {
   $self: &;
-  margin-bottom: $vr__default;
-  margin-bottom: var(--vr__default);
+  margin-bottom: $space__4;
   width: 100%;
   @include for-hands-up {
     flex: 1 1 9.375rem;

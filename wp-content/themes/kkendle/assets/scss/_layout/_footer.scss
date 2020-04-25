@@ -5,4 +5,29 @@
 .site-footer {
   background-color: $theme__footer--primary;
   color: $theme__footer--text;
+
+  h2 {
+    color: $theme__footer--heading;
+    margin-bottom: $space__1;
+  }
+
+  p {
+    color: $theme__footer--text;
+  }
+
+  .c-form {
+
+    &__footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .c-form {
+
+        &__form {
+          flex: 0 1 size(600);
+        }
+      }
+    }
+  }
 }

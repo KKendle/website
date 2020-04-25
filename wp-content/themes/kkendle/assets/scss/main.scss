@@ -51,7 +51,7 @@
 
 // FORM COMPONENTS
 @import
-  '_components/form/form';
+  '_components/vendor/wpforms';
 
 // COMPONENTS
 @import
@@ -88,7 +88,8 @@
 // PAGES
 //------------
 @import
-  '_pages/search-page';
+  '_pages/search-page',
+  '_pages/single-work';
 
 //------------
 // HACKS

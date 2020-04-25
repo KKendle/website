@@ -17,14 +17,14 @@
   --letterspacing__caps: .05em; // for uppercase copy
 
   /* baseline amounts */
-  --vr__05: calc(1rem * (var(--baseline) * .5));
-  --vr__1: calc(1rem * var(--baseline));
-  --vr__15: calc(1rem * (var(--baseline) * 1.5));
-  --vr__2: calc(1rem * (var(--baseline) * 2));
-  --vr__25: calc(1rem * (var(--baseline) * 2.5));
-  --vr__3: calc(1rem * (var(--baseline) * 3));
-  --vr__4: calc(1rem * (var(--baseline) * 4));
-  --vr__default: var(--vr__1);
+  // --vr__05: calc(1rem * (var(--baseline) * .5));
+  // --vr__1: calc(1rem * var(--baseline));
+  // --vr__15: calc(1rem * (var(--baseline) * 1.5));
+  // --vr__2: calc(1rem * (var(--baseline) * 2));
+  // --vr__25: calc(1rem * (var(--baseline) * 2.5));
+  // --vr__3: calc(1rem * (var(--baseline) * 3));
+  // --vr__4: calc(1rem * (var(--baseline) * 4));
+  // --vr__default: var(--vr__1);
 
   // gutter
   --gutter: var(--space__4);
@@ -33,6 +33,12 @@
 // so grid can work
 * {
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -57,18 +63,21 @@ body {
 
 // focus state
 :focus:not([tabindex='-1']) {
-  outline: .125rem dashed rgba($black-1, 1);
+  outline: .125rem solid rgba($black-1, 1);
   outline-offset: .125rem;
 }
 
 main {
   background-color: $white-1;
+  margin-bottom: size(-240);
   margin-left: $space__default;
   margin-right: $space__default;
+  padding-bottom: size(48);
   position: relative;
   transform: translateY(#{size(-240)});
   z-index: 1; // for heading underlines
   @include for-handsWide-up {
+    margin-bottom: size(-200);
     transform: translateY(#{size(-200)});
   }
   @include for-desk-up {
@@ -124,8 +133,7 @@ blockquote,
 button,
 article,
 .widget {
-  margin-bottom: $vr__default;
-  margin-bottom: var(--vr__default, #{$vr__default});
+  margin-bottom: $space__4;
   margin-top: 0;
 }
 
@@ -144,8 +152,13 @@ h6 {
   font-family: $theme__font--heading;
   font-weight: 400;
   line-height: $theme__lineHeight--heading;
-  margin-bottom: $vr__default;
-  margin-bottom: var(--vr__default, #{$vr__default});
+  margin-bottom: $space__4;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
   position: relative;
 
   &::after {
@@ -261,7 +274,6 @@ ul,
 ol {
   list-style-type: disc;
   margin-bottom: $space__4;
-  margin-bottom: var(--space__4, #{$space__4});
   padding: 0 0 0 40px;
 
   &:last-child {

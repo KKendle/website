@@ -9,7 +9,7 @@
   &__title {
     color: $theme__header--heading;
     color: var(--theme__header--heading, #{$theme__header--heading});
-    display: block;
+    display: inline-block;
     font-family: $theme__font--heading;
     margin-bottom: $space__2;
     text-decoration: none;
@@ -21,6 +21,10 @@
     &:focus {
       color: var(--theme__header--heading, #{$theme__header--heading});
       text-decoration: underline;
+    }
+
+    &:focus {
+      outline-color: rgba($green-1, 1);
     }
   }
 
