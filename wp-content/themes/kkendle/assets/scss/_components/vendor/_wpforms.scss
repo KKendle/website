@@ -112,3 +112,33 @@
     }
   }
 }
+
+body {
+
+  .wpforms-confirmation-container-full,
+  div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+    background-color: $green-1;
+    border: size(2) solid $green-1;
+    color: $theme__text--body;
+    padding: $space__4;
+
+    p {
+      color: $theme__text--body;
+    }
+  }
+
+  div.wpforms-container-full .wpforms-form .wpforms-field input.wpforms-error,
+  div.wpforms-container-full .wpforms-form .wpforms-field input.user-invalid,
+  div.wpforms-container-full .wpforms-form .wpforms-field textarea.wpforms-error,
+  div.wpforms-container-full .wpforms-form .wpforms-field textarea.user-invalid,
+  div.wpforms-container-full .wpforms-form .wpforms-field select.wpforms-error,
+  div.wpforms-container-full .wpforms-form .wpforms-field select.user-invalid {
+    border: size(2) solid $red-1;
+  }
+
+  div.wpforms-container-full .wpforms-form label.wpforms-error {
+    color: $red-1;
+    font-size: size(16);
+    margin-top: size(4);
+  }
+}

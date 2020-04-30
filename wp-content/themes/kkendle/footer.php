@@ -10,7 +10,7 @@
             <p>Like to work with me? Fill out the form.</p>
           </div>
           <div class="l-squish l-squeeze c-form__form">
-            <?php echo do_shortcode('[wpforms id="42" title="false" description="false"]'); ?>
+            <?php echo do_shortcode('[wpforms id="20" title="false" description="false"]'); ?>
           </div>
         </div>
       </div>

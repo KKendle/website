@@ -16,7 +16,7 @@
           <p>I’m a front-end developer, primarily experienced with developing UI/UX. With over 6.5 years experience, I've architected Design Systems - both in Sketch and in code, documented Use Cases for the various components, and always took the initiative to improve team efficiency and reduce tech debt wherever possible.</p>
           <p>I excel at writing semantic and accessible HTML, reusable and flexible Scss, testing and documenting accessibility concerns, and creating responsive designs that account for edge cases.</p>
           <p>When I'm not working, you can find me playing or building PC games, scrolling until the end of time on Pinterest, or cuddled with my wife watching a movie (nearly always suggesting a sci-fi movie).</p>
-          <p>Find me on <a href="https://github.com/kkendle" target="_blank" rel="noopener noreferrer nofollow">Github</a> and <a href="https://linkedin.com/in/kevinkendle" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> or <a href="http://localhost:8888/kkendle/website/wp-content/uploads/2020/04/KKendle-Resume.pdf" target="_blank" rel="noopener noreferrer nofollow">view my resume (pdf, 75kb)</a>.</p>
+          <p>Find me on <a href="https://github.com/kkendle" target="_blank" rel="noopener noreferrer nofollow">Github</a> and <a href="https://linkedin.com/in/kevinkendle" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> or <a href="https://kkendle.com/wp-content/uploads/2020/04/KKendle-Resume.pdf" target="_blank" rel="noopener noreferrer nofollow">view my resume (pdf, 75kb)</a>.</p>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
 
           <div class="l-flex l-flex__wrap">
             <div class="l-column l-column--1-2@handsWide-up">
-              <div class="l-squeeze">
+              <div class="l-squeeze _margin-bottom">
                 <h3>Front-end development</h3>
                 <p>I enjoy developing beautiful, high-quality websites.</p>
                 <div>Capabilities</div>
@@ -68,7 +68,7 @@
                   <li class="c-list__item">User Interface (UI)</li>
                   <li class="c-list__item">WCAG 2.1 AA</li>
                   <li class="c-list__item">WordPress</li>
-                <ul>
+                </ul>
               </div>
             </div>
 
@@ -131,7 +131,7 @@
                     </div>
                   <?php endif; ?>
                   <div class="c-button__container">
-                    <a class="c-button c-button__2" href="<?php echo get_the_permalink(); ?>">Learn More</a>
+                    <a class="c-button c-button__2" href="<?php echo get_the_permalink(); ?>" aria-label="Learn more about <?php echo get_the_title(); ?>">Learn More</a>
                   </div>
                 </div>
               </div>
