@@ -20,7 +20,8 @@ $link-2: #3962d3;
 /// @prop {Color} $yellow-1 [#ffd34d]
 $black-1: #1c1c1c;
 $white-2: #f7f7f7;
-$green-1: #51ce54;
+// $green-1: #51ce54;
+$green-1: #47a549;
 $orange-1: #f9a825;
 
 //------------
@@ -34,8 +35,7 @@ $orange-1: #f9a825;
 ///   font-family: neue-haas-grotesk-display, sans-serif;
 ///   font-weight: 400;
 ///   font-style: normal;
-$source-serif-pro: 'Source Serif Pro', serif;
-$roboto: 'Roboto', sans-serif;
+$font-1: 'Fira Sans', sans-serif;
 
 //------------
 // ELEMENT SPACING
@@ -108,10 +108,10 @@ $theme__button--2: $theme__color--white;
 // backgrounds
 $theme__bg--1: $green-1;
 // font
-$theme__font--button: $roboto;
-$theme__font--heading: $source-serif-pro;
-$theme__font--body: $roboto;
-$theme__font--navigation: $roboto;
+$theme__font--button: $font-1;
+$theme__font--heading: $font-1;
+$theme__font--body: $font-1;
+$theme__font--navigation: $font-1;
 // headings
 $theme__heading--1: $black-1;
 // line-height
