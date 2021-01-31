@@ -29,13 +29,7 @@ wp-config.php
 # ignore everything in the root except the "wp-content" directory.
 /*
 !wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# mu-plugins, plugins, and themes directories
 wp-content/*
-#!wp-content/mu-plugins/
-#!wp-content/plugins/
-!wp-content/themes/kkendle
 
 # ignore OS generated files
 ehthumbs.db
@@ -92,6 +86,7 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/themes/kkendle/
+!wp-content/themes/kkendle/*
 !wp-content/themes/kkendle/.babelrc
 !wp-content/themes/kkendle/.stylelintrc
 !wp-content/themes/kkendle/.stylelintignore
