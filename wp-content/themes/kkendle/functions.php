@@ -67,7 +67,7 @@ function addGoogleFonts()
      */
 
     $siteURL = 'https://fonts.googleapis.com/css2?';
-    $fonts = 'family=Nixie+One&family=Overpass&family=Signika';
+    $fonts = 'family=Fira+Sans';
     $fontDisplay = '&display=swap';
     $googleFontURL = $siteURL . $fonts . $fontDisplay;
     ?>
