@@ -37,7 +37,6 @@ function kkendle_custom_scripts() {
 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', [], '3.4.1');
 
   // styles
-  wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro&display=swap', [], '1.0' );
   wp_enqueue_style('stylesheet', get_template_directory_uri() . '/style.css', [], time());
   wp_enqueue_style('_theme-stylesheet', get_template_directory_uri() . '/dist/css/main.css', [], time());
 
@@ -46,6 +45,49 @@ function kkendle_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kkendle_custom_scripts' );
 
+
+
+
+//------------
+// ADD GOOGLE FONTS
+//------------
+function addGoogleFonts()
+{
+    /**
+     * source: https://csswizardry.com/2020/05/the-fastest-google-fonts/
+     * 1. Preemptively warm up the fonts’ origin.
+     * 2. Initiate a high-priority, asynchronous fetch for the CSS file. Works in
+     *    most modern browsers.
+     * 3. Initiate a low-priority, asynchronous fetch that gets applied to the page
+     *    only after it’s arrived. Works in all browsers with JavaScript enabled.
+     * 4. In the unlikely event that a visitor has intentionally disabled
+     *    JavaScript, fall back to the original method. The good news is that,
+     *    although this is a render-blocking request, it can still make use of the
+     *    preconnect which makes it marginally faster than the default.
+     */
+
+    $siteURL = 'https://fonts.googleapis.com/css2?';
+    $fonts = 'family=Nixie+One&family=Overpass&family=Signika';
+    $fontDisplay = '&display=swap';
+    $googleFontURL = $siteURL . $fonts . $fontDisplay;
+    ?>
+
+    <?php // [1] ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <?php // [2] ?>
+    <link rel="preload" as="style" href="<?php echo $googleFontURL; ?>" />
+
+    <?php // [3] ?>
+    <link rel="stylesheet" href="<?php echo $googleFontURL; ?>" media="print" onload="this.media='all'" />
+
+    <?php // [4] ?>
+    <noscript>
+        <link rel="stylesheet" href="<?php echo $googleFontURL; ?>" />
+    </noscript>
+    <?php
+}
+add_action('wp_head', 'addGoogleFonts');
 
 
 
