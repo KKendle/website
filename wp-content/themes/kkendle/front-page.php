@@ -16,7 +16,7 @@
                     <p>I’m a front-end developer, primarily experienced with developing UI/UX. With over 6.5 years experience, I've architected Design Systems - both in Sketch and in code, documented Use Cases for the various components, and always took the initiative to improve team efficiency and reduce tech debt wherever possible.</p>
                     <p>I excel at writing semantic and accessible HTML, reusable and flexible Scss, testing and documenting accessibility concerns, and creating responsive designs that account for edge cases.</p>
                     <p>When I'm not working, you can find me playing or building PC games, scrolling until the end of time on Pinterest, or cuddled with my wife watching a movie (nearly always suggesting a sci-fi movie).</p>
-                    <p>Find me on <a href="https://github.com/kkendle" target="_blank" rel="noopener noreferrer nofollow">Github</a> and <a href="https://linkedin.com/in/kevinkendle" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> or <a href="https://kkendle.com/wp-content/uploads/2020/04/KKendle-Resume.pdf" target="_blank" rel="noopener noreferrer nofollow">view my resume (pdf, 75kb)</a>.</p>
+                    <p>Find me on <a href="https://github.com/kkendle" target="_blank" rel="noopener noreferrer nofollow">Github</a> and <a href="https://linkedin.com/in/kevinkendle" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> or <a href="https://kkendle.com/resume" target="_blank" rel="noopener noreferrer nofollow">view my resume (pdf, 55kb)</a>.</p>
                 </div>
             </div>
 
