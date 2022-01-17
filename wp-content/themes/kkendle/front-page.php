@@ -143,10 +143,6 @@
                 wp_reset_postdata(); ?>
             </div>
         <?php endif; ?>
-
-        <section>
-            <?php the_content(); ?>
-        </section>
     </main>
 </div>
 
