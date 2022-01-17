@@ -97,3 +97,10 @@ wp-content/themes/kkendle/backstop_data/
 # ignore backstopjs config updating each test file path
 # (may be able to ignore all of html_report, not sure if that gets regenerated each time)
 wp-content/themes/kkendle/backstop_data/html_report/config.js
+
+# from SG
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/cache/*
+wp-content/cache/supercache/*
+wp-content/w3tc-cache/*
